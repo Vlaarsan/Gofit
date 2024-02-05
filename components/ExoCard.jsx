@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useNavigation } from "@react-navigation/native";
 
-const ExoCard = ({ name, url }) => {
+
+const ExoCard = ({ name, url, category, exempleImg, }) => {
   const [isLiked, setisLiked] = useState(false);
+  const navigation = useNavigation();
+
+  const navigateToDetails = () => {
+    navigation.navigate("DetailsExo", { name, url, category, exempleImg });
+  };
+
   return (
-    <TouchableOpacity style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={navigateToDetails}>
       <Image
         source={{
           uri: url,
@@ -16,10 +24,14 @@ const ExoCard = ({ name, url }) => {
       <View style={styles.cardContent}>
         <Text style={styles.title}>{name}</Text>
         <TouchableOpacity
-        onPress={() => {setisLiked(!isLiked)}}
+          onPress={() => {
+            setisLiked(!isLiked);
+          }}
           style={[
             styles.favoriteButton,
-            isLiked ? { backgroundColor: "#8b50de" } : { backgroundColor: "#fff" },
+            isLiked
+              ? { backgroundColor: "#8b50de" }
+              : { backgroundColor: "#fff" },
           ]}
         >
           <FontAwesomeIcon icon={faHeart} size={10} color="#FF5733" />

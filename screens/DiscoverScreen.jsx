@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   ScrollView,
   FlatList,
+  StatusBar,
 } from "react-native";
 import React from "react";
 import LogoApp from "../components/LogoApp";
@@ -25,20 +26,23 @@ const DiscoverScreen = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.CategoryButtonContainer}>
-      <CategoryButton
-      name={"Biceps"}/>
-      <CategoryButton
-      name={"Dos"}/>
-      <CategoryButton
-      name={"Pecs"}/>
-      <CategoryButton
-      name={"Triceps"}/>
+        <CategoryButton name={"Biceps"} />
+        <CategoryButton name={"Dos"} />
+        <CategoryButton name={"Pecs"} />
+        <CategoryButton name={"Triceps"} />
       </View>
       <FlatList
         data={exoData}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <ExoCard name={item.name} url={item.url} key={item.id.toString()} />
+          <ExoCard
+            name={item.name}
+            url={item.url}
+            category={item.category}
+            exempleImg={item.exempleImg}
+            liked={item.liked}
+            key={item.id.toString()}
+          />
         )}
       />
     </SafeAreaView>
@@ -59,8 +63,8 @@ const styles = StyleSheet.create({
   searchButton: {
     margin: 25,
   },
-  CategoryButtonContainer:{
-    flexDirection:"row",
+  CategoryButtonContainer: {
+    flexDirection: "row",
     marginVertical: 10,
     marginHorizontal: 20,
   },
