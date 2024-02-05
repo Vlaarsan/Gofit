@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const ExoCard = ({ name, url }) => {
+  const [isLiked, setisLiked] = useState(false);
   return (
     <TouchableOpacity style={styles.card}>
       <Image
@@ -14,7 +15,13 @@ const ExoCard = ({ name, url }) => {
       />
       <View style={styles.cardContent}>
         <Text style={styles.title}>{name}</Text>
-        <TouchableOpacity style={styles.favoriteButton}>
+        <TouchableOpacity
+        onPress={() => {setisLiked(!isLiked)}}
+          style={[
+            styles.favoriteButton,
+            isLiked ? { backgroundColor: "#8b50de" } : { backgroundColor: "#fff" },
+          ]}
+        >
           <FontAwesomeIcon icon={faHeart} size={10} color="#FF5733" />
         </TouchableOpacity>
       </View>

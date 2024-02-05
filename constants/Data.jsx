@@ -8,7 +8,7 @@ export const exoData = [
   {
     id: "2",
     name: "Pompe 2",
-    url: "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    url: "https://images.pexels.com/photos/3775164/pexels-photo-3775164.jpeg",
     category: "",
   },
   {

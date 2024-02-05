@@ -8,7 +8,7 @@ const LogoApp = ({title}) => {
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <View style={styles.logoBackground}>
-          <FontAwesomeIcon icon={faDumbbell} size={15} color="#fff" />
+          <FontAwesomeIcon icon={faDumbbell} size={20} color="#fff" />
         </View>
         <Text style={styles.title}> {title}</Text>
       </View>
