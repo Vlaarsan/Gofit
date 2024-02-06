@@ -7,7 +7,7 @@ import {
   FlatList,
   StatusBar,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import LogoApp from "../components/LogoApp";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
@@ -17,6 +17,23 @@ import { exoData } from "../constants/Data";
 import CategoryButton from "../components/CategoryButton";
 
 const DiscoverScreen = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const filterByCategory = (item) => {
+    if (selectedCategory === null) {
+      return true; // Afficher tous les éléments si aucune catégorie n'est sélectionnée
+    }
+    return item.category === selectedCategory;
+  };
+
+  const toggleCategory = (category) => {
+    if (selectedCategory === category) {
+      setSelectedCategory(null);
+    } else {
+      setSelectedCategory(category);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
@@ -26,13 +43,25 @@ const DiscoverScreen = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.CategoryButtonContainer}>
-        <CategoryButton name={"Biceps"} />
-        <CategoryButton name={"Dos"} />
-        <CategoryButton name={"Pecs"} />
-        <CategoryButton name={"Triceps"} />
+        <CategoryButton
+          name={"Biceps"}
+          onPressCallBack={() => toggleCategory("Biceps")}
+        />
+        <CategoryButton
+          name={"Dos"}
+          onPressCallBack={() => toggleCategory("Dos")}
+        />
+        <CategoryButton
+          name={"Pecs"}
+          onPressCallBack={() => toggleCategory("Pecs")}
+        />
+        <CategoryButton
+          name={"Triceps"}
+          onPressCallBack={() => toggleCategory("Triceps")}
+        />
       </View>
       <FlatList
-        data={exoData}
+        data={exoData.filter(filterByCategory)}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <ExoCard
@@ -48,6 +77,7 @@ const DiscoverScreen = () => {
     </SafeAreaView>
   );
 };
+
 
 export default DiscoverScreen;
 

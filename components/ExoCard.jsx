@@ -5,7 +5,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useLikedExercisesContext } from "../context/LikedExercicesContext";
 
-const ExoCard = ({ id, name, url, category, exempleImg }) => {
+const ExoCard = ({ id, name, url, category, exempleImg, }) => {
   const navigation = useNavigation();
   const { exercises, addExercise, removeExercise } = useLikedExercisesContext();
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
-const CategoryButton = ({ name }) => {
+const CategoryButton = ({ name, onPressCallBack }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const handlePress = () => {
@@ -10,7 +10,10 @@ const CategoryButton = ({ name }) => {
 
   return (
     <TouchableOpacity
-      onPress={handlePress}
+      onPress={() => {
+        handlePress();
+        onPressCallBack();
+      }}
       style={[
         styles.button,
         { backgroundColor: isSelected ? "#8b50de" : "#fff" },

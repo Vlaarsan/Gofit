@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
   },
   flatListContainer: {
     paddingBottom: 16,
-    width: 200,
   },
 });
 
