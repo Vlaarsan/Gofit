@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const ExoCard = ({ name, url, category, exempleImg }) => {
+const ExoCard = ({ name, url, category, exempleImg, }) => {
+
   const [isLiked, setisLiked] = useState(false);
   const navigation = useNavigation();
 
   const navigateToDetails = () => {
-    navigation.navigate("DetailsExo", { name, url, category, exempleImg });
+    navigation.navigate("DetailsExo", { name, url, category, exempleImg, isLiked });
   };
 
   return (

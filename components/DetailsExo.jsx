@@ -11,9 +11,10 @@ import {
   ScrollView,
 } from "react-native";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const DetailsExo = ({ route }) => {
-  const { name, url, category, exempleImg } = route.params;
+  const { name, url, category, exempleImg, isLiked } = route.params;
   const navigation = useNavigation();
   return (
     <ScrollView style={styles.container}>
@@ -23,6 +24,16 @@ const DetailsExo = ({ route }) => {
         backgroundColor="rgba(1, 1, 1, 0.2)"
       /> */}
       <Image source={{ uri: url }} style={styles.image} />
+      <View
+        style={[
+          styles.favoriteButton,
+          isLiked
+            ? { backgroundColor: "#8b50de" }
+            : { backgroundColor: "#fff" },
+        ]}
+      >
+        <FontAwesomeIcon icon={faHeart} size={10} color="#FF5733" />
+      </View>
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.navigate("Discover")}
@@ -62,6 +73,14 @@ const styles = StyleSheet.create({
     marginTop: 25,
     width: "100%",
     height: 300,
+  },
+  favoriteButton: {
+    padding: 10,
+    borderRadius: 50,
+    backgroundColor: "#fff",
+    position: "absolute",
+    right: 20,
+    top: 250,
   },
 });
 
