@@ -3,14 +3,31 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
+import { useLikedExercisesContext } from "../context/LikedExercicesContext";
 
-const ExoCard = ({ name, url, category, exempleImg, }) => {
-
-  const [isLiked, setisLiked] = useState(false);
+const ExoCard = ({ id, name, url, category, exempleImg }) => {
   const navigation = useNavigation();
+  const { exercises, addExercise, removeExercise } = useLikedExercisesContext();
+
+  const isLiked = exercises.some((exercise) => exercise.name === name);
 
   const navigateToDetails = () => {
-    navigation.navigate("DetailsExo", { name, url, category, exempleImg, isLiked });
+    navigation.navigate("DetailsExo", {
+      id,
+      name,
+      url,
+      category,
+      exempleImg,
+      isLiked,
+    });
+  };
+
+  const toggleLike = () => {
+    if (isLiked) {
+      removeExercise(id);
+    } else {
+      addExercise({ id, name, url, category, exempleImg });
+    }
   };
 
   return (
@@ -24,9 +41,7 @@ const ExoCard = ({ name, url, category, exempleImg, }) => {
       <View style={styles.cardContent}>
         <Text style={styles.title}>{name}</Text>
         <TouchableOpacity
-          onPress={() => {
-            setisLiked(!isLiked);
-          }}
+          onPress={toggleLike}
           style={[
             styles.favoriteButton,
             isLiked

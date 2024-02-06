@@ -20,7 +20,7 @@ const DiscoverScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
-        <LogoApp title={"Exercices"} />
+        <LogoApp title={" Exercices"} />
         <TouchableOpacity style={styles.searchButton}>
           <FontAwesomeIcon icon={faSearch} size={20} color="#FF5733" />
         </TouchableOpacity>
@@ -36,12 +36,12 @@ const DiscoverScreen = () => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <ExoCard
+            id={item.id}
             name={item.name}
             url={item.url}
             category={item.category}
             exempleImg={item.exempleImg}
             liked={item.liked}
-            key={item.id.toString()}
           />
         )}
       />

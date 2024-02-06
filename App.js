@@ -7,6 +7,7 @@ import DiscoverScreen from "./screens/DiscoverScreen";
 import InsightScreen from "./screens/InsightScreen";
 import ProfilScreen from "./screens/ProfilScreen";
 import DetailsExo from "./components/DetailsExo";
+import { LikedExercisesProvider } from "./context/LikedExercicesContext";
 
 const Tab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
@@ -53,30 +54,32 @@ const DiscoverStack = () => {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        tabBarShowLabel={false}
-        screenOptions={{
-          swipeEnabled: true,
-          tabBarStyle: {
-            backgroundColor: "#8b50de",
-            marginTop: 50,
-          },
-          tabBarIndicatorStyle: {
-            backgroundColor: "#ffffff",
-          },
-          tabBarActiveTintColor: "#ffffff",
-          tabBarInactiveTintColor: "#bdc3c7",
-          tabBarLabelStyle: {
-            fontSize: 10,
-          },
-        }}
-      >
-        <Tab.Screen name="Home" component={HomeStack} />
-        <Tab.Screen name="Exercices" component={DiscoverStack} />
-        <Tab.Screen name="Insight" component={InsightScreen} />
-        <Tab.Screen name="Profil" component={ProfilScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <LikedExercisesProvider>
+      <NavigationContainer>
+        <Tab.Navigator
+          tabBarShowLabel={false}
+          screenOptions={{
+            swipeEnabled: true,
+            tabBarStyle: {
+              backgroundColor: "#8b50de",
+              marginTop: 55,
+            },
+            tabBarIndicatorStyle: {
+              backgroundColor: "#ffffff",
+            },
+            tabBarActiveTintColor: "#ffffff",
+            tabBarInactiveTintColor: "#bdc3c7",
+            tabBarLabelStyle: {
+              fontSize: 10,
+            },
+          }}
+        >
+          <Tab.Screen name="Home" component={HomeStack} />
+          <Tab.Screen name="Favoris" component={InsightScreen} />
+          <Tab.Screen name="Découverte" component={DiscoverStack} />
+          <Tab.Screen name="Profil" component={ProfilScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </LikedExercisesProvider>
   );
 }
