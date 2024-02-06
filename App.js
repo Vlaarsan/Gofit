@@ -15,7 +15,7 @@ const HomeStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
+        name="Main"
         component={HomeScreen}
         options={{ headerShown: false }}
       />
@@ -60,7 +60,7 @@ export default function App() {
           swipeEnabled: true,
           tabBarStyle: {
             backgroundColor: "#8b50de",
-            marginTop: 30,
+            marginTop: 50,
           },
           tabBarIndicatorStyle: {
             backgroundColor: "#ffffff",
