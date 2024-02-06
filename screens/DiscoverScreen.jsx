@@ -1,11 +1,8 @@
 import {
   StyleSheet,
-  Text,
   View,
   TouchableOpacity,
-  ScrollView,
   FlatList,
-  StatusBar,
 } from "react-native";
 import React, { useState } from "react";
 import LogoApp from "../components/LogoApp";
@@ -17,20 +14,24 @@ import { exoData } from "../constants/Data";
 import CategoryButton from "../components/CategoryButton";
 
 const DiscoverScreen = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
   const filterByCategory = (item) => {
-    if (selectedCategory === null) {
-      return true; // Afficher tous les éléments si aucune catégorie n'est sélectionnée
+    if (selectedCategories.length === 0) {
+      return true;
     }
-    return item.category === selectedCategory;
+    return selectedCategories.includes(item.category);
   };
 
   const toggleCategory = (category) => {
-    if (selectedCategory === category) {
-      setSelectedCategory(null);
+    if (selectedCategories.includes(category)) {
+      // La catégorie est déjà sélectionnée, la retirer
+      setSelectedCategories(
+        selectedCategories.filter((cat) => cat !== category)
+      );
     } else {
-      setSelectedCategory(category);
+      // La catégorie n'est pas sélectionnée, l'ajouter
+      setSelectedCategories([...selectedCategories, category]);
     }
   };
 
@@ -77,7 +78,6 @@ const DiscoverScreen = () => {
     </SafeAreaView>
   );
 };
-
 
 export default DiscoverScreen;
 

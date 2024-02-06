@@ -4,9 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import {
   StyleSheet,
   Text,
-  View,
   Image,
-  StatusBar,
   TouchableOpacity,
   ScrollView,
 } from "react-native";
@@ -18,11 +16,6 @@ const DetailsExo = ({ route }) => {
   const navigation = useNavigation();
   return (
     <ScrollView style={styles.container}>
-      {/* <StatusBar
-        barStyle="light-content"
-        translucent={true}
-        backgroundColor="rgba(1, 1, 1, 0.2)"
-      /> */}
       <Image source={{ uri: url }} style={styles.image} />
 
       <TouchableOpacity
@@ -56,7 +49,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: "absolute",
-    top: 60,
+    top: 30,
     left: 20,
     padding: 10,
   },
