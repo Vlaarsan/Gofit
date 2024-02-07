@@ -1,5 +1,12 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import React, { useState, useRef } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Animated,
+} from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -9,10 +16,9 @@ import DeleteFavoriteModal from "../modals/DeleteFavoriteModal";
 const ExoCard = ({ id, name, url, category, exempleImg }) => {
   const navigation = useNavigation();
   const { exercises, addExercise, removeExercise } = useLikedExercisesContext();
-
   const [modalVisible, setModalVisible] = useState(false);
-
   const isLiked = exercises.some((exercise) => exercise.name === name);
+  const cardScale = useRef(new Animated.Value(1)).current;
 
   const navigateToDetails = () => {
     navigation.navigate("DetailsExo", {
@@ -30,10 +36,25 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
       setModalVisible(!modalVisible);
     } else {
       addExercise({ id, name, url, category, exempleImg });
+      // Déclenche l'animation d'agrandissement de la carte
+      Animated.timing(cardScale, {
+        toValue: 1.4,
+        duration: 300,
+        useNativeDriver: true,
+      }).start(() => {
+        // Une fois l'animation terminée, revient à l'échelle normale
+        Animated.timing(cardScale, {
+          toValue: 1,
+          duration: 300,
+          useNativeDriver: true,
+        }).start(() => {
+        });
+      });
     }
   };
 
   return (
+    <Animated.View style={[styles.card, { transform: [{ scale: cardScale }] }]}>
     <TouchableOpacity style={styles.card} onPress={navigateToDetails}>
       <Image
         source={{
@@ -70,19 +91,19 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
         category={category}
       />
     </TouchableOpacity>
+    </Animated.View>
   );
 };
 
 const styles = StyleSheet.create({
   card: {
     height: 120,
-    width: "90%",
+    width: "95%",
     marginVertical: 10,
-    marginHorizontal: 20,
-    borderRadius: 30,
-    overflow: "hidden",
+ alignSelf: "center",
   },
   backgroundImage: {
+    borderRadius: 40,
     width: "100%",
     height: "100%",
     resizeMode: "cover",
@@ -97,7 +118,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
   },
