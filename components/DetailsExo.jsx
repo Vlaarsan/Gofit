@@ -9,7 +9,6 @@ import {
   ScrollView,
 } from "react-native";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const DetailsExo = ({ route }) => {
   const { name, url, category, exempleImg, isLiked } = route.params;

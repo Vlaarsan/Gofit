@@ -67,9 +67,9 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <LogoApp title={"Gofit"} />
-      <Text style={styles.title}>Salut user 👍</Text>
+      <Text style={styles.title}>Salut user</Text>
       <Text style={styles.message}>
-        Pense à noter les jours ou tu t'es entrainé !
+        Pense à noter les jours ou tu t'es entrainé  💪
       </Text>
       <Calendar
         onDayPress={handleDayPress}
@@ -82,7 +82,7 @@ const HomeScreen = () => {
         theme={{
           calendarBackground: "#fff",
           textSectionTitleColor: "#b6c1cd",
-          selectedDayBackgroundColor: "#8b50de", // Fond violet pour le jour sélectionné
+          selectedDayBackgroundColor: "#8b50de",
           selectedDayTextColor: "#ffffff",
           todayTextColor: "#8b50de",
           dayTextColor: "#2d4150",
@@ -109,12 +109,13 @@ const styles = StyleSheet.create({
     fontSize: 28,
   },
   message: {
-    fontSize: 14,
+    fontSize: 16,
     marginTop: 100,
     padding: 10,
     textAlign: "center",
   },
   calendar: {
     marginTop: 35,
+    marginHorizontal: 10,
   },
 });

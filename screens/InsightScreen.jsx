@@ -19,7 +19,6 @@ const InsightScreen = () => {
             url={item.url}
             category={item.category}
             exempleImg={item.exempleImg}
-            liked={item.liked}
           />
         )}
         contentContainerStyle={styles.flatListContainer}
