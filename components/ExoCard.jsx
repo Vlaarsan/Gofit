@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import {
   StyleSheet,
   Text,
-  View,
   Image,
   TouchableOpacity,
   Animated,
@@ -37,7 +36,6 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
       setModalVisible(!modalVisible);
     } else {
       addExercise({ id, name, url, category, exempleImg });
-      // Déclenche l'animation d'agrandissement de la carte
       startAnimation();
     }
   };
