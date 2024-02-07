@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useLikedExercisesContext } from "../context/LikedExercicesContext";
+import DeleteFavoriteModal from "../modals/DeleteFavoriteModal";
 
-const ExoCard = ({ id, name, url, category, exempleImg, }) => {
+const ExoCard = ({ id, name, url, category, exempleImg }) => {
   const navigation = useNavigation();
   const { exercises, addExercise, removeExercise } = useLikedExercisesContext();
+
+  const [modalVisible, setModalVisible] = useState(false);
 
   const isLiked = exercises.some((exercise) => exercise.name === name);
 
@@ -24,7 +27,7 @@ const ExoCard = ({ id, name, url, category, exempleImg, }) => {
 
   const toggleLike = () => {
     if (isLiked) {
-      removeExercise(id);
+      setModalVisible(!modalVisible);
     } else {
       addExercise({ id, name, url, category, exempleImg });
     }
@@ -52,6 +55,20 @@ const ExoCard = ({ id, name, url, category, exempleImg, }) => {
           <FontAwesomeIcon icon={faHeart} size={10} color="#FF5733" />
         </TouchableOpacity>
       </View>
+      <DeleteFavoriteModal
+        visible={modalVisible}
+        onClose={() => {
+          setModalVisible(false);
+        }}
+        id={id}
+        onDelete={() => {
+          removeExercise(id);
+          setModalVisible(false);
+        }}
+        name={name}
+        url={url}
+        category={category}
+      />
     </TouchableOpacity>
   );
 };
@@ -80,6 +97,9 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   favoriteButton: {
     padding: 10,

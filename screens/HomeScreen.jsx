@@ -110,12 +110,12 @@ const styles = StyleSheet.create({
   },
   message: {
     fontSize: 16,
-    marginTop: 100,
+    marginTop: 60,
     padding: 10,
     textAlign: "center",
   },
   calendar: {
-    marginTop: 35,
+    marginTop: 25,
     marginHorizontal: 10,
   },
 });
