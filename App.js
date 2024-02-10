@@ -8,6 +8,8 @@ import InsightScreen from "./screens/InsightScreen";
 import ProfilScreen from "./screens/ProfilScreen";
 import DetailsExo from "./components/DetailsExo";
 import { LikedExercisesProvider } from "./context/LikedExercicesContext";
+import LoginScreen from "./screens/LoginScreen";
+import SignupScreen from "./screens/SignUpScreen";
 
 const Tab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
@@ -74,6 +76,8 @@ export default function App() {
             },
           }}
         >
+          <Tab.Screen name="login" component={LoginScreen} />
+          <Tab.Screen name="inscription" component={SignupScreen} />
           <Tab.Screen name="Home" component={HomeStack} />
           <Tab.Screen name="Favoris" component={InsightScreen} />
           <Tab.Screen name="Découverte" component={DiscoverStack} />
