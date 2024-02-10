@@ -14,8 +14,6 @@ import SignupScreen from "./screens/SignUpScreen";
 const Tab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
 
-
-
 const TabNavigator = () => {
   return (
     <Tab.Navigator
@@ -44,13 +42,22 @@ const TabNavigator = () => {
   );
 };
 
+const MyStack = () => {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="TabNavigator" component={TabNavigator} />
+      <Stack.Screen name="DetailsExo" component={DetailsExo} />
+    </Stack.Navigator>
+  );
+};
+
 export default function App() {
   return (
     <LikedExercisesProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="TabNavigator" component={TabNavigator} />
+          <Stack.Screen name="MyStack" component={MyStack} />
         </Stack.Navigator>
       </NavigationContainer>
     </LikedExercisesProvider>

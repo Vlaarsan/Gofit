@@ -19,7 +19,7 @@ const DetailsExo = ({ route }) => {
 
       <TouchableOpacity
         style={styles.backButton}
-        onPress={() => navigation.navigate("Discover")}
+        onPress={() => navigation.goBack()}
       >
         <FontAwesomeIcon icon={faArrowLeft} size={25} color="#8b50de" />
       </TouchableOpacity>
