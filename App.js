@@ -18,8 +18,8 @@ const HomeStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Main"
-        component={HomeScreen}
+        name="login"
+        component={LoginScreen}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -76,8 +76,6 @@ export default function App() {
             },
           }}
         >
-          <Tab.Screen name="login" component={LoginScreen} />
-          <Tab.Screen name="inscription" component={SignupScreen} />
           <Tab.Screen name="Home" component={HomeStack} />
           <Tab.Screen name="Favoris" component={InsightScreen} />
           <Tab.Screen name="Découverte" component={DiscoverStack} />

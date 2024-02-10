@@ -6,25 +6,23 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/config";
 
-import auth from "@react-native-firebase/auth";
 
-const LoginScreen = () => {
+const LoginScreen = (navigation) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleLogin = async () => {
-    try {
-      const userCredential = await auth().signInWithEmailAndPassword(
-        email,
-        password
-      );
-      // L'utilisateur est connecté avec succès
-      console.log("Utilisateur connecté :", userCredential.user.uid);
-    } catch (error) {
-      console.error("Erreur de connexion :", error.message);
-    }
+  const handleLogin = () => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log("Utilisateur connecté avec succès!");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const togglePasswordVisibility = () => {

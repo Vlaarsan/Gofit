@@ -1,22 +1,50 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-
-
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  sendEmailVerification,
+} from "firebase/auth";
+import { app } from "../firebase/config";
 
 const SignupScreen = ({ navigation }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
+  const [confirmation, setConfirmation] = useState("");
 
   const handleSignup = () => {
-    // Ajoutez ici la logique d'inscription avec Firebase ou tout autre backend
-    console.log('Email:', email);
-    console.log('Password:', password);
-  };
+    if (password === confirmPassword) {
+      const auth = getAuth();
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(async (userCredential) => {
+          // L'utilisateur est créé avec succès, envoyez l'e-mail de confirmation
+          // sendEmailVerification(auth.currentUser).then(() => {
+          //   console.log("E-mail de confirmation envoyé avec succès!");
+          // });
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+          // Affichez le message à l'intérieur du bloc .then
+          console.log("Utilisateur créé avec succès!");
+          // Informez l'utilisateur de l'inscription réussie
+          setConfirmation(
+            "Inscription réussie ! Vous pouvez maintenant vous connecter."
+          );
+        })
+        .catch((error) => {
+          // Gérer les erreurs ici
+          console.error(error);
+        });
+    } else {
+      // Gérer le cas où les mots de passe ne correspondent pas
+      console.error("Les mots de passe ne correspondent pas");
+    }
   };
 
   return (
@@ -34,23 +62,27 @@ const SignupScreen = ({ navigation }) => {
         <TextInput
           style={styles.input}
           placeholder="Mot de passe"
-          secureTextEntry={true}
+          secureTextEntry={!showPassword}
           value={password}
           onChangeText={(text) => setPassword(text)}
         />
-                <TouchableOpacity
-          onPress={togglePasswordVisibility}
-          style={styles.eyeIcon}
-        >
-          <Text>{showPassword ? "👁️" : "🔒"}</Text>
-        </TouchableOpacity>
       </View>
+      <TextInput
+        style={styles.input}
+        placeholder="Confirmer le mot de passe"
+        secureTextEntry={!showPassword}
+        value={confirmPassword}
+        onChangeText={(text) => setConfirmPassword(text)}
+      />
       <TouchableOpacity onPress={handleSignup} style={styles.signupButton}>
         <Text style={styles.buttonText}>S'inscrire</Text>
       </TouchableOpacity>
       <Text style={styles.loginText}>
-        Vous avez déjà un compte ?{' '}
-        <Text style={styles.loginLink} onPress={() => navigation.navigate('Login')}>
+        {confirmation ? confirmation : "Vous avez déjà un compte ? "}
+        <Text
+          style={styles.loginLink}
+          onPress={() => navigation.navigate("Login")}
+        >
           Se connecter
         </Text>
       </Text>
@@ -59,56 +91,51 @@ const SignupScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: "center",
-      padding: 20,
-    },
-    header: {
-      marginTop: 25,
-      fontSize: 36,
-      fontWeight: "bold",
-      marginBottom: 150,
-    },
-    input: {
-      height: 45,
-      borderColor: "gray",
-      backgroundColor: "#d9d9d9",
-      borderRadius: 15,
-      marginBottom: 15,
-      paddingLeft: 10,
-      width: "90%",
-    },
-    passwordContainer: {
-      flexDirection: "row",
-      flexWrap: "wrap",
-    },
-    eyeIcon: {
-      position: "absolute",
-      right: 15,
-      top: 10,
-    },
-    signupButton: {
-      width: "80%",
-      backgroundColor: "#4caf50",
-      padding: 10,
-      borderRadius: 25,
-      marginTop: 10,
-    },
-    buttonText: {
-      color: "white",
-      textAlign: "center",
-      fontWeight: "bold",
-    },
-    loginText: {
-      marginTop: 20,
-      marginBottom: 20,
-    },
-    loginLink: {
-      marginTop: 10,
-      color: "#8b50de",
-      textDecorationLine: "underline",
-    },
-  });
+  container: {
+    flex: 1,
+    alignItems: "center",
+    padding: 20,
+  },
+  header: {
+    marginTop: 25,
+    fontSize: 36,
+    fontWeight: "bold",
+    marginBottom: 50,
+  },
+  input: {
+    height: 45,
+    borderColor: "gray",
+    backgroundColor: "#d9d9d9",
+    borderRadius: 15,
+    marginBottom: 15,
+    paddingLeft: 10,
+    width: "90%",
+  },
+  passwordContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    position: "relative",
+  },
+  signupButton: {
+    width: "80%",
+    backgroundColor: "#4caf50",
+    padding: 10,
+    borderRadius: 25,
+    marginTop: 10,
+  },
+  buttonText: {
+    color: "white",
+    textAlign: "center",
+    fontWeight: "bold",
+  },
+  loginText: {
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  loginLink: {
+    color: "#8b50de",
+    textDecorationLine: "underline",
+  },
+});
 
 export default SignupScreen;
