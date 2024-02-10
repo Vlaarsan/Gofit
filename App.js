@@ -14,43 +14,33 @@ import SignupScreen from "./screens/SignUpScreen";
 const Tab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator();
 
-const HomeStack = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="login"
-        component={LoginScreen}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="DetailsExo"
-        component={DetailsExo}
-        options={{
-          headerShown: false,
-          headerBackTitleVisible: false,
-        }}
-      />
-    </Stack.Navigator>
-  );
-};
 
-const DiscoverStack = () => {
+
+const TabNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Discover"
-        component={DiscoverScreen}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="DetailsExo"
-        component={DetailsExo}
-        options={{
-          headerShown: false,
-          headerBackTitleVisible: false,
-        }}
-      />
-    </Stack.Navigator>
+    <Tab.Navigator
+      tabBarShowLabel={false}
+      screenOptions={{
+        swipeEnabled: true,
+        tabBarStyle: {
+          backgroundColor: "#8b50de",
+          marginTop: 55,
+        },
+        tabBarIndicatorStyle: {
+          backgroundColor: "#ffffff",
+        },
+        tabBarActiveTintColor: "#ffffff",
+        tabBarInactiveTintColor: "#bdc3c7",
+        tabBarLabelStyle: {
+          fontSize: 10,
+        },
+      }}
+    >
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Favoris" component={InsightScreen} />
+      <Tab.Screen name="Découverte" component={DiscoverScreen} />
+      <Tab.Screen name="Profil" component={ProfilScreen} />
+    </Tab.Navigator>
   );
 };
 
@@ -58,29 +48,10 @@ export default function App() {
   return (
     <LikedExercisesProvider>
       <NavigationContainer>
-        <Tab.Navigator
-          tabBarShowLabel={false}
-          screenOptions={{
-            swipeEnabled: true,
-            tabBarStyle: {
-              backgroundColor: "#8b50de",
-              marginTop: 55,
-            },
-            tabBarIndicatorStyle: {
-              backgroundColor: "#ffffff",
-            },
-            tabBarActiveTintColor: "#ffffff",
-            tabBarInactiveTintColor: "#bdc3c7",
-            tabBarLabelStyle: {
-              fontSize: 10,
-            },
-          }}
-        >
-          <Tab.Screen name="Home" component={HomeStack} />
-          <Tab.Screen name="Favoris" component={InsightScreen} />
-          <Tab.Screen name="Découverte" component={DiscoverStack} />
-          <Tab.Screen name="Profil" component={ProfilScreen} />
-        </Tab.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="TabNavigator" component={TabNavigator} />
+        </Stack.Navigator>
       </NavigationContainer>
     </LikedExercisesProvider>
   );

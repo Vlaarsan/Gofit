@@ -10,7 +10,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
 
 
-const LoginScreen = (navigation) => {
+const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -19,6 +19,7 @@ const LoginScreen = (navigation) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("Utilisateur connecté avec succès!");
+        navigation.replace("TabNavigator")
       })
       .catch((error) => {
         console.error(error);
