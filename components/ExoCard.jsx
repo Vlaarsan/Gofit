@@ -17,7 +17,7 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
   const navigation = useNavigation();
   const { exercises, addExercise, removeExercise } = useLikedExercisesContext();
   const [modalVisible, setModalVisible] = useState(false);
-  const isLiked = exercises.some((exercise) => exercise.name === name);
+  const isLiked = exercises.some((exercise) => exercise.id === id);
   const { cardScale, startAnimation } = createCardScaleAnimation();
 
   const navigateToDetails = () => {

@@ -63,7 +63,7 @@ const LoginScreen = ({navigation}) => {
         <Text style={styles.signupLink}>Mot de passe oublié ?</Text>
       </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigation.navigate("Signup")}}>
           <Text style={styles.signupLink}>S'inscrire</Text>
         </TouchableOpacity>
     </View>

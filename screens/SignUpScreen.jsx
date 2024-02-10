@@ -79,13 +79,13 @@ const SignupScreen = ({ navigation }) => {
       </TouchableOpacity>
       <Text style={styles.loginText}>
         {confirmation ? confirmation : "Vous avez déjà un compte ? "}
+      </Text>
         <Text
           style={styles.loginLink}
           onPress={() => navigation.navigate("Login")}
         >
           Se connecter
         </Text>
-      </Text>
     </View>
   );
 };
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
     fontSize: 36,
     fontWeight: "bold",
-    marginBottom: 50,
+    marginBottom: 150,
   },
   input: {
     height: 45,
