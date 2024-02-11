@@ -7,16 +7,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { auth, firestore } from "../firebase/config";
-import {
-  collection,
-  addDoc,
-  getDocs,
-  getDoc,
-  doc,
-  deleteDoc,
-} from "firebase/firestore";
+import { auth, } from "../firebase/config";
 import { useUserContext } from "../context/UserContext";
+import saveUser from "../database/firestore";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -24,18 +17,31 @@ const LoginScreen = ({ navigation }) => {
   const [showPassword, setShowPassword] = useState(false);
   const { user, setUserContext } = useUserContext();
 
-  const handleLogin = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log("Utilisateur connecté avec succès!");
-        setUserContext(userCredential);
-        navigation.replace("MyStack");
-      })
-      .catch((error) => {
-        console.error(error);
-        console.log("Erreur lors de la connexion !");
+  const handleLogin = async () => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log("Utilisateur connecté avec succès!");
+      console.log(userCredential.user);
+      
+      // Obtenez l'objet user à partir de userCredential
+      const user = userCredential.user;
+      
+      // Enregistrez l'utilisateur dans la base de données
+      saveUser({
+        uid: user.uid,
+        email: user.email,
+        emailVerified: user.emailVerified,
+        // Ajoutez d'autres propriétés d'utilisateur si nécessaire
       });
+      
+      // Remplacez la ligne suivante par le code de navigation approprié
+      navigation.replace("MyStack");
+    } catch (error) {
+      console.error(error);
+      console.log("Erreur lors de la connexion !");
+    }
   };
+  
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
