@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -9,9 +9,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigation } from "@react-navigation/native";
-import { useLikedExercisesContext } from "../context/LikedExercicesContext";
+import {
+  LikedExercisesProvider,
+  useLikedExercisesContext,
+} from "../context/LikedExercicesContext";
+import { useUserContext } from "../context/UserContext";
 import DeleteFavoriteModal from "../modals/DeleteFavoriteModal";
 import { createCardScaleAnimation } from "../animation/CardAnimation";
+import SaveFavorite from "../database/SaveFavorite";
 
 const ExoCard = ({ id, name, url, category, exempleImg }) => {
   const navigation = useNavigation();
@@ -19,6 +24,7 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const isLiked = exercises.some((exercise) => exercise.id === id);
   const { cardScale, startAnimation } = createCardScaleAnimation();
+  const { user, setUserContext } = useUserContext();
 
   const navigateToDetails = () => {
     navigation.navigate("DetailsExo", {
@@ -40,44 +46,48 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
     }
   };
 
+  useEffect(() => {
+    SaveFavorite(user.uid, exercises);
+  }, [exercises]);
+
   return (
-  <Animated.View style={[styles.card, { transform: [{ scale: cardScale }] }]}>
-    <Image
-      source={{
-        uri: url,
-      }}
-      style={styles.backgroundImage}
-    />
-    <TouchableOpacity style={styles.cardContent} onPress={navigateToDetails}>
-      <Text style={styles.title}>{name}</Text>
-      <TouchableOpacity
-        onPress={toggleLike}
-        style={[
-          styles.favoriteButton,
-          isLiked
-            ? { backgroundColor: "#8b50de" }
-            : { backgroundColor: "#fff" },
-        ]}
-      >
-        <FontAwesomeIcon icon={faHeart} size={10} color="#FF5733" />
+    <Animated.View style={[styles.card, { transform: [{ scale: cardScale }] }]}>
+      <Image
+        source={{
+          uri: url,
+        }}
+        style={styles.backgroundImage}
+      />
+      <TouchableOpacity style={styles.cardContent} onPress={navigateToDetails}>
+        <Text style={styles.title}>{name}</Text>
+        <TouchableOpacity
+          onPress={toggleLike}
+          style={[
+            styles.favoriteButton,
+            isLiked
+              ? { backgroundColor: "#8b50de" }
+              : { backgroundColor: "#fff" },
+          ]}
+        >
+          <FontAwesomeIcon icon={faHeart} size={10} color="#FF5733" />
+        </TouchableOpacity>
       </TouchableOpacity>
-    </TouchableOpacity>
-    <DeleteFavoriteModal
-      visible={modalVisible}
-      onClose={() => {
-        setModalVisible(false);
-      }}
-      id={id}
-      onDelete={() => {
-        removeExercise(id);
-        setModalVisible(false);
-      }}
-      name={name}
-      url={url}
-      category={category}
-    />
-  </Animated.View>
-);
+      <DeleteFavoriteModal
+        visible={modalVisible}
+        onClose={() => {
+          setModalVisible(false);
+        }}
+        id={id}
+        onDelete={() => {
+          removeExercise(id);
+          setModalVisible(false);
+        }}
+        name={name}
+        url={url}
+        category={category}
+      />
+    </Animated.View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -85,7 +95,7 @@ const styles = StyleSheet.create({
     height: 120,
     width: "95%",
     marginVertical: 10,
- alignSelf: "center",
+    alignSelf: "center",
   },
   backgroundImage: {
     borderRadius: 40,

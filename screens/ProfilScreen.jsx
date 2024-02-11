@@ -6,7 +6,7 @@ const ProfilScreen = () => {
   const { user, setUserContext } = useUserContext();
   return (
     <View>
-      <Text></Text>
+      <Text>{user.uid}</Text>
     </View>
   )
 }

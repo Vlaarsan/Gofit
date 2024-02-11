@@ -9,7 +9,7 @@ import {
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth, } from "../firebase/config";
 import { useUserContext } from "../context/UserContext";
-import saveUser from "../database/firestore";
+import SaveUser from "../database/SaveUser";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -21,13 +21,13 @@ const LoginScreen = ({ navigation }) => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Utilisateur connecté avec succès!");
-      console.log(userCredential.user);
       
       // Obtenez l'objet user à partir de userCredential
       const user = userCredential.user;
+      setUserContext (user);
       
       // Enregistrez l'utilisateur dans la base de données
-      saveUser({
+      SaveUser({
         uid: user.uid,
         email: user.email,
         emailVerified: user.emailVerified,
