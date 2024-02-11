@@ -46,9 +46,6 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
     }
   };
 
-  useEffect(() => {
-    SaveFavorite(user.uid, exercises);
-  }, [exercises]);
 
   return (
     <Animated.View style={[styles.card, { transform: [{ scale: cardScale }] }]}>
