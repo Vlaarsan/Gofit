@@ -7,7 +7,7 @@ const LoadFavorites = async (user) => {
 
   try {
     // Référence au document de l'utilisateur spécifique
-    const userDocRef = doc(firestore, "users", user);
+    const userDocRef = doc(firestore, "users", user.uid);
 
     // Obtenez les données du document utilisateur
     const userDocSnap = await getDoc(userDocRef);
