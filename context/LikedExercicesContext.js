@@ -19,8 +19,11 @@ export const LikedExercisesProvider = ({ children }) => {
     );
   };
 
+
+
   const contextValue = {
     exercises,
+    setExercises,
     addExercise,
     removeExercise,
   };
