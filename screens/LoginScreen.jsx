@@ -19,6 +19,7 @@ const LoginScreen = ({navigation}) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("Utilisateur connecté avec succès!");
+        console.log(userCredential);
         navigation.replace("MyStack")
       })
       .catch((error) => {
