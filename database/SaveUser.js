@@ -20,4 +20,4 @@ const SaveUser = async (user) => {
   }
 };
 
-export default saveUser;
+export default SaveUser;
