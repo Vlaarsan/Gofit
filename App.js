@@ -8,6 +8,7 @@ import InsightScreen from "./screens/InsightScreen";
 import ProfilScreen from "./screens/ProfilScreen";
 import DetailsExo from "./components/DetailsExo";
 import { LikedExercisesProvider } from "./context/LikedExercicesContext";
+import { UserProvider } from "./context/UserContext";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignUpScreen";
 
@@ -53,14 +54,16 @@ const MyStack = () => {
 
 export default function App() {
   return (
-    <LikedExercisesProvider>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Signup" component={SignupScreen} />
-          <Stack.Screen name="MyStack" component={MyStack} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </LikedExercisesProvider>
+    <UserProvider>
+      <LikedExercisesProvider>
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Signup" component={SignupScreen} />
+            <Stack.Screen name="MyStack" component={MyStack} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </LikedExercisesProvider>
+    </UserProvider>
   );
 }

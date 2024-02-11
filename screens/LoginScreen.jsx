@@ -7,7 +7,15 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/config";
+import { auth, firestore } from "../firebase/config";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  getDoc,
+  doc,
+  deleteDoc,
+} from "firebase/firestore";
 
 
 const LoginScreen = ({navigation}) => {
