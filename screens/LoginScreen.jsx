@@ -16,22 +16,24 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore";
+import { useUserContext } from "../context/UserContext";
 
-
-const LoginScreen = ({navigation}) => {
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const { user, setUserContext } = useUserContext();
 
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("Utilisateur connecté avec succès!");
-        console.log(userCredential);
-        navigation.replace("MyStack")
+        setUserContext(userCredential);
+        navigation.replace("MyStack");
       })
       .catch((error) => {
         console.error(error);
+        console.log("Erreur lors de la connexion !");
       });
   };
 
@@ -72,9 +74,13 @@ const LoginScreen = ({navigation}) => {
         <Text style={styles.signupLink}>Mot de passe oublié ?</Text>
       </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => {navigation.navigate("Signup")}}>
-          <Text style={styles.signupLink}>S'inscrire</Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Signup");
+        }}
+      >
+        <Text style={styles.signupLink}>S'inscrire</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -124,8 +130,8 @@ const styles = StyleSheet.create({
   signupText: {
     marginTop: 20,
     marginBottom: 20,
-},
-signupLink: {
+  },
+  signupLink: {
     marginTop: 10,
     color: "blue",
     textDecorationLine: "underline",
