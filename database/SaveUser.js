@@ -1,5 +1,5 @@
 import { auth, firestore } from "../firebase/config";
-import { collection, doc, getDoc, setDoc } from "firebase/firestore";
+import { collection, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 
 const SaveUser = async (user) => {
   try {
@@ -11,21 +11,16 @@ const SaveUser = async (user) => {
     // Vérification de l'existence du document avant la sauvegarde
     const docSnapshot = await getDoc(userDocRef);
 
-    if (!docSnapshot.exists()) {
-      // Le document n'existe pas, on peut le créer
-      await setDoc(userDocRef, user);
+    await updateDoc(userDocRef, user);
 
-      console.log(
-        "Données enregistrées avec succès ! UID utilisé comme ID du document :",
-        user.uid
-      );
-    } else {
-      console.log("Document déjà présent dans la base de données");
-      await setDoc(userDocRef, user);
-    }
+    console.log(
+      "Données enregistrées avec succès ! UID utilisé comme ID du document :",
+      user.uid
+    );
   } catch (error) {
     console.error("Erreur lors de l'enregistrement des données : ", error);
   }
 };
 
 export default SaveUser;
+

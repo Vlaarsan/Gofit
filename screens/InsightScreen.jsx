@@ -5,6 +5,7 @@ import { useUserContext } from "../context/UserContext";
 import ExoCard from "../components/ExoCard";
 import SaveFavorite from "../database/SaveFavorite";
 import LoadFavorites from "../database/LoadFavorite";
+import LoadUser from "../database/LoadUser";
 
 const InsightScreen = () => {
   const { exercises, setExercises } = useLikedExercisesContext();
@@ -19,6 +20,7 @@ const InsightScreen = () => {
 
   useEffect(() => {
     LoadFavorites(user, setExercises, setSavable);
+    LoadUser(user, setUserContext);
   }, []);
 
   return (

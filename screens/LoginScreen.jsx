@@ -31,7 +31,6 @@ const LoginScreen = ({ navigation }) => {
         uid: user.uid,
         email: user.email,
         emailVerified: user.emailVerified,
-        displayName: "Anonymous",
         // Ajoutez d'autres propriétés d'utilisateur si nécessaire
       });
       
