@@ -1,13 +1,11 @@
-import { auth, firestore } from "../firebase/config";
-import { collection, doc, getDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
+import { firestore } from "../firebase/config";
 import { useLikedExercisesContext } from "../context/LikedExercicesContext";
 
-const LoadFavorites = async (user) => {
-  const { exercises, setExercices } = useLikedExercisesContext();
-
+const LoadFavorites = async (user, setExercices, setSavable) => {
   try {
     // Référence au document de l'utilisateur spécifique
-    const userDocRef = doc(firestore, "users", user.uid);
+    const userDocRef = doc(firestore, "favorite", user.uid);
 
     // Obtenez les données du document utilisateur
     const userDocSnap = await getDoc(userDocRef);
@@ -16,6 +14,7 @@ const LoadFavorites = async (user) => {
       // Récupérez les favoris de l'utilisateur
       const favorites = userDocSnap.data().favorite;
       setExercices(favorites);
+      setSavable(true);
 
       console.log("Favoris chargés avec succès !");
     } else {

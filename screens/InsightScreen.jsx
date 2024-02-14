@@ -1,24 +1,25 @@
-import React, { useEffect, useRef } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-import { useLikedExercisesContext } from '../context/LikedExercicesContext';
-import { useUserContext } from '../context/UserContext';
-import ExoCard from '../components/ExoCard';
-import SaveFavorite from '../database/SaveFavorite';
-
-
+import React, { useEffect, useState } from "react";
+import { StyleSheet, Text, View, FlatList } from "react-native";
+import { useLikedExercisesContext } from "../context/LikedExercicesContext";
+import { useUserContext } from "../context/UserContext";
+import ExoCard from "../components/ExoCard";
+import SaveFavorite from "../database/SaveFavorite";
+import LoadFavorites from "../database/LoadFavorite";
 
 const InsightScreen = () => {
-  const { exercises } = useLikedExercisesContext();
+  const { exercises, setExercises } = useLikedExercisesContext();
   const { user, setUserContext } = useUserContext();
-  const previousExercises = useRef([]);
+  const [savable, setSavable] = useState(false);
 
   useEffect(() => {
-    // Vérifie si le tableau n'était pas vide auparavant ou s'il contient des éléments actuellement
-    if (previousExercises.current.length === 0 || exercises.length > 0) {
+    if (savable) {
       SaveFavorite(user, exercises);
     }
-  }, [user, exercises]);
-  
+  }, [exercises]);
+
+  useEffect(() => {
+    LoadFavorites(user, setExercises, setSavable);
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -44,14 +45,14 @@ const InsightScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     padding: 16,
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 16,
-    textAlign: 'center',
+    textAlign: "center",
   },
   flatListContainer: {
     paddingBottom: 16,
