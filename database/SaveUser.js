@@ -20,7 +20,7 @@ const SaveUser = async (user) => {
         user.uid
       );
     } else {
-      console.log("Document déjà présent");
+      console.log("Document déjà présent dans la base de données");
     }
   } catch (error) {
     console.error("Erreur lors de l'enregistrement des données : ", error);

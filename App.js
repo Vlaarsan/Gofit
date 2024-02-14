@@ -34,10 +34,11 @@ const TabNavigator = () => {
           fontSize: 10,
         },
       }}
+      initialRouteName="Exercices"
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Calendrier" component={HomeScreen} />
+      <Tab.Screen name="Exercices" component={DiscoverScreen} />
       <Tab.Screen name="Favoris" component={InsightScreen} />
-      <Tab.Screen name="Découverte" component={DiscoverScreen} />
       <Tab.Screen name="Profil" component={ProfilScreen} />
     </Tab.Navigator>
   );

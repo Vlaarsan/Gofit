@@ -16,13 +16,13 @@ const SaveFavorite = async (user, newFavorite) => {
       await updateDoc(userDocRef, {
         favorite: newFavorite,
       });
-      console.log("Champ 'favorite' mis à jour avec succès !");
+      console.log("Favoris enregistrés avec succès en base de données !");
     } else {
       // Si le document n'existe pas, utilise setDoc pour créer le document avec le champ favorite
       await setDoc(userDocRef, {
         favorite: newFavorite,
       });
-      console.log("Champ 'favorite' ajouté avec succès !");
+      console.log("Favoris enregistrés avec succès en base de données !");
     }
   } catch (error) {
     console.error("Erreur lors de l'enregistrement des données : ", error);
