@@ -11,15 +11,15 @@ const InsightScreen = () => {
   const { user, setUserContext } = useUserContext();
   const [savable, setSavable] = useState(false);
 
-  // useEffect(() => {
-  //   if (savable) {
-  //     SaveFavorite(user, exercises);
-  //   }
-  // }, [exercises]);
+  useEffect(() => {
+    if (savable) {
+      SaveFavorite(user, exercises);
+    }
+  }, [exercises]);
 
-  // useEffect(() => {
-  //   LoadFavorites(user, setExercises, setSavable);
-  // }, []);
+  useEffect(() => {
+    LoadFavorites(user, setExercises, setSavable);
+  }, []);
 
   return (
     <View style={styles.container}>
