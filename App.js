@@ -23,7 +23,7 @@ const TabNavigator = () => {
         swipeEnabled: true,
         tabBarStyle: {
           backgroundColor: "#8b50de",
-          marginTop: 55,
+          marginTop: 35,
         },
         tabBarIndicatorStyle: {
           backgroundColor: "#ffffff",
