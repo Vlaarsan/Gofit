@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import LogoApp from "../components/LogoApp";
 import { Calendar, LocaleConfig } from "react-native-calendars";
+import { useUserContext } from "../context/UserContext";
 
 LocaleConfig.locales["fr"] = {
   monthNames: [
@@ -48,6 +49,8 @@ LocaleConfig.defaultLocale = "fr";
 
 const HomeScreen = () => {
   const [selected, setSelected] = useState([]);
+  const { user, setUserContext } = useUserContext();
+
   const handleDayPress = (day) => {
     // Vérifie si le jour est déjà sélectionné
     const isSelected = selected.includes(day.dateString);
@@ -57,7 +60,7 @@ const HomeScreen = () => {
       setSelected((prevSelected) =>
         prevSelected.filter((selectedDay) => selectedDay !== day.dateString)
       );
-      console.log('supprimé');
+      console.log("supprimé");
     } else {
       // Sinon, ajoute-le à la liste
       setSelected((prevSelected) => [...prevSelected, day.dateString]);
@@ -67,9 +70,9 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <LogoApp title={"Gofit"} />
-      <Text style={styles.title}>Salut user</Text>
+      <Text style={styles.title}>Salut {user.displayName}</Text>
       <Text style={styles.message}>
-        Pense à noter les jours ou tu t'es entrainé  💪
+        Pense à noter les jours ou tu t'es entrainé 💪
       </Text>
       <Calendar
         onDayPress={handleDayPress}

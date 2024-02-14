@@ -21,6 +21,7 @@ const SaveUser = async (user) => {
       );
     } else {
       console.log("Document déjà présent dans la base de données");
+      await setDoc(userDocRef, user);
     }
   } catch (error) {
     console.error("Erreur lors de l'enregistrement des données : ", error);
