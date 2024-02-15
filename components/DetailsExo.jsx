@@ -1,16 +1,19 @@
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import React, { useState, useEffect } from "react";
-import { useNavigation } from "@react-navigation/native";
+import React, { useState } from "react";
 import {
+  ScrollView,
   StyleSheet,
   Text,
   Image,
   TouchableOpacity,
-  ScrollView,
   Button,
-  TextInput,
   View,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import {
+  TextInput,
+  Button as PaperButton,
+} from "react-native-paper";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const DetailsExo = ({ route }) => {
@@ -27,15 +30,19 @@ const DetailsExo = ({ route }) => {
   } = route.params;
 
   const navigation = useNavigation();
-
   const [newAverageWeight, setNewAverageWeight] = useState(averageWeight);
   const [newMaxWeight, setNewMaxWeight] = useState(maxWeight);
+  const [textInputVisible, setTextInputVisible] = useState(true); // État pour contrôler la visibilité des TextInput
+
+  const toggleTextInputVisibility = () => {
+    setTextInputVisible(!textInputVisible);
+  };
 
   const handleSaveWeights = () => {
     setAverageWeight(newAverageWeight);
     setMaxWeight(newMaxWeight);
-    
-    navigation.navigate('DetailsExo', {
+    navigation.navigate("DetailsExo", {
+      // Utilisez la méthode navigate pour rafraîchir la page avec les nouvelles valeurs
       id: id,
       name: name,
       url: url,
@@ -47,14 +54,10 @@ const DetailsExo = ({ route }) => {
       setMaxWeight: setMaxWeight,
     });
   };
-  
-
-
 
   return (
     <ScrollView style={styles.container}>
       <Image source={{ uri: url }} style={styles.image} />
-
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}
@@ -63,34 +66,55 @@ const DetailsExo = ({ route }) => {
       </TouchableOpacity>
       <View style={styles.containerKg}>
         <Text style={styles.title}>Informations de poids</Text>
-        <View style={styles.inputContainer}>
-          <Text style={styles.label}>
-            Ton poids habituel 👉 {averageWeight} kg
+        <View style={styles.kgInfoContainer}>
+          <Text style={styles.TextInfoKg}>
+            Ton poids habituel {"     "} 👉  {"     " + averageWeight} kg
           </Text>
         </View>
-        <View style={styles.inputContainer}>
-          <Text style={styles.label}>Ton poids maximal 👉 {maxWeight} kg </Text>
+        <View style={styles.kgInfoContainer}>
+          <Text style={styles.TextInfoKg}>
+            Ton poids maximal {"    "} 👉  {"     " + maxWeight} kg
+          </Text>
         </View>
       </View>
       <Text style={styles.exerciseName}>{name}</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Nouveau poids moyen"
-        keyboardType="numeric"
-        value={newAverageWeight.toString()} // Assurez-vous de convertir la valeur en chaîne
-        onChangeText={(text) => setNewAverageWeight(text)} // Mettre à jour la nouvelle valeur du poids moyen
+      {textInputVisible && (
+        <>
+          <TextInput
+            label="Nouveau poids habituel"
+            keyboardType="numeric"
+            value={newAverageWeight.toString()}
+            onChangeText={(text) => setNewAverageWeight(text)}
+            mode="outlined"
+            textColor="#8b50de"
+            selectTextOnFocus={true}
+            style={styles.input}
+            />
+          <TextInput
+            label="Nouveau poids maximal"
+            keyboardType="numeric"
+            value={newMaxWeight.toString()}
+            onChangeText={(text) => setNewMaxWeight(text)}
+            mode="outlined"
+            textColor="#8b50de"
+            selectTextOnFocus={true}
+            style={styles.input}
+          />
+        </>
+      )}
+        {textInputVisible && (
+          <PaperButton
+            mode="contained"
+            onPress={handleSaveWeights}
+            style={[styles.saveButton, { backgroundColor: "#8b50de" }]}
+          >
+            Enregistrer
+          </PaperButton>
+        )}
+      <Button
+        title={textInputVisible ? "Cacher" : "Changer mes poids"}
+        onPress={toggleTextInputVisibility}
       />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Nouveau poids maximal"
-        keyboardType="numeric"
-        value={newMaxWeight.toString()} // Assurez-vous de convertir la valeur en chaîne
-        onChangeText={(text) => setNewMaxWeight(text)} // Mettre à jour la nouvelle valeur du poids maximal
-      />
-
-      <Button title="Enregistrer" onPress={handleSaveWeights} />
-
       <Image source={{ uri: exempleImg }} style={styles.exempleImage} />
     </ScrollView>
   );
@@ -139,14 +163,27 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     textAlign: "center",
   },
-  inputContainer: {
+  kgInfoContainer: {
     marginBottom: 10,
     marginLeft: 35,
   },
-  label: {
-    fontSize: 16,
+  TextInfoKg: {
+    fontSize: 15,
     fontWeight: "bold",
     marginRight: 10,
+  },
+  input: {
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    backgroundColor: "#fff",
+    alignContent: "center",
+  },
+  saveButton: {
+    marginHorizontal: 20,
+    marginTop: 10,
+    marginBottom: 20,
+    backgroundColor: "#8b50de",
   },
 });
 
