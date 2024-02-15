@@ -44,7 +44,7 @@ const DetailsExo = ({ route }) => {
   const handleSaveWeights = () => {
     setAverageWeight(newAverageWeight);
     setMaxWeight(newMaxWeight);
-    // SaveWeight(user, id, averageWeight, maxWeight)
+    SaveWeight(user, id, name, newAverageWeight, newMaxWeight)
     navigation.navigate("DetailsExo", {
       // Utilisez la méthode navigate pour rafraîchir la page avec les nouvelles valeurs
       id: id,
