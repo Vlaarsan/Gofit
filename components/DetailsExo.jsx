@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ScrollView,
   StyleSheet,
@@ -9,14 +9,12 @@ import {
   View,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import {
-  TextInput,
-  Button as PaperButton,
-} from "react-native-paper";
+import { TextInput, Button as PaperButton } from "react-native-paper";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import SaveWeight from "../database/SaveWeight";
 import { useUserContext } from "../context/UserContext";
+import LoadWeight from "../database/LoadWeight";
 
 const DetailsExo = ({ route }) => {
   const {
@@ -31,11 +29,26 @@ const DetailsExo = ({ route }) => {
     setMaxWeight,
   } = route.params;
 
+
+
+
   const navigation = useNavigation();
   const { user, setUserContext } = useUserContext();
   const [newAverageWeight, setNewAverageWeight] = useState(averageWeight);
   const [newMaxWeight, setNewMaxWeight] = useState(maxWeight);
   const [textInputVisible, setTextInputVisible] = useState(false);
+
+  useEffect(() => {
+    loadExerciseWeight();
+  }, [])
+
+  useEffect(() => {
+    reload();
+  
+
+  }, [newAverageWeight, newMaxWeight])
+  
+ 
 
   const toggleTextInputVisibility = () => {
     setTextInputVisible(!textInputVisible);
@@ -44,20 +57,41 @@ const DetailsExo = ({ route }) => {
   const handleSaveWeights = () => {
     setAverageWeight(newAverageWeight);
     setMaxWeight(newMaxWeight);
-    SaveWeight(user, id, name, newAverageWeight, newMaxWeight)
-    navigation.navigate("DetailsExo", {
-      // Utilisez la méthode navigate pour rafraîchir la page avec les nouvelles valeurs
-      id: id,
-      name: name,
-      url: url,
-      category: category,
-      exempleImg: exempleImg,
-      averageWeight: newAverageWeight,
-      maxWeight: newMaxWeight,
-      setAverageWeight: setAverageWeight,
-      setMaxWeight: setMaxWeight,
-    });
+    SaveWeight(user, id, name, newAverageWeight, newMaxWeight);
+    reload();
   };
+
+  const loadExerciseWeight = async () => {
+    try {
+      // Chargez les poids en fonction de l'ID de l'utilisateur et de l'ID de l'exercice
+      const weight = await LoadWeight(user, id);
+
+      // Mettez à jour l'état avec les poids de l'exercice
+      setNewAverageWeight(weight?.averageWeight || 0);
+      setNewMaxWeight(weight?.maxWeight || 0);
+    } catch (error) {
+      console.error(
+        "Erreur lors du chargement des poids de l'exercice :",
+        error
+      );
+    } 
+  ;};
+
+
+const reload = () => {
+  navigation.navigate("DetailsExo", {
+    id: id,
+    name: name,
+    url: url,
+    category: category,
+    exempleImg: exempleImg,
+    averageWeight: newAverageWeight,
+    maxWeight: newMaxWeight,
+    setAverageWeight: setAverageWeight,
+    setMaxWeight: setMaxWeight,
+  });
+};
+
 
   return (
     <ScrollView style={styles.container}>
@@ -72,12 +106,12 @@ const DetailsExo = ({ route }) => {
         <Text style={styles.title}>Informations de poids</Text>
         <View style={styles.kgInfoContainer}>
           <Text style={styles.TextInfoKg}>
-            Ton poids habituel {"     "} 👉  {"     " + averageWeight} kg
+            Ton poids habituel {"     "} 👉 {"     " + averageWeight} kg
           </Text>
         </View>
         <View style={styles.kgInfoContainer}>
           <Text style={styles.TextInfoKg}>
-            Ton poids maximal {"    "} 👉  {"     " + maxWeight} kg
+            Ton poids maximal {"    "} 👉 {"     " + maxWeight} kg
           </Text>
         </View>
       </View>
@@ -93,7 +127,7 @@ const DetailsExo = ({ route }) => {
             textColor="#8b50de"
             selectTextOnFocus={true}
             style={styles.input}
-            />
+          />
           <TextInput
             label="Nouveau poids maximal"
             keyboardType="numeric"
@@ -106,15 +140,15 @@ const DetailsExo = ({ route }) => {
           />
         </>
       )}
-        {textInputVisible && (
-          <PaperButton
-            mode="contained"
-            onPress={handleSaveWeights}
-            style={[styles.saveButton, { backgroundColor: "#8b50de" }]}
-          >
-            Enregistrer
-          </PaperButton>
-        )}
+      {textInputVisible && (
+        <PaperButton
+          mode="contained"
+          onPress={handleSaveWeights}
+          style={[styles.saveButton, { backgroundColor: "#8b50de" }]}
+        >
+          Enregistrer
+        </PaperButton>
+      )}
       <Button
         title={textInputVisible ? "Cacher" : "Changer mes poids"}
         onPress={toggleTextInputVisibility}
