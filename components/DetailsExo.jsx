@@ -103,15 +103,15 @@ const reload = () => {
         <FontAwesomeIcon icon={faArrowLeft} size={25} color="#8b50de" />
       </TouchableOpacity>
       <View style={styles.containerKg}>
-        <Text style={styles.title}>Informations de poids</Text>
+        <Text style={styles.title}>Combien tu soulèves ? 🏋️</Text>
         <View style={styles.kgInfoContainer}>
           <Text style={styles.TextInfoKg}>
-            Ton poids habituel {"     "} 👉 {"     " + averageWeight} kg
+            Poids habituel {"     "} 👉 {"     " + averageWeight} kg
           </Text>
         </View>
         <View style={styles.kgInfoContainer}>
           <Text style={styles.TextInfoKg}>
-            Ton poids maximal {"    "} 👉 {"     " + maxWeight} kg
+            Poids maximal {"    "} 👉 {"     " + maxWeight} kg
           </Text>
         </View>
       </View>
@@ -190,12 +190,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#8b50de",
     margin: 20,
     padding: 10,
-    borderRadius: 75,
+    borderRadius: 50,
     width: "80%",
     alignSelf: "center",
   },
   title: {
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: "bold",
     marginTop: 5,
     marginBottom: 15,
@@ -206,7 +206,8 @@ const styles = StyleSheet.create({
     marginLeft: 35,
   },
   TextInfoKg: {
-    fontSize: 15,
+    color: "white",
+    fontSize: 14,
     fontWeight: "bold",
     marginRight: 10,
   },
