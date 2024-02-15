@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 import React, { useState } from 'react';
 import { useUserContext } from '../context/UserContext';
 import SaveUser from '../database/SaveUser';
+import LogoApp from '../components/LogoApp';
 
 const ProfilScreen = () => {
   const { user, setUserContext } = useUserContext();
@@ -27,7 +28,10 @@ const ProfilScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profil</Text>
+      <View style={styles.logoContainer}>
+      <LogoApp
+      title={"Profil"}/>
+      </View >
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Pseudo : </Text>
         <TextInput
@@ -51,6 +55,9 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
+  logoContainer: {
+    marginBottom: 30
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -66,11 +73,10 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   textInput: {
-    backgroundColor: '#fff',
     padding: 10,
     borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#ccc',
+    borderBottomWidth: 1,
+    borderColor: '#8b50de',
     flex: 1,
     textAlign: "center",
   },

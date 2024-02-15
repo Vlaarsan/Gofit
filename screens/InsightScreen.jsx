@@ -6,6 +6,7 @@ import ExoCard from "../components/ExoCard";
 import SaveFavorite from "../database/SaveFavorite";
 import LoadFavorites from "../database/LoadFavorite";
 import LoadUser from "../database/LoadUser";
+import LogoApp from "../components/LogoApp";
 
 const InsightScreen = () => {
   const { exercises, setExercises } = useLikedExercisesContext();
@@ -25,7 +26,10 @@ const InsightScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Mes favoris</Text>
+      <View style={styles.logoContainer}>
+      <LogoApp
+      title={"Mes Favoris"}/>
+      </View>
       {exercises.length > 0 ? (
         <FlatList
           data={exercises}
@@ -57,6 +61,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     padding: 16,
+  },
+  logoContainer: {
+    marginBottom: 30
   },
   title: {
     fontSize: 24,

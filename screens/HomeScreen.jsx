@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import LogoApp from "../components/LogoApp";
 import { Calendar, LocaleConfig } from "react-native-calendars";
 import { useUserContext } from "../context/UserContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 LocaleConfig.locales["fr"] = {
   monthNames: [
@@ -50,6 +51,38 @@ LocaleConfig.defaultLocale = "fr";
 const HomeScreen = () => {
   const [selected, setSelected] = useState([]);
   const { user, setUserContext } = useUserContext();
+
+  useEffect(() => {
+    // Charger la sauvegarde lors du montage du composant
+    loadSelectedDates();
+  }, []); // Le tableau vide en second argument assure que cela ne s'exécute qu'une seule fois au montage
+
+  useEffect(() => {
+    // Sauvegarder les dates sélectionnées chaque fois que la variable selected est mise à jour
+    saveSelectedDates();
+  }, [selected]); // Cela se déclenchera à chaque changement de selected
+
+  const loadSelectedDates = async () => {
+    try {
+      const savedDates = await AsyncStorage.getItem('selectedDates');
+      if (savedDates !== null) {
+        // Convertir la chaîne JSON en tableau et mettre à jour l'état
+        setSelected(JSON.parse(savedDates));
+      }
+    } catch (error) {
+      console.error('Erreur lors du chargement des dates sélectionnées:', error);
+    }
+  };
+
+  const saveSelectedDates = async () => {
+    try {
+      // Convertir le tableau en chaîne JSON et sauvegarder
+      await AsyncStorage.setItem('selectedDates', JSON.stringify(selected));
+    } catch (error) {
+      console.error('Erreur lors de la sauvegarde des dates sélectionnées:', error);
+    }
+  };
+
 
   const handleDayPress = (day) => {
     // Vérifie si le jour est déjà sélectionné
