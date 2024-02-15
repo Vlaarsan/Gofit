@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import {
   StyleSheet,
   Text,
@@ -7,9 +7,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { auth, } from "../firebase/config";
+import { auth } from "../firebase/config";
 import { useUserContext } from "../context/UserContext";
 import SaveUser from "../database/SaveUser";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -17,15 +18,35 @@ const LoginScreen = ({ navigation }) => {
   const [showPassword, setShowPassword] = useState(false);
   const { user, setUserContext } = useUserContext();
 
+  useEffect(() => {
+    const loadUserData = async () => {
+      try {
+        const savedEmail = await AsyncStorage.getItem('email');
+        const savedPassword = await AsyncStorage.getItem('password');
+        if (savedEmail && savedPassword) {
+          setEmail(savedEmail);
+          setPassword(savedPassword);
+        }
+      } catch (error) {
+        console.error('Error loading user data:', error);
+      }
+    };
+    loadUserData();
+  }, []);
+
   const handleLogin = async () => {
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       console.log("Utilisateur connecté avec succès!");
-      
+
       // Obtenez l'objet user à partir de userCredential
       const user = userCredential.user;
-      setUserContext (user);
-      
+      setUserContext(user);
+
       // Enregistrez l'utilisateur dans la base de données
       SaveUser({
         uid: user.uid,
@@ -33,7 +54,11 @@ const LoginScreen = ({ navigation }) => {
         emailVerified: user.emailVerified,
         // Ajoutez d'autres propriétés d'utilisateur si nécessaire
       });
-      
+
+      // Enregistrez les valeurs de l'e-mail et du mot de passe dans AsyncStorage
+      await AsyncStorage.setItem("email", email);
+      await AsyncStorage.setItem("password", password);
+
       // Remplacez la ligne suivante par le code de navigation approprié
       navigation.replace("MyStack");
     } catch (error) {
@@ -41,7 +66,6 @@ const LoginScreen = ({ navigation }) => {
       console.log("Erreur lors de la connexion !");
     }
   };
-  
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
