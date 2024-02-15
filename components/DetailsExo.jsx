@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   StyleSheet,
@@ -7,12 +7,26 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
+  Button,
 } from "react-native";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import WeightInfos from "./WeightInfos";
 
 const DetailsExo = ({ route }) => {
-  const { name, url, category, exempleImg, isLiked } = route.params;
+  const {
+    id,
+    name,
+    url,
+    category,
+    exempleImg,
+    averageWeight,
+    maxWeight,
+    setAverageWeight,
+    setMaxWeight,
+  } = route.params;
+
   const navigation = useNavigation();
+
   return (
     <ScrollView style={styles.container}>
       <Image source={{ uri: url }} style={styles.image} />
@@ -23,6 +37,9 @@ const DetailsExo = ({ route }) => {
       >
         <FontAwesomeIcon icon={faArrowLeft} size={25} color="#8b50de" />
       </TouchableOpacity>
+      <WeightInfos
+      averageWeight={averageWeight}
+      maxWeight={maxWeight}/>
       <Text style={styles.exerciseName}>{name}</Text>
       <Image source={{ uri: exempleImg }} style={styles.exempleImage} />
     </ScrollView>
@@ -48,7 +65,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: "absolute",
-    top: 30,
+    top: 40,
     left: 20,
     padding: 10,
   },
@@ -57,7 +74,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
   },
-
 });
 
 export default DetailsExo;

@@ -18,13 +18,15 @@ import DeleteFavoriteModal from "../modals/DeleteFavoriteModal";
 import { createCardScaleAnimation } from "../animation/CardAnimation";
 import SaveFavorite from "../database/SaveFavorite";
 
-const ExoCard = ({ id, name, url, category, exempleImg }) => {
+const ExoCard = ({ id, name, url, category, exempleImg, }) => {
   const navigation = useNavigation();
   const { exercises, addExercise, removeExercise } = useLikedExercisesContext();
   const [modalVisible, setModalVisible] = useState(false);
   const isLiked = exercises.some((exercise) => exercise.id === id);
   const { cardScale, startAnimation } = createCardScaleAnimation();
   const { user, setUserContext } = useUserContext();
+  const [averageWeight, setAverageWeight] = useState(0)
+  const [maxWeight, setMaxWeight] = useState(0)
 
   const navigateToDetails = () => {
     navigation.navigate("DetailsExo", {
@@ -33,7 +35,10 @@ const ExoCard = ({ id, name, url, category, exempleImg }) => {
       url,
       category,
       exempleImg,
-      isLiked,
+      averageWeight,
+      setAverageWeight,
+      maxWeight,
+      setMaxWeight,
     });
   };
 
