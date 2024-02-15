@@ -30,15 +30,15 @@ const ExoCard = ({ id, name, url, category, exempleImg, }) => {
 
   const navigateToDetails = () => {
     navigation.navigate("DetailsExo", {
-      id,
-      name,
-      url,
-      category,
-      exempleImg,
-      averageWeight,
-      setAverageWeight,
-      maxWeight,
-      setMaxWeight,
+      id: id,
+      name: name,
+      url: url,
+      category: category,
+      exempleImg: exempleImg,
+      averageWeight: averageWeight,
+      maxWeight: maxWeight,
+      setAverageWeight: setAverageWeight,
+      setMaxWeight: setMaxWeight,
     });
   };
 

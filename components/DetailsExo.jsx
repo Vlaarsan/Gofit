@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import {
   StyleSheet,
@@ -8,9 +8,10 @@ import {
   TouchableOpacity,
   ScrollView,
   Button,
+  TextInput,
+  View,
 } from "react-native";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import WeightInfos from "./WeightInfos";
 
 const DetailsExo = ({ route }) => {
   const {
@@ -27,6 +28,29 @@ const DetailsExo = ({ route }) => {
 
   const navigation = useNavigation();
 
+  const [newAverageWeight, setNewAverageWeight] = useState(averageWeight);
+  const [newMaxWeight, setNewMaxWeight] = useState(maxWeight);
+
+  const handleSaveWeights = () => {
+    setAverageWeight(newAverageWeight);
+    setMaxWeight(newMaxWeight);
+    
+    navigation.navigate('DetailsExo', {
+      id: id,
+      name: name,
+      url: url,
+      category: category,
+      exempleImg: exempleImg,
+      averageWeight: newAverageWeight,
+      maxWeight: newMaxWeight,
+      setAverageWeight: setAverageWeight,
+      setMaxWeight: setMaxWeight,
+    });
+  };
+  
+
+
+
   return (
     <ScrollView style={styles.container}>
       <Image source={{ uri: url }} style={styles.image} />
@@ -37,10 +61,36 @@ const DetailsExo = ({ route }) => {
       >
         <FontAwesomeIcon icon={faArrowLeft} size={25} color="#8b50de" />
       </TouchableOpacity>
-      <WeightInfos
-      averageWeight={averageWeight}
-      maxWeight={maxWeight}/>
+      <View style={styles.containerKg}>
+        <Text style={styles.title}>Informations de poids</Text>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>
+            Ton poids habituel 👉 {averageWeight} kg
+          </Text>
+        </View>
+        <View style={styles.inputContainer}>
+          <Text style={styles.label}>Ton poids maximal 👉 {maxWeight} kg </Text>
+        </View>
+      </View>
       <Text style={styles.exerciseName}>{name}</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Nouveau poids moyen"
+        keyboardType="numeric"
+        value={newAverageWeight.toString()} // Assurez-vous de convertir la valeur en chaîne
+        onChangeText={(text) => setNewAverageWeight(text)} // Mettre à jour la nouvelle valeur du poids moyen
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Nouveau poids maximal"
+        keyboardType="numeric"
+        value={newMaxWeight.toString()} // Assurez-vous de convertir la valeur en chaîne
+        onChangeText={(text) => setNewMaxWeight(text)} // Mettre à jour la nouvelle valeur du poids maximal
+      />
+
+      <Button title="Enregistrer" onPress={handleSaveWeights} />
+
       <Image source={{ uri: exempleImg }} style={styles.exempleImage} />
     </ScrollView>
   );
@@ -73,6 +123,30 @@ const styles = StyleSheet.create({
     marginTop: 25,
     width: "100%",
     height: 300,
+  },
+  containerKg: {
+    backgroundColor: "#8b50de",
+    margin: 20,
+    padding: 10,
+    borderRadius: 75,
+    width: "80%",
+    alignSelf: "center",
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginTop: 5,
+    marginBottom: 15,
+    textAlign: "center",
+  },
+  inputContainer: {
+    marginBottom: 10,
+    marginLeft: 35,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginRight: 10,
   },
 });
 
