@@ -15,6 +15,8 @@ import {
 } from "react-native-paper";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import SaveWeight from "../database/SaveWeight";
+import { useUserContext } from "../context/UserContext";
 
 const DetailsExo = ({ route }) => {
   const {
@@ -30,9 +32,10 @@ const DetailsExo = ({ route }) => {
   } = route.params;
 
   const navigation = useNavigation();
+  const { user, setUserContext } = useUserContext();
   const [newAverageWeight, setNewAverageWeight] = useState(averageWeight);
   const [newMaxWeight, setNewMaxWeight] = useState(maxWeight);
-  const [textInputVisible, setTextInputVisible] = useState(true); // État pour contrôler la visibilité des TextInput
+  const [textInputVisible, setTextInputVisible] = useState(false);
 
   const toggleTextInputVisibility = () => {
     setTextInputVisible(!textInputVisible);
@@ -41,6 +44,7 @@ const DetailsExo = ({ route }) => {
   const handleSaveWeights = () => {
     setAverageWeight(newAverageWeight);
     setMaxWeight(newMaxWeight);
+    // SaveWeight(user, id, averageWeight, maxWeight)
     navigation.navigate("DetailsExo", {
       // Utilisez la méthode navigate pour rafraîchir la page avec les nouvelles valeurs
       id: id,

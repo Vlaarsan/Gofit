@@ -8,9 +8,6 @@ const SaveUser = async (user) => {
     // Utilisation de doc avec spécification de l'ID du document (utilisation de l'uid comme ID)
     const userDocRef = doc(userCollection, user.uid);
 
-    // Vérification de l'existence du document avant la sauvegarde
-    const docSnapshot = await getDoc(userDocRef);
-
     await updateDoc(userDocRef, user);
 
     console.log(
