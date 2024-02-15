@@ -105,7 +105,7 @@ const HomeScreen = () => {
       <LogoApp title={"Gofit"} />
       <Text style={styles.title}>Salut {user.displayName}</Text>
       <Text style={styles.message}>
-        Pense à noter les jours ou tu t'es entrainé 💪
+        Pense à noter les jours où tu t'es entrainé 💪
       </Text>
       <Calendar
         onDayPress={handleDayPress}
