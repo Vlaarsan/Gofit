@@ -70,6 +70,7 @@ const DiscoverScreen = () => {
             name={item.name}
             url={item.url}
             category={item.category}
+            material={item.material}
             exempleImg={item.exempleImg}
             liked={item.liked}
           />

@@ -19,7 +19,7 @@ export const exoData = [
   },
   {
     id: "2",
-    name: "Squat (barre)",
+    name: "Squat barre",
     url: "https://www.espace-musculation.com/uploads/2019/04/bienfait-squat.jpg",
     category: "Fessier",
     material : "Barre", 

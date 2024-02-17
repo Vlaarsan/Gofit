@@ -18,7 +18,7 @@ import DeleteFavoriteModal from "../modals/DeleteFavoriteModal";
 import { createCardScaleAnimation } from "../animation/CardAnimation";
 import SaveFavorite from "../database/SaveFavorite";
 
-const ExoCard = ({ id, name, url, category, exempleImg, }) => {
+const ExoCard = ({ id, name, url, category, exempleImg, material }) => {
   const navigation = useNavigation();
   const { exercises, addExercise, removeExercise } = useLikedExercisesContext();
   const [modalVisible, setModalVisible] = useState(false);
@@ -34,6 +34,7 @@ const ExoCard = ({ id, name, url, category, exempleImg, }) => {
       name: name,
       url: url,
       category: category,
+      material: material,
       exempleImg: exempleImg,
       averageWeight: averageWeight,
       maxWeight: maxWeight,
@@ -46,7 +47,7 @@ const ExoCard = ({ id, name, url, category, exempleImg, }) => {
     if (isLiked) {
       setModalVisible(!modalVisible);
     } else {
-      addExercise({ id, name, url, category, exempleImg });
+      addExercise({ id, name, url, category, exempleImg, material });
       startAnimation();
     }
   };
