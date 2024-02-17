@@ -3,6 +3,7 @@ import {
   View,
   TouchableOpacity,
   FlatList,
+  ScrollView,
 } from "react-native";
 import React, { useState } from "react";
 import LogoApp from "../components/LogoApp";
@@ -12,15 +13,20 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import ExoCard from "../components/ExoCard";
 import { exoData } from "../constants/Data";
 import CategoryButton from "../components/CategoryButton";
+import { Muscles, Materials } from "../constants/Categories";
 
 const DiscoverScreen = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedMaterials, setSelectedMaterials] = useState([]);
 
   const filterByCategory = (item) => {
-    if (selectedCategories.length === 0) {
+    if (selectedCategories.length === 0 && selectedMaterials.length === 0) {
       return true;
     }
-    return selectedCategories.includes(item.category);
+    return (
+      (selectedCategories.length === 0 || selectedCategories.includes(item.category)) &&
+      (selectedMaterials.length === 0 || selectedMaterials.includes(item.material))
+    );
   };
 
   const toggleCategory = (category) => {
@@ -35,6 +41,16 @@ const DiscoverScreen = () => {
     }
   };
 
+  const toggleMaterial = (material) => {
+    if (selectedMaterials.includes(material)) {
+      setSelectedMaterials(
+        selectedMaterials.filter((mat) => mat !== material)
+      );
+    } else {
+      setSelectedMaterials([...selectedMaterials, material]);
+    }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
@@ -43,24 +59,24 @@ const DiscoverScreen = () => {
           <FontAwesomeIcon icon={faSearch} size={20} color="#FF5733" />
         </TouchableOpacity>
       </View>
-      <View style={styles.CategoryButtonContainer}>
-        <CategoryButton
-          name={"Biceps"}
-          onPressCallBack={() => toggleCategory("Biceps")}
-        />
-        <CategoryButton
-          name={"Dos"}
-          onPressCallBack={() => toggleCategory("Dos")}
-        />
-        <CategoryButton
-          name={"Pecs"}
-          onPressCallBack={() => toggleCategory("Pecs")}
-        />
-        <CategoryButton
-          name={"Triceps"}
-          onPressCallBack={() => toggleCategory("Triceps")}
-        />
-      </View>
+      <ScrollView horizontal contentContainerStyle={styles.CategoryButtonContainer}>
+      {Muscles.map((muscle, index) => (
+          <CategoryButton
+            key={index}
+            name={muscle}
+            onPressCallBack={() => toggleCategory(muscle)}
+          />
+        ))}
+      </ScrollView>
+      <ScrollView horizontal contentContainerStyle={styles.MaterialButtonContainer}>
+      {Materials.map((material, index) => (
+          <CategoryButton
+            key={index}
+            name={material}
+            onPressCallBack={() => toggleMaterial(material)}
+          />
+        ))}
+      </ScrollView>
       <FlatList
         data={exoData.filter(filterByCategory)}
         keyExtractor={(item) => item.id.toString()}
@@ -96,7 +112,9 @@ const styles = StyleSheet.create({
   },
   CategoryButtonContainer: {
     flexDirection: "row",
-    marginVertical: 10,
-    marginHorizontal: 20,
+
+  },
+  MaterialButtonContainer: {
+
   },
 });

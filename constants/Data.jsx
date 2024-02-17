@@ -4,7 +4,7 @@ export const exoData = [
     name: "Pompes",
     url: "https://images.pexels.com/photos/3775164/pexels-photo-3775164.jpeg",
     category: "Pecs",
-    material : "PoidsCorps", 
+    material : "Poids de corps", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2020/10/pompe-musculation.gif",
   },
@@ -76,7 +76,7 @@ export const exoData = [
     name: "Dips barres parallèles",
     url: "https://www.gorillasports.fr/media/images/popup/10000829_barres-paralleles-noires.jpg",
     category: "Pecs",
-    material : "PoidsCorps", 
+    material : "Poids de corps", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2000/01/dips-pectoraux.gif",
   },
@@ -128,7 +128,7 @@ export const exoData = [
   {
     id: "14",
     name: "Développé couché prise inversée barre",
-    url: "https://www.benchpresschampion.com/ASSISTANCE/Reverse2.jpg",
+    url: "https://www.objectifs-fitness.com/wp-content/uploads/2018/08/d%C3%A9velopp%C3%A9-couch%C3%A9-prise-invers%C3%A9e-triceps.jpg",
     category: "Pecs",
     material : "Barre", 
     exempleImg:
@@ -218,7 +218,7 @@ export const exoData = [
   {
     id: "24",
     name: "Svend press",
-    url: "https://www.muscleandfitness.com/wp-content/uploads/2020/06/Osamoj-Imoohi-Performing-Step-1-Of-A-Svend-Press-Exercise.jpg?quality=86&strip=all",
+    url: "https://shredz.com/cdn/shop/articles/sssdd_54db4b0b-9daa-4c83-9d71-845172709c7a.jpg?v=1595444173",
     category: "Pecs",
     material : "Haltere", 
     exempleImg:

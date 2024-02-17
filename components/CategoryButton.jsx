@@ -19,7 +19,7 @@ const CategoryButton = ({ name, onPressCallBack }) => {
         { backgroundColor: isSelected ? "#8b50de" : "#fff" },
       ]}
     >
-      <Text style={{ color: isSelected ? "#fff" : "#8b50de" }}>{name}</Text>
+       <Text style={[styles.buttonText, { color: isSelected ? "#fff" : "#8b50de" }]}> {name}</Text>
     </TouchableOpacity>
   );
 };
@@ -28,12 +28,18 @@ export default CategoryButton;
 
 const styles = StyleSheet.create({
   button: {
-    marginVertical: 7,
-    marginHorizontal: 7,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
+    marginVertical: 15,
+    marginHorizontal: 8,
+    paddingHorizontal: 7,
+    height: 25,
     borderRadius: 25,
-    borderWidth: 2,
+    borderWidth: 1.7,
     borderColor: "#8b50de",
+    justifyContent: "center",
   },
+  buttonText:{
+    fontWeight: "bold",
+    textAlign : "center",
+    fontSize: 13,
+  }
 });
