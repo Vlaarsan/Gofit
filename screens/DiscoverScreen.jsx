@@ -24,8 +24,10 @@ const DiscoverScreen = () => {
       return true;
     }
     return (
-      (selectedCategories.length === 0 || selectedCategories.includes(item.category)) &&
-      (selectedMaterials.length === 0 || selectedMaterials.includes(item.material))
+      (selectedCategories.length === 0 ||
+        selectedCategories.includes(item.category)) &&
+      (selectedMaterials.length === 0 ||
+        selectedMaterials.includes(item.material))
     );
   };
 
@@ -43,9 +45,7 @@ const DiscoverScreen = () => {
 
   const toggleMaterial = (material) => {
     if (selectedMaterials.includes(material)) {
-      setSelectedMaterials(
-        selectedMaterials.filter((mat) => mat !== material)
-      );
+      setSelectedMaterials(selectedMaterials.filter((mat) => mat !== material));
     } else {
       setSelectedMaterials([...selectedMaterials, material]);
     }
@@ -59,25 +59,40 @@ const DiscoverScreen = () => {
           <FontAwesomeIcon icon={faSearch} size={20} color="#FF5733" />
         </TouchableOpacity>
       </View>
-      <ScrollView horizontal contentContainerStyle={styles.CategoryButtonContainer}>
-      {Muscles.map((muscle, index) => (
-          <CategoryButton
-            key={index}
-            name={muscle}
-            onPressCallBack={() => toggleCategory(muscle)}
-          />
-        ))}
-      </ScrollView>
-      <ScrollView horizontal contentContainerStyle={styles.MaterialButtonContainer}>
-      {Materials.map((material, index) => (
+      <ScrollView
+  horizontal
+  contentContainerStyle={styles.CategoryButtonContainer}
+  decelerationRate="fast"
+  showsHorizontalScrollIndicator={false}
+>
+  {Muscles.map((muscle, index) => (
+    <View key={index} style={index !== Muscles.length - 1 ? styles.categoryButton : [styles.categoryButton, { marginRight: 20 }]}>
+      <CategoryButton
+        name={muscle}
+        onPressCallBack={() => toggleCategory(muscle)}
+      />
+    </View>
+  ))}
+</ScrollView>
+
+      <ScrollView
+        horizontal
+        contentContainerStyle={styles.CategoryButtonContainer}
+        decelerationRate="fast"
+        showsHorizontalScrollIndicator={false}
+      >
+        {Materials.map((material, index) => (
+          <View key={index} style={index !== Materials.length - 1 ? styles.categoryButton : [styles.categoryButton, { marginRight: 20 }]}>
           <CategoryButton
             key={index}
             name={material}
             onPressCallBack={() => toggleMaterial(material)}
           />
+          </View>
         ))}
       </ScrollView>
       <FlatList
+        style={styles.FlatList}
         data={exoData.filter(filterByCategory)}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
@@ -111,10 +126,9 @@ const styles = StyleSheet.create({
     margin: 25,
   },
   CategoryButtonContainer: {
-    flexDirection: "row",
-
+    marginHorizontal: 10,
   },
-  MaterialButtonContainer: {
-
+  FlatList: {
+    marginTop: 15,
   },
 });
