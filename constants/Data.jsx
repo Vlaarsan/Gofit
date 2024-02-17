@@ -4,6 +4,7 @@ export const exoData = [
     name: "Pompes",
     url: "https://images.pexels.com/photos/3775164/pexels-photo-3775164.jpeg",
     category: "Pecs",
+    material : "PoidsCorps", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2020/10/pompe-musculation.gif",
   },
@@ -12,6 +13,7 @@ export const exoData = [
     name: "Soulevé de terre barre",
     url: "https://images.pexels.com/photos/949126/pexels-photo-949126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     category: "Dos",
+    material : "Barre", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2020/10/pompe-musculation.gif",
   },
@@ -20,6 +22,7 @@ export const exoData = [
     name: "Squat (barre)",
     url: "https://www.espace-musculation.com/uploads/2019/04/bienfait-squat.jpg",
     category: "Fessier",
+    material : "Barre", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/11/homme-faisant-un-squat-avec-barre.gif",
   },
@@ -28,6 +31,7 @@ export const exoData = [
     name: "Développé couché barre",
     url: "https://julienquaglierini.com/wp-content/uploads/2021/04/pousser-plus-lourd-de%CC%81veloppe%CC%81-couche%CC%81-musculation.jpg",
     category: "Pecs",
+    material : "Barre", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2019/08/developpe-couche.gif",
   },
@@ -36,6 +40,7 @@ export const exoData = [
     name: "Développé incliné barre",
     url: "https://contents.mediadecathlon.com/p2103467/k$f1d793d13167148faae55c4781bf5a66/1920x0/2736pt1404/5472xcr2824/developpe-couche-incline-musculation.jpg?format=auto",
     category: "Pecs",
+    material : "Barre", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/10/developpe-incline-barre.gif",
   },
@@ -44,14 +49,16 @@ export const exoData = [
     name: "Écartés couché haltères",
     url: "https://www.interval.fr/wp-content/uploads/2021/07/bras-bis.jpg",
     category: "Pecs",
+    material : "Haltere", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/09/ecarte-couche-haltere.gif",
   },
   {
     id: "6",
-    name: "Écartés à la poulie vis-à-vis",
+    name: "Écartés à la poulie",
     url: "https://www.fitadium.com/conseils/wp-content/uploads/2020/08/poulie-vis-a-vis.jpg",
     category: "Pecs",
+    material : "Poulie", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2000/06/ecarte-poulie-vis-a-vis-exercice-musculation-pectoraux.gif",
   },
@@ -60,6 +67,7 @@ export const exoData = [
     name: "Développé couché haltères",
     url: "https://musculation-nutrition.fr/wp-content/uploads/2021/06/exercice-pectoraux-femme.jpg",
     category: "Pecs",
+    material : "Haltere",
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2000/05/developpe-couche-halteres-exercice-musculation.gif",
   },
@@ -67,7 +75,8 @@ export const exoData = [
     id: "8",
     name: "Dips barres parallèles",
     url: "https://www.gorillasports.fr/media/images/popup/10000829_barres-paralleles-noires.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "PoidsCorps", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2000/01/dips-pectoraux.gif",
   },
@@ -75,7 +84,8 @@ export const exoData = [
     id: "9",
     name: "Pec-deck",
     url: "https://post.healthline.com/wp-content/uploads/2019/05/Male_Gym_1296x728-body-1296x728.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Machine", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2000/06/pec-deck-butterfly-exercice-musculation.gif",
   },
@@ -83,7 +93,8 @@ export const exoData = [
     id: "10",
     name: "Développé incliné machine convergente",
     url: "https://i.ytimg.com/vi/XQYV30itl_Y/maxresdefault.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Machine", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2000/06/developpe-incline-machine-convergente-exercice-musculation.gif",
   },
@@ -91,7 +102,8 @@ export const exoData = [
     id: "11",
     name: "Développé décliné barre",
     url: "https://disciplean.com/wp-content/uploads/2022/04/Developpe_Couche_Decline_Conseils-Musculation.Info_-e1676069940709.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Barre", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-decline-barre.gif",
   },
@@ -99,7 +111,8 @@ export const exoData = [
     id: "12",
     name: "Écartés décliné avec haltères",
     url: "https://musqle.fr/Media/Default/Exercise%20images/BIG50975.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Haltere",
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/11/ecartes-decline-avec-halteres.gif",
   },
@@ -107,7 +120,8 @@ export const exoData = [
     id: "13",
     name: "Écartés Hyght",
     url: "https://i.ytimg.com/vi/Ml8zVGxoVGE/maxresdefault.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Haltere", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/06/hyght-dumbell-fly.gif",
   },
@@ -115,7 +129,8 @@ export const exoData = [
     id: "14",
     name: "Développé couché prise inversée barre",
     url: "https://www.benchpresschampion.com/ASSISTANCE/Reverse2.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Barre", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/01/developpe-couche-prise-inversee.gif",
   },
@@ -123,7 +138,8 @@ export const exoData = [
     id: "15",
     name: "Écartés unilatéraux landmine",
     url: "https://www.blkboxfitness.com/cdn/shop/articles/blueprint_logo_2.png?v=1650972871",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Landmine",
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/04/ecartes-unilateral-landmine-pectoraux.gif",
   },
@@ -131,7 +147,8 @@ export const exoData = [
     id: "16",
     name: "Développé décliné avec haltère",
     url: "https://www.fitnessheroes.fr/wp-content/uploads/2015/03/developpe_decline_halteres_decline_dumbell_bench_press_depart.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Haltere",
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-decline-halteres.gif",
   },
@@ -139,7 +156,8 @@ export const exoData = [
     id: "17",
     name: "Pullover avec haltère",
     url: "https://medias.toutelanutrition.com/ressource/104/Pullover-haltere-head_1.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Haltere", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/12/pullover-haltere.gif",
   },
@@ -147,7 +165,8 @@ export const exoData = [
     id: "18",
     name: "Développé couché Smith machine",
     url: "https://us.123rf.com/450wm/tonobalaguer/tonobalaguer1412/tonobalaguer141200100/34242505-bench-press-femme-sur-multipower-plat-smith-machine-exercice-d-entra%C3%AEnement-au-gymnase.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Machine", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-couche-smith-machine.gif",
   },
@@ -155,7 +174,8 @@ export const exoData = [
     id: "19",
     name: "Hex press Smith machine",
     url: "https://bodybuilding-wizard.com/wp-content/uploads/2022/06/hex-press-inner-chest-muscles.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Machine", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/08/hex-press-a-la-smith-machine.gif",
   },
@@ -163,7 +183,8 @@ export const exoData = [
     id: "20",
     name: "Écartés couché à la poulie",
     url: "https://guidedesport.com/wp-content/uploads/2018/11/%C3%A9cart%C3%A9s-aux-poulies.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Poulie", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/04/ecartes-poulie-vis-a-vis.gif",
   },
@@ -171,7 +192,8 @@ export const exoData = [
     id: "21",
     name: "Développé debout élastique",
     url: "https://purshape.com/wp-content/uploads/2021/08/Exercice-developpe-debout-avec-elastique-de-musculation.jpg",
-    category: "Pecs", 
+    category: "Pecs",
+    material : "Elastique", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-debout-pectoraux-elastique.gif",
   },
