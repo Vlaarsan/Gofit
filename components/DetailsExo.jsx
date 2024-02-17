@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
   exempleImage: {
     marginTop: 25,
     width: "100%",
-    height: 300,
+    height: 400,
   },
   containerKg: {
     backgroundColor: "#8b50de",
@@ -204,9 +204,9 @@ const styles = StyleSheet.create({
   },
   kgInfoContainer: {
     marginBottom: 10,
-    marginLeft: 35,
   },
   TextInfoKg: {
+    textAlign: "center",
     color: "white",
     fontSize: 14,
     fontWeight: "bold",
