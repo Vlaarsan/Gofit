@@ -49,7 +49,7 @@ const SignupScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>SignupScreen</Text>
+      <Text style={styles.header}>S'inscrire</Text>
       <TextInput
         style={styles.input}
         placeholder="Email"

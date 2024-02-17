@@ -5,6 +5,7 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  ImageBackground
 } from "react-native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
@@ -72,47 +73,53 @@ const LoginScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Connectez vous</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        keyboardType="email-address"
-        autoCapitalize="none"
-        value={email}
-        onChangeText={(text) => setEmail(text)}
-      />
-      <View style={styles.passwordContainer}>
+    <ImageBackground
+      source={{ uri: 'https://www.pixelstalk.net/wp-content/uploads/images6/Cool-Workout-Background.jpg' }}
+      style={styles.backgroundImage}
+    >
+      <View style={styles.container}>
+        <Text style={styles.header}>Connectez vous</Text>
         <TextInput
           style={styles.input}
-          placeholder="Mot de passe"
-          secureTextEntry={!showPassword}
-          value={password}
-          onChangeText={(text) => setPassword(text)}
+          placeholder="Email"
+          keyboardType="email-address"
+          autoCapitalize="none"
+          value={email}
+          onChangeText={(text) => setEmail(text)}
         />
+        <View style={styles.passwordContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Mot de passe"
+            secureTextEntry={!showPassword}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
+          <TouchableOpacity
+            onPress={togglePasswordVisibility}
+            style={styles.eyeIcon}
+          >
+            <Text>{showPassword ? "👁️" : "🔒"}</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
+          <Text style={styles.buttonText}>Se connecter</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.signupText}>
+          <Text style={styles.signupLink}>Mot de passe oublié ?</Text>
+        </TouchableOpacity>
+  
         <TouchableOpacity
-          onPress={togglePasswordVisibility}
-          style={styles.eyeIcon}
+          onPress={() => {
+            navigation.navigate("Signup");
+          }}
         >
-          <Text>{showPassword ? "👁️" : "🔒"}</Text>
+          <Text style={styles.signupLink}>S'inscrire</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
-        <Text style={styles.buttonText}>Se connecter</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.signupText}>
-        <Text style={styles.signupLink}>Mot de passe oublié ?</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate("Signup");
-        }}
-      >
-        <Text style={styles.signupLink}>S'inscrire</Text>
-      </TouchableOpacity>
-    </View>
+    </ImageBackground>
   );
+  
 };
 
 const styles = StyleSheet.create({
@@ -121,20 +128,33 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
   },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
   header: {
-    marginTop: 25,
+    marginTop: 40,
     fontSize: 36,
     fontWeight: "bold",
-    marginBottom: 150,
+    marginBottom: 180,
+    color: "#fff",
+    textShadowColor: "rgba(0, 0, 0, 0.75)", // Couleur de l'ombre
+    textShadowOffset: { width: 2, height: 2 }, // Décalage de l'ombre
+    textShadowRadius: 5, // Rayon de l'ombre
   },
+  
   input: {
     height: 45,
-    borderColor: "gray",
-    backgroundColor: "#d9d9d9",
-    borderRadius: 15,
+    marginTop: 15,
+    backgroundColor: "#fff",
+    borderRadius: 25,
     marginBottom: 15,
-    paddingLeft: 10,
-    width: "90%",
+    paddingLeft: 20,
+    width: "80%",
+    color: "#000",
+    borderWidth: 0.6,
+
   },
   passwordContainer: {
     flexDirection: "row",
@@ -143,7 +163,7 @@ const styles = StyleSheet.create({
   eyeIcon: {
     position: "absolute",
     right: 15,
-    top: 10,
+    top: 25,
   },
   loginButton: {
     width: "80%",
@@ -163,7 +183,7 @@ const styles = StyleSheet.create({
   },
   signupLink: {
     marginTop: 10,
-    color: "blue",
+    color: "#fff",
     textDecorationLine: "underline",
   },
 });
