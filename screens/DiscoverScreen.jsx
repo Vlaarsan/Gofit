@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   FlatList,
   ScrollView,
+  ImageBackground,
 } from "react-native";
 import React, { useState } from "react";
 import LogoApp from "../components/LogoApp";
@@ -52,6 +53,10 @@ const DiscoverScreen = () => {
   };
 
   return (
+    <ImageBackground
+    source={{ uri: 'https://images.pexels.com/photos/2086622/pexels-photo-2086622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
+    style={styles.backgroundImage}
+    >
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
         <LogoApp title={" Exercices"} />
@@ -105,18 +110,23 @@ const DiscoverScreen = () => {
             exempleImg={item.exempleImg}
             liked={item.liked}
           />
-        )}
-      />
+          )}
+          />
     </SafeAreaView>
+        </ImageBackground>
   );
 };
 
 export default DiscoverScreen;
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
   container: {
     flex: 1,
-    backgroundColor: "#fff",
   },
   logoContainer: {
     flexDirection: "row",
