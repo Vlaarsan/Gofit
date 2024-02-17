@@ -28,7 +28,7 @@ export default CategoryButton;
 
 const styles = StyleSheet.create({
   button: {
-    marginVertical: 10,
+    marginVertical: 13,
     marginHorizontal: 8,
     paddingHorizontal: 8,
     height: 25,
