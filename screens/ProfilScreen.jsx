@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useUserContext } from '../context/UserContext';
 import SaveUser from '../database/SaveUser';
 import LogoApp from '../components/LogoApp';
+import StepCounter from '../components/StepCounter';
 
 const ProfilScreen = () => {
   const { user, setUserContext } = useUserContext();
@@ -41,6 +42,7 @@ const ProfilScreen = () => {
           onChangeText={handlePseudoChange}
         />
       </View>
+      <StepCounter/>
       <TouchableOpacity style={styles.button} onPress={updateDisplayName}>
         <Text style={styles.buttonText}>Mettre à jour le pseudo</Text>
       </TouchableOpacity>
