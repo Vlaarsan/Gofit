@@ -59,6 +59,7 @@ const DetailsExo = ({ route }) => {
     setMaxWeight(newMaxWeight);
     SaveWeight(user, id, name, newAverageWeight, newMaxWeight);
     reload();
+    setTextInputVisible(!textInputVisible);
   };
 
   const loadExerciseWeight = async () => {
