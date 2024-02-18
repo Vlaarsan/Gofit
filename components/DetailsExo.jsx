@@ -105,6 +105,7 @@ const reload = () => {
       >
         <FontAwesomeIcon icon={faArrowLeft} size={25} color="#8b50de" />
       </TouchableOpacity>
+      <Text style={styles.exerciseName}>{name}</Text>
       <View style={styles.containerKg}>
         <Text style={styles.title}>Combien tu soulèves ? 🏋️</Text>
         <View style={styles.kgInfoContainer}>
@@ -118,7 +119,6 @@ const reload = () => {
           </Text>
         </View>
       </View>
-      <Text style={styles.exerciseName}>{name}</Text>
       {textInputVisible && (
         <>
           <TextInput
@@ -176,7 +176,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginHorizontal: 20,
     textAlign: "center",
-    marginBottom: 25,
   },
   backButton: {
     position: "absolute",
@@ -192,7 +191,7 @@ const styles = StyleSheet.create({
   },
   containerKg: {
     backgroundColor: "#8b50de",
-    margin: 20,
+    margin: 10,
     padding: 10,
     borderRadius: 50,
     width: "80%",

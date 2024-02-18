@@ -5,6 +5,7 @@ import {
   FlatList,
   ScrollView,
   ImageBackground,
+  StatusBar
 } from "react-native";
 import React, { useState } from "react";
 import LogoApp from "../components/LogoApp";
@@ -57,6 +58,7 @@ const DiscoverScreen = () => {
     source={{ uri: 'https://images.pexels.com/photos/2086622/pexels-photo-2086622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }}
     style={styles.backgroundImage}
     >
+      <StatusBar/>
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
         <LogoApp title={" Exercices"} />
