@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
   },
   containerKg: {
     backgroundColor: "#8b50de",
-    margin: 10,
+    marginVertical: 20,
     padding: 10,
     borderRadius: 50,
     width: "80%",
