@@ -467,4 +467,164 @@ export const exoData = [
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/01/rowing-assis-machine-hammer-strenght.gif",
   },
+  {
+    id: "52",
+    name: "Tirage vertical supination machine",
+    url: "https://musqle.fr/Media/Default/Exercise%20images/BIG59276.jpg",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/tirage-avant-iso-laterale-hammer-strength.gif",
+  },
+  {
+    id: "53",
+    name: "Traction assistée machine",
+    url: "https://www.ownsport.fr/blog/wp-content/uploads/2021/02/machine-traction-assitee-Copie.jpg",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/traction-assistee-machine.gif",
+  },
+  {
+    id: "54",
+    name: "Tractions prise neutre",
+    url: "https://medias.toutelanutrition.com/ressource/104/Les%20tractions%20pour%20un%20dos%20fort%20et%20volumineux.jpg",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/10/traction-prise-neutre.gif",
+  },
+  {
+    id: "55",
+    name: "Rowing haltères",
+    url: "https://www.fitnessheroes.fr/wp-content/uploads/2015/10/rowing_deux_halteres_bent_over_row_depart2.jpg",
+    category: "Dos",
+    material : "Haltere", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/10/bent-over-row-avec-halteres.gif",
+  },
+  {
+    id: "56",
+    name: "Seal row haltères",
+    url: "https://i.ytimg.com/vi/6CDqbJk54PE/mqdefault.jpg",
+    category: "Dos",
+    material : "Haltere", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/seal-row-halteres.gif",
+  },
+  {
+    id: "57",
+    name: "Renegade row haltères",
+    url: "https://www.sixpack.fr/wp-content/uploads/2023/12/2022-bicycling-inhouseshoots-ep25-renegaderows-ph-v01-index-1659470173.webp",
+    category: "Dos",
+    material : "Haltere", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/renegade-row.gif",
+  },
+  {
+    id: "58",
+    name: "Tirage vertical poitrine machine",
+    url: "https://www.lesdessousdusport.fr/wp-content/uploads/2020/10/Tirage-vertical-poulie-haute-3.jpg",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/11/tirage-vertical-poitrine.gif",
+  },
+  {
+    id: "59",
+    name: "Rowing unilatéral landmine",
+    url: "https://www.bodybuilding.com/exercises/exerciseImages/sequences/3811/Male/l/3811_2.jpg",
+    category: "Dos",
+    material : "Landmine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-unilateral-landmine-meadows-row.gif",
+  },
+  {
+    id: "60",
+    name: "Superman",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2023/03/image-18.jpg",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/superman.gif"
+  },
+  {
+    id: "61",
+    name: "Rowing haltères banc incliné",
+    url: "https://musqle.fr/Media/Default/Exercise%20images/BIG50896.jpg",
+    category: "Dos",
+    material : "Halteres", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-halteres-banc-incline-prise-neutre.gif"
+  },
+  {
+    id: "62",
+    name: "Tractions australiennes",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2023/03/shutterstock_1413806930-1.jpg",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/01/traction-australienne-rowing-poids-du-corps.gif"
+  },
+  {
+    id: "63",
+    name: "Shrug à la machine",
+    url: "https://fitnessvolt.com/wp-content/uploads/2018/04/8qla9t5i8rc.jpg",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/shrug-machine-mollets.gif"
+  },
+  {
+    id: "64",
+    name: "Bird dog",
+    url: "https://cdn.mos.cms.futurecdn.net/Rt3Q5cBP5BHdpyQthBT3RT.jpg",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/bird-dog.gif"
+  },
+  {
+    id: "65",
+    name: "Pull-over poulie",
+    url: "https://medias.toutelanutrition.com/ressource/104/pullover%20%C3%A0%20la%20poulie.jpg",
+    category: "Dos",
+    material : "Poulie", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/pull-over-poulie.gif"
+  },
+  {
+    id: "66",
+    name: "Overhead shrug",
+    url: "https://i.ytimg.com/vi/qF9psR_4VTU/maxresdefault.jpg",
+    category: "Dos",
+    material : "Barre", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/01/overhead-shrug.gif"
+  },
+  {
+    id: "67",
+    name: "Pull-over décliné barre",
+    url: "https://musqle.fr/Media/Default/Exercise%20images/BIG50979.jpg",
+    category: "Dos",
+    material : "Barre", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/05/pull-over-barre.gif"
+  },
+  {
+    id: "68",
+    name: "Planche inversée",
+    url: "https://www.ownsport.fr/blog/wp-content/uploads/2021/01/planche-inverse2-1-1024x1002.png",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/05/planche-inversee-abdos.gif"
+  },
+  {
+    id: "69",
+    name: "Shrug poulie",
+    url: "https://i.ytimg.com/vi/7_JO-J58lPo/maxresdefault.jpg",
+    category: "Dos",
+    material : "Poulie", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/shrug-poulie-haussement-epaules.gif"
+  },
+  {
+    id: "70",
+    name: "Extension lombaire banc 45°",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/05/Untitled-design-2023-05-23T180151.713-1.png",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2021/08/extension-lombaire-au-banc-45.gif"
+  },
 ];
