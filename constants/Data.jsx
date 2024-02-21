@@ -350,4 +350,121 @@ export const exoData = [
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-couche-au-sol.gif",
   },
+  {
+    id: "39",
+    name: "Muscle-up",
+    url: "https://www.woday.fr/wp-content/uploads/2023/02/comment-faire-le-muscle-up.png",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/muscle-up-calisthenics-street-workout-dos.gif",
+  },
+  {
+    id: "40",
+    name: "Traction",
+    url: "https://julienquaglierini.com/wp-content/uploads/2022/03/type-traction-musculation.jpg",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/traction-musculation-dos.gif",
+  },
+  {
+    id: "41",
+    name: "Tirage horizontal poulie",
+    url: "https://i.ytimg.com/vi/SLOtxuaStoQ/maxresdefault.jpg",
+    category: "Dos",
+    material : "Poulie", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/tirage-horizontal-poulie.gif",
+  },
+  {
+    id: "42",
+    name: "Rowing barre",
+    url: "https://guidedesport.com/wp-content/uploads/2018/12/rowing-barre.jpg",
+    category: "Dos",
+    material : "Barre", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/09/rowing-barre.gif",
+  },
+  {
+    id: "43",
+    name: "Shrug barre",
+    url: "https://i0.wp.com/musculationmaison.com/wp-content/uploads/2022/04/GrosDos-1.jpeg?resize=750%2C617&ssl=1",
+    category: "Dos",
+    material : "Barre", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/shrug-barre.gif",
+  },
+  {
+    id: "44",
+    name: "Pull-over assis machine",
+    url: "https://i.ytimg.com/vi/HoNtfUrCaFw/maxresdefault.jpg",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/musculation-pull-over-assis-machine.gif",
+  },
+  {
+    id: "45",
+    name: "Traction supination",
+    url: "https://img.livestrong.com/-/cme-data/getty%2Fc8aa92ca4016456ebc7a8792e69bb4fd.jpg",
+    category: "Dos",
+    material : "Poids de corps", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/08/chin-up-traction-supination.gif",
+  },
+  {
+    id: "46",
+    name: "Rowing haltère à un bras",
+    url: "https://www.musculation.com/wikibody/wp-content/uploads/2021/08/shutterstock_1873868590-1.jpg",
+    category: "Dos",
+    material : "Haltere", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/08/rowing-haltere-un-bras.gif",
+  },
+  {
+    id: "47",
+    name: "Rowing landmine",
+    url: "https://assets.roguefitness.com/f_auto,q_auto,c_limit,w_1600,b_rgb:ffffff/catalog/Strength%20Equipment/Strength%20Training/Upper%20Body%20Training/AU-RA0947/AU-RA0947-WEB4_b3nzha.png",
+    category: "Dos",
+    material : "Landmine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/08/rowing-barre-t-landmine.gif",
+  },
+  {
+    id: "48",
+    name: "Tirage vertical prise serrée",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/07/Untitled-design-2023-07-11T093911.202-1.png",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/08/tirage-vertical-prise-serree.gif",
+  },
+  {
+    id: "49",
+    name: "Rowing pronation machine",
+    url: "https://www.sixpack.fr/wp-content/uploads/2023/06/rowing-assis-a-la-machine.webp",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-assis-machine-prise-pronation.gif",
+  },
+  {
+    id: "50",
+    name: "Rowing à la barre en T machine",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/05/landmine-row.png",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/rowing-t-bar-machine.gif",
+  },
+  {
+    id: "51",
+    name: "Rowing prise neutre assis machine",
+    url: "https://www.sixpack.fr/wp-content/uploads/2023/06/low-row-machine.webp",
+    category: "Dos",
+    material : "Machine", 
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/rowing-assis-machine-hammer-strenght.gif",
+  },
 ];
