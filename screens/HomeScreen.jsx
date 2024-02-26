@@ -5,6 +5,7 @@ import LogoApp from "../components/LogoApp";
 import { Calendar, LocaleConfig } from "react-native-calendars";
 import { useUserContext } from "../context/UserContext";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import ImageApp from "../components/ImageApp";
 
 
 LocaleConfig.locales["fr"] = {
@@ -129,6 +130,7 @@ const HomeScreen = () => {
         }}
         style={styles.calendar}
       />
+      <ImageApp/>
     </SafeAreaView>
   );
 };

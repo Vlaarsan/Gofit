@@ -7,6 +7,7 @@ import SaveFavorite from "../database/SaveFavorite";
 import LoadFavorites from "../database/LoadFavorite";
 import LoadUser from "../database/LoadUser";
 import LogoApp from "../components/LogoApp";
+import ImageApp from "../components/ImageApp";
 
 const InsightScreen = () => {
   const { exercises, setExercises } = useLikedExercisesContext();
@@ -52,6 +53,7 @@ const InsightScreen = () => {
           </Text>
         </View>
       )}
+      <ImageApp/>
     </View>
   );
 };

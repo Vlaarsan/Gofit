@@ -1,13 +1,13 @@
 // ModalUpdateProfile.js
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Modal, TextInput, TouchableOpacity } from 'react-native';
-
-
+import { useUserContext } from "../context/UserContext";
 const ProfilUpdateModal = ({ isVisible, onClose, onUpdate }) => {
   const [pseudo, setPseudo] = useState('');
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [targetWeight, setTargetWeight] = useState('');
+  const { user, setUserContext } = useUserContext();
 
   const handleUpdate = () => {
     onUpdate({ pseudo, height, weight, targetWeight });
@@ -26,27 +26,27 @@ const ProfilUpdateModal = ({ isVisible, onClose, onUpdate }) => {
           <TextInput
             style={styles.textInput}
             placeholder="Nouveau pseudo"
-            value={pseudo}
+            value={user.displayName}
             onChangeText={setPseudo}
           />
           <TextInput
             style={styles.textInput}
             placeholder="Nouvelle taille (cm)"
-            value={height}
+            value={user.height}
             onChangeText={setHeight}
             keyboardType="numeric"
           />
           <TextInput
             style={styles.textInput}
             placeholder="Nouveau poids (kg)"
-            value={weight}
+            value={user.weight}
             onChangeText={setWeight}
             keyboardType="numeric"
           />
           <TextInput
             style={styles.textInput}
             placeholder="Nouveau poids ciblé (kg)"
-            value={targetWeight}
+            value={user.targetWeight}
             onChangeText={setTargetWeight}
             keyboardType="numeric"
           />
@@ -57,6 +57,7 @@ const ProfilUpdateModal = ({ isVisible, onClose, onUpdate }) => {
             <Text style={styles.buttonText}>Annuler</Text>
           </TouchableOpacity>
         </View>
+        
       </View>
     </Modal>
   );
