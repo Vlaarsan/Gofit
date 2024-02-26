@@ -17,10 +17,12 @@ const styles = StyleSheet.create({
   bubble: {
     backgroundColor: '#8b50de',
     borderRadius: 100,
+    borderWidth: 3,
     width: 130,
     height: 130,
     justifyContent: 'center',
     alignItems: 'center',
+    
 
   },
   text: {
@@ -28,11 +30,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     padding: 10,
+    textShadowColor: "rgba(0, 0, 0, 1)",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
   },
   title: {
     color: '#fff',
     fontSize: 8,
-
   },
 });
 

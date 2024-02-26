@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
-    textShadowColor: "rgba(0, 0, 0, 0.75)",
+    textShadowColor: "rgba(0, 0, 0, 1)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
     backgroundColor: "rgba(0, 0, 0, 0.5)",
