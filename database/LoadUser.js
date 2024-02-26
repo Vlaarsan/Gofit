@@ -16,10 +16,14 @@ const LoadUser = async (user, setUser) => {
             // Mettre à jour l'utilisateur avec le nouveau displayName
             setUser({
                 ...user,
-                displayName: userData.displayName
+                displayName: userData.displayName,
+                height: userData.height,
+                weight: userData.weight,
+                targetWeight: userData.targetWeight,
+               
             });
     
-            console.log("Pseudo chargé !");
+            console.log("Profil chargé !");
         } else {
             console.error("Document utilisateur introuvable");
         }

@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   bubble: {
     backgroundColor: '#8b50de',
     borderRadius: 100,
-    width: 115,
-    height: 115,
+    width: 130,
+    height: 130,
     justifyContent: 'center',
     alignItems: 'center',
 
