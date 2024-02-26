@@ -45,6 +45,7 @@ const ProfilScreen = () => {
       weight: weight,
       targetWeight: targetWeight,
     });
+    setIsModalVisible(false);
   };
 
   return (

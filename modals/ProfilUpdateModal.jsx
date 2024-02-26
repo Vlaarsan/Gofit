@@ -1,5 +1,5 @@
 // ModalUpdateProfile.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Modal, TextInput, TouchableOpacity } from 'react-native';
 import { useUserContext } from "../context/UserContext";
 const ProfilUpdateModal = ({ isVisible, onClose, onUpdate }) => {
@@ -13,6 +13,12 @@ const ProfilUpdateModal = ({ isVisible, onClose, onUpdate }) => {
     onUpdate({ pseudo, height, weight, targetWeight });
     onClose();
   };
+  useEffect(() => {
+    setPseudo(user.displayName);
+    setHeight(user.height );
+    setWeight(user.weight);
+    setTargetWeight(user.targetWeight );
+  }, [user]);
 
   return (
     <Modal
@@ -26,27 +32,27 @@ const ProfilUpdateModal = ({ isVisible, onClose, onUpdate }) => {
           <TextInput
             style={styles.textInput}
             placeholder="Nouveau pseudo"
-            value={user.displayName}
+            value={pseudo}
             onChangeText={setPseudo}
           />
           <TextInput
             style={styles.textInput}
             placeholder="Nouvelle taille (cm)"
-            value={user.height}
+            value={height}
             onChangeText={setHeight}
             keyboardType="numeric"
           />
           <TextInput
             style={styles.textInput}
             placeholder="Nouveau poids (kg)"
-            value={user.weight}
+            value={weight}
             onChangeText={setWeight}
             keyboardType="numeric"
           />
           <TextInput
             style={styles.textInput}
             placeholder="Nouveau poids ciblé (kg)"
-            value={user.targetWeight}
+            value={targetWeight}
             onChangeText={setTargetWeight}
             keyboardType="numeric"
           />
