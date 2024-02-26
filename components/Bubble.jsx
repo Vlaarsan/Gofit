@@ -12,20 +12,21 @@ const Bubble = ({ text }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    marginBottom: 10,
-  },
+
   bubble: {
     backgroundColor: '#8b50de',
-    borderRadius: 20,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+    borderRadius: 100,
+    width: 115,
+    height: 115,
+    justifyContent: 'center',
+    alignItems: 'center',
+
   },
   text: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
+    padding: 10,
   },
 });
 

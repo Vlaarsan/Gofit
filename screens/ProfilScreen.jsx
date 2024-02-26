@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import { useUserContext } from '../context/UserContext';
-import SaveUser from '../database/SaveUser';
-import LogoApp from '../components/LogoApp';
-import StepCounter from '../components/StepCounter';
-import ProfilUpdateModal from '../modals/ProfilUpdateModal';
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
+import { useUserContext } from "../context/UserContext";
+import SaveUser from "../database/SaveUser";
+import LogoApp from "../components/LogoApp";
+import StepCounter from "../components/StepCounter";
+import ProfilUpdateModal from "../modals/ProfilUpdateModal";
+import Bubble from "../components/Bubble";
 
 const ProfilScreen = () => {
   const { user, setUserContext } = useUserContext();
-  const [pseudo, setPseudo] = useState('');
-  const [height, setHeight] = useState('');
-  const [weight, setWeight] = useState('');
-  const [targetWeight, setTargetWeight] = useState('');
+  const [pseudo, setPseudo] = useState("");
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+  const [targetWeight, setTargetWeight] = useState("");
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -25,60 +32,44 @@ const ProfilScreen = () => {
 
   const handleUpdateProfile = ({ pseudo, height, weight, targetWeight }) => {
     // Mettez à jour les informations de profil ici
-    setPseudo(pseudo);
-    setHeight(height);
-    setWeight(weight);
-    setTargetWeight(targetWeight);
-    updateDisplayName();
+    setUserContext({ ...user, displayName: pseudo, height : height, weight : weight});
+    SaveUser({
+      uid: user.uid,
+      email: user.email,
+      emailVerified: user.emailVerified,
+      displayName: pseudo,
+      height : height,
+      weight : weight,
+      targetWeight : targetWeight,
+    });
   };
+  
 
-  const updateDisplayName = () => {
-    if (pseudo.trim() !== '') { 
-      setUserContext({ ...user, displayName: pseudo });
-      SaveUser({
-        uid: user.uid,
-        email: user.email,
-        emailVerified: user.emailVerified,
-        displayName: pseudo,
-        height,
-        weight,
-        targetWeight,
-      });
-    } else {
-      console.error('Please enter a valid pseudo.');
-    }
-  };
 
   return (
     <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <LogoApp title={"Profil"} />
-      </View >
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Pseudo : {pseudo} </Text>
- 
-      </View>
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Taille (cm) : {height} </Text>
-
-      </View>
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Poids (kg) : {weight} </Text>
-
-      </View>
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Poids ciblé (kg) : {targetWeight} </Text>
-      </View>
-
-      <TouchableOpacity style={styles.button} onPress={handleOpenModal}>
-        <Text style={styles.buttonText}>Modifier le profil</Text>
-      </TouchableOpacity>
-      <ProfilUpdateModal
-        isVisible={isModalVisible}
-        onClose={handleCloseModal}
-        onUpdate={handleUpdateProfile}
-      />
+    <View style={styles.logoContainer}>
+      <LogoApp title={"Profil"} />
     </View>
+    <View style={styles.pseudoContainer}>
+      <Bubble text={user.displayName} />
+    </View>
+    <View style={styles.heightContainer}>
+      <Bubble text={`${user.height} cm` } />
+    </View>
+    <View style={styles.weightContainer}>
+      <Bubble text={`${user.weight} kg`} />
+    </View>
+    <TouchableOpacity style={styles.button} onPress={handleOpenModal}>
+      <Text style={styles.buttonText}>Modifier le profil</Text>
+    </TouchableOpacity>
+    <ProfilUpdateModal
+      isVisible={isModalVisible}
+      onClose={handleCloseModal}
+      onUpdate={handleUpdateProfile}
+    />
+  </View>
+  
   );
 };
 
@@ -90,40 +81,43 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   logoContainer: {
-    marginBottom: 30
+    marginBottom: 30,
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
+  pseudoContainer: {
+    position: "absolute",
+    top: 150,
+    left: 20,
+    borderRadius: 100,
   },
-  inputContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 20,
+  heightContainer: {
+    position: "absolute",
+    top: 250,
+    right: 20,
+    borderRadius: 100,
   },
-  label: {
-    fontSize: 16,
-    marginRight: 10,
+  weightContainer: {
+    position: "absolute",
+    top: 350,
+    left: 20,
+    borderRadius: 100,
   },
-  textInput: {
-    padding: 10,
-    borderRadius: 5,
-    borderBottomWidth: 1,
-    borderColor: '#8b50de',
-    flex: 1,
-    textAlign: "center",
+  targetWeightContainer: {
+    position: "absolute",
+    top: 450,
+    right: 20,
+    borderRadius: 100,
   },
   button: {
-    backgroundColor: '#8b50de', // Customize button color
+    backgroundColor: "#8b50de",
     padding: 10,
     borderRadius: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 500,
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-
   },
 });
+
