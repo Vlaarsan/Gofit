@@ -21,7 +21,7 @@ export const exoData = [
     id: "2",
     name: "Squat barre",
     url: "https://www.espace-musculation.com/uploads/2019/04/bienfait-squat.jpg",
-    category: "Fessier",
+    category: "Fessiers",
     material : "Barre", 
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/11/homme-faisant-un-squat-avec-barre.gif",
@@ -626,5 +626,245 @@ export const exoData = [
     category: "Dos",
     material : "Poids de corps", 
     exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2021/08/extension-lombaire-au-banc-45.gif"
+  },
+  {
+    id: "71",
+    name: "Rowing buste penché élastique",
+    url: "https://www.ownsport.fr/blog/wp-content/uploads/2019/08/Rowing-1.jpg",
+    category: "Dos",
+    material : "Elastique", 
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/09/rowing-buste-penche-avec-elastique.gif"
+  },
+  {
+    id: "72",
+    name: "Shrugs haltères",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2022/06/shutterstock_1946165155-1.jpg",
+    category: "Dos",
+    material : "Haltere",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/11/shrugs-avec-halteres.gif"
+  },
+  {
+    id: "73",
+    name: "Soulevé de terre avec machine",
+    url: "https://i.ytimg.com/vi/KTJranIRvjw/maxresdefault.jpg",
+    category: "Dos",
+    material : "Machine",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/11/souleve-de-terre-avec-machine.gif"
+  },
+  {
+    id: "74",
+    name: "Traction assistée avec élastique",
+    url: "https://homefittraining.fr/wp-content/uploads/2023/03/meilleurs-elastiques-pour-les-tractions.jpg",
+    category: "Dos",
+    material : "Elastique",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2021/12/traction-assiste-elastique.gif"
+  },
+  {
+    id: "75",
+    name: "Pullover avec deux haltères",
+    url: "https://medias.toutelanutrition.com/ressource/104/pull%20over%20deux%20halt%C3%A8res.jpg",
+    category: "Dos",
+    material : "Haltere",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/10/pullover-avec-deux-halteres.gif"
+  },
+  {
+    id: "76",
+    name: "Bent over row prise disque",
+    url: "https://cdn.shopify.com/s/files/1/0680/7843/6626/files/barbell_row_480x480.png?v=1690598464",
+    category: "Dos",
+    material : "Barre",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/10/bent-over-row-prise-disque.gif"
+  },
+  {
+    id: "77",
+    name: "Rowing unilatéral élastique",
+    url: "https://assets-global.website-files.com/5d0c269d409e5b11b36e12aa/65448dcfe705faa408ca0314_exercice-musculation-dos-femme-rowing-unilateral-elastique.jpg",
+    category: "Dos",
+    material : "Elastique",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/10/rowing-unilateral-avec-elastique.gif"
+  },
+  {
+    id: "78",
+    name: "Rowing Smith machine",
+    url: "https://cdn.shopify.com/s/files/1/1876/4703/files/shutterstock_1123526333.jpg?v=1654627403",
+    category: "Dos",
+    material : "Machine",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/10/rowing-smith-machine.gif"
+  },
+  {
+    id: "79",
+    name: "Tirage horizontal prise large",
+    url: "https://i.ytimg.com/vi/xmh0Dm6ESYc/maxresdefault.jpg",
+    category: "Dos",
+    material : "Machine",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/10/tirage-horizontal-prise-large.gif"
+  },
+  {
+    id: "80",
+    name: "Pull-over barre",
+    url: "https://musculation-alimentation.fr/wp-content/uploads/2021/05/barre-front-768x538.jpg",
+    category: "Dos",
+    material : "Barre",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/pull-over-barre.gif"
+  },
+  {
+    id: "81",
+    name: "Tirage incliné poulie haute",
+    url: "https://www.fitadium.com/conseils/wp-content/uploads/2020/05/tirage-horizontal.jpg",
+    category: "Dos",
+    material : "Poulie",  
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/tirage-incline-poulie-haute.gif"
+  },
+  {
+    id: "82",
+    name: "Traction lestée",
+    url: "https://res.cloudinary.com/keystone-demo/image/upload/v1626622667/traction-gilet-leste.jpg",
+    category: "Dos",
+    material : "Poids de corps",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/traction-lestee.gif"
+  },
+  {
+    id: "83",
+    name: "Traction assistée banc",
+    url: "https://www.powertec.eu/2237-thickbox_default/dip-traction.jpg",
+    category: "Dos",
+    material : "Poids de corps",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/traction-assistee-avec-banc.gif"
+  },
+  {
+    id: "84",
+    name: "Tirage horizontal élastique",
+    url: "https://i.ytimg.com/vi/eqfrmHjBQqc/maxresdefault.jpg",
+    category: "Dos",
+    material : "Elastique",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/rowing-horizontal-bande-elastique.gif"
+  },
+  {
+    id: "85",
+    name: "Tirage vertical prise inversée",
+    url: "https://www.sci-sport.com/articles/img/a15100.jpg",
+    category: "Dos",
+    material : "Machine",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/01/tirage-vertical-prise-inversee.gif"
+  },
+  {
+    id: "86",
+    name: "Hip thrust machine",
+    url: "https://puremuscleathletics.com/cdn/shop/products/066-1024x1024.jpg?v=1626791808",
+    category: "Fessiers",
+    material : "Machine",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/08/hip-thrust-a-la-machine.gif"
+  },
+  {
+    id: "87",
+    name: "Soulevé de terre roumain",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2017/12/romanian-deadlift.jpg",
+    category: "Fessiers",
+    material : "Barre",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/souleve-de-terre-roumain.gif"
+  },
+  {
+    id: "88",
+    name: "Good morning",
+    url: "https://res.cloudinary.com/keystone-demo/image/upload/v1697442879/good-morning-exercice-variations.jpg",
+    category: "Fessiers",
+    material : "Barre",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/01/good-morning-exercice.gif"
+  },
+  {
+    id: "89",
+    name: "Pull through poulie",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2023/03/shutterstock_222797518-1024x673.jpg",
+    category: "Fessiers",
+    material : "Poulie",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/05/pull-through-a-la-poulie.gif"
+  },
+  {
+    id: "90",
+    name: "Montées banc haltères",
+    url: "https://www.fitnessheroes.fr/wp-content/uploads/2015/02/montees_banc_halteres_dumbell_step_ups_depart.jpg",
+    category: "Fessiers",
+    material : "Haltere",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2000/06/montees-sur-banc-exercice-musculation.gif"
+  },
+  {
+    id: "91",
+    name: "Extension hanche poulie basse",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2021/04/shutterstock_1869221173-1-800x533-1.jpg",
+    category: "Fessiers",
+    material : "Poulie",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/05/extension-hanche-poulie-basse.gif"
+  },
+  {
+    id: "92",
+    name: "Reverse hyperextension",
+    url: "https://barbend.com/wp-content/uploads/2018/03/BarBend-Feature-Image-1200-x-675-2021-05-26T122326.206.jpg",
+    category: "Fessiers",
+    material : "Machine",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/reverse-hyperextension.gif"
+  },
+  {
+    id: "93",
+    name: "Soulevé de terre roumain landmine",
+    url: "https://i.ytimg.com/vi/dEEuPiMQaNA/maxresdefault.jpg",
+    category: "Fessiers",
+    material : "Landmine",    
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/01/souleve-de-terre-roumain-landmine.gif"
+  },
+  {
+    id: "94",
+    name: "Donkey kick",
+    url: "https://parade.com/.image/t_share/MTkwNTgxNDc3NDUxNTA3NTgw/donkey-kick-jpg.jpg",
+    category: "Fessiers",
+    material : "Poids de corps",        
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/donkey-kick.gif"
+  },
+  {
+    id: "95",
+    name: "Fire hydrant",
+    url: "https://www.houseofpeach.com/wp-content/uploads/2021/01/Fire-Hydrant-jen-selter.jpeg",
+    category: "Fessiers",
+    material : "Poids de corps",        
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/04/fire-hydratant.gif"
+  },
+  {
+    id: "96",
+    name: "Rack Pull",
+    url: "https://www.sixpack.fr/wp-content/uploads/2023/06/rack-pull-femme.webp",
+    category: "Fessiers",
+    material : "Barre",        
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/01/rack-pull.gif"
+  },
+  {
+    id: "97",
+    name: "Good morning élastique",
+    url: "https://www.setforset.com/cdn/shop/articles/banded_good_mornings_2000x.jpg?v=1641652714",
+    category: "Fessiers",
+    material : "Elastique",        
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2022/02/good-morning-elastique.gif"
+  },
+  {
+    id: "98",
+    name: "Kettlebell swing",
+    url: "https://breakingmuscle.com/wp-content/uploads/2023/01/Shutterstock_708400606.jpg",
+    category: "Fessiers",
+    material : "Kettlebell",        
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2021/12/kettlebell-swing.gif"
+  },
+  {
+    id: "99",
+    name: "Squat barre devant",
+    url: "https://wodnews.com/wp-content/uploads/2019/03/front-squat_wodnews.jpg",
+    category: "Fessiers",
+    material : "Barre",        
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2021/11/squat-barre-devant-front.gif"
+  },
+  {
+    id: "100",
+    name: "Soulevé de terre roumain kettlebell",
+    url: "https://contents.mediadecathlon.com/s942079/k$efd85409a37ffd2c9b481ad73890443a/1920x0/3000pt2031/6000xcr3938/SOULEVE-DE-TERRE-AVEC-kettlebell.jpg?format=auto",
+    category: "Fessiers",
+    material : "Kettlebell",        
+    exempleImg: "https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre-roumain-kettlebell.gif"
   },
 ];
