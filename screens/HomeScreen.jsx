@@ -6,6 +6,8 @@ import { Calendar, LocaleConfig } from "react-native-calendars";
 import { useUserContext } from "../context/UserContext";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import ImageApp from "../components/ImageApp";
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 
 LocaleConfig.locales["fr"] = {
@@ -103,11 +105,12 @@ const HomeScreen = () => {
     console.log("ajouté");
   };
   return (
+    <LinearGradient colors={["#fff",'#bb91fa', '#8b50de']} style={styles.container}>
     <SafeAreaView style={styles.container}>
       <LogoApp title={"Gofit"} />
       <Text style={styles.title}>Salut {user.displayName}</Text>
       <Text style={styles.message}>
-        Pense à noter les jours où tu t'es entrainé 💪
+      Pense à noter tes jours d'entrainement 💪
       </Text>
       <Calendar
         onDayPress={handleDayPress}
@@ -132,6 +135,7 @@ const HomeScreen = () => {
       />
       <ImageApp/>
     </SafeAreaView>
+    </LinearGradient>
   );
 };
 
@@ -140,7 +144,6 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
   },
   title: {
     margin: 25,
@@ -152,9 +155,12 @@ const styles = StyleSheet.create({
     marginTop: 60,
     padding: 10,
     textAlign: "center",
+    color: "#000",
   },
   calendar: {
-    marginTop: 25,
-    marginHorizontal: 10,
+    marginTop: 40,
+    borderRadius: 20,
+    width: "100%",
+    height: 450,
   },
 });

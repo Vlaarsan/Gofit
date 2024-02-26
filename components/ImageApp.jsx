@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     right: 0,
-    zIndex: 9999, // assure que l'image est au-dessus de tous les autres éléments
+    zIndex: 9999,
   },
   image: {
-    width: 100, // ajustez la largeur selon vos besoins
-    height: 100, // ajustez la hauteur selon vos besoins
-    margin: 10, // ajustez le margin selon vos besoins
+    width: 100, 
+    height: 100, 
+    margin: 5, 
   },
 })

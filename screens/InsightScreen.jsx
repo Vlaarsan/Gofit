@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  ImageBackground,
+} from "react-native";
 import { useLikedExercisesContext } from "../context/LikedExercicesContext";
 import { useUserContext } from "../context/UserContext";
 import ExoCard from "../components/ExoCard";
@@ -28,11 +34,11 @@ const InsightScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-      <LogoApp
-      title={"Mes Favoris"}/>
+        <LogoApp title={"Mes Favoris"} />
       </View>
       {exercises.length > 0 ? (
         <FlatList
+          showsVerticalScrollIndicator={false}
           data={exercises}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
@@ -49,11 +55,11 @@ const InsightScreen = () => {
       ) : (
         <View style={styles.emptyMessageContainer}>
           <Text style={styles.emptyMessageText}>
-            Vous n'avez pas encore d'exercices favoris 💪. 
+            Vous n'avez pas encore d'exercices favoris 💪.
           </Text>
         </View>
       )}
-      <ImageApp/>
+      <ImageApp />
     </View>
   );
 };
@@ -65,7 +71,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   logoContainer: {
-    marginBottom: 30
+    marginBottom: 30,
   },
   title: {
     fontSize: 24,
@@ -93,14 +99,13 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 5,
   },
-  
+
   emptyMessageText: {
     fontSize: 18,
     textAlign: "center",
     color: "#fff",
     fontWeight: "bold",
   },
-  
 });
 
 export default InsightScreen;
