@@ -182,6 +182,10 @@ const styles = StyleSheet.create({
     top: 40,
     left: 20,
     padding: 10,
+    backgroundColor: "rgba(0, 0, 0, 1)",
+    borderRadius: 50,
+    borderWidth: 1,
+    borderColor: "#8b50de",
   },
   exempleImage: {
     marginTop: 25,

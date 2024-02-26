@@ -119,6 +119,10 @@ const styles = StyleSheet.create({
     textShadowColor: "rgba(0, 0, 0, 0.75)",
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 5,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    borderRadius: 50,
+    paddingHorizontal: 10,
+    paddingVertical: 1,
   },
   favoriteButton: {
     padding: 10,
