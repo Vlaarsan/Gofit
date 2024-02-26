@@ -6,6 +6,7 @@ import { Calendar, LocaleConfig } from "react-native-calendars";
 import { useUserContext } from "../context/UserContext";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+
 LocaleConfig.locales["fr"] = {
   monthNames: [
     "Janvier",

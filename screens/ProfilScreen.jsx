@@ -4,6 +4,7 @@ import { useUserContext } from '../context/UserContext';
 import SaveUser from '../database/SaveUser';
 import LogoApp from '../components/LogoApp';
 import StepCounter from '../components/StepCounter';
+import ProfilUpdateModal from '../modals/ProfilUpdateModal';
 
 const ProfilScreen = () => {
   const { user, setUserContext } = useUserContext();
@@ -11,26 +12,24 @@ const ProfilScreen = () => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [targetWeight, setTargetWeight] = useState('');
-  const [trainingsPerWeek, setTrainingsPerWeek] = useState('');
 
-  const handlePseudoChange = (text) => {
-    setPseudo(text);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalVisible(true);
   };
 
-  const handleHeightChange = (text) => {
-    setHeight(text);
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
   };
 
-  const handleWeightChange = (text) => {
-    setWeight(text);
-  };
-
-  const handleTargetWeightChange = (text) => {
-    setTargetWeight(text);
-  };
-
-  const handleTrainingsPerWeekChange = (text) => {
-    setTrainingsPerWeek(text);
+  const handleUpdateProfile = ({ pseudo, height, weight, targetWeight }) => {
+    // Mettez à jour les informations de profil ici
+    setPseudo(pseudo);
+    setHeight(height);
+    setWeight(weight);
+    setTargetWeight(targetWeight);
+    updateDisplayName();
   };
 
   const updateDisplayName = () => {
@@ -44,7 +43,6 @@ const ProfilScreen = () => {
         height,
         weight,
         targetWeight,
-        trainingsPerWeek,
       });
     } else {
       console.error('Please enter a valid pseudo.');
@@ -58,57 +56,28 @@ const ProfilScreen = () => {
       </View >
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Pseudo : {pseudo} </Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Tapez votre pseudo ici"
-          value={pseudo}
-          onChangeText={handlePseudoChange}
-        />
+ 
       </View>
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Taille (cm) : {height} </Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Votre taille en cm"
-          value={height}
-          onChangeText={handleHeightChange}
-          keyboardType="numeric"
-        />
+
       </View>
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Poids (kg) : {weight} </Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Votre poids en kg"
-          value={weight}
-          onChangeText={handleWeightChange}
-          keyboardType="numeric"
-        />
+
       </View>
       <View style={styles.inputContainer}>
         <Text style={styles.label}>Poids ciblé (kg) : {targetWeight} </Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Votre poids ciblé en kg"
-          value={targetWeight}
-          onChangeText={handleTargetWeightChange}
-          keyboardType="numeric"
-        />
       </View>
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Nombre d'entraînements par semaine : {trainingsPerWeek} </Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Nombre d'entraînements par semaine"
-          value={trainingsPerWeek}
-          onChangeText={handleTrainingsPerWeekChange}
-          keyboardType="numeric"
-        />
-      </View>
-      <StepCounter />
-      <TouchableOpacity style={styles.button} onPress={updateDisplayName}>
-        <Text style={styles.buttonText}>Mettre à jour le profil</Text>
+
+      <TouchableOpacity style={styles.button} onPress={handleOpenModal}>
+        <Text style={styles.buttonText}>Modifier le profil</Text>
       </TouchableOpacity>
+      <ProfilUpdateModal
+        isVisible={isModalVisible}
+        onClose={handleCloseModal}
+        onUpdate={handleUpdateProfile}
+      />
     </View>
   );
 };
@@ -148,12 +117,13 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#8b50de', // Customize button color
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
+
   },
 });
