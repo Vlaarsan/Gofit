@@ -7,6 +7,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { auth } from "../firebase/config";
+import { sendPasswordResetEmail } from "firebase/auth";
+
 
 const ForgotPasswordScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -14,8 +16,11 @@ const ForgotPasswordScreen = ({ navigation }) => {
 
   const handleResetPassword = async () => {
     try {
-      await auth.sendPasswordResetEmail(email);
+      await sendPasswordResetEmail(auth, email); // Utiliser sendPasswordResetEmail du module firebase/auth
       setResetSent(true);
+      setTimeout(() => {
+        navigation.goBack();
+      }, 2000);
     } catch (error) {
       console.error(
         "Erreur lors de l'envoi du lien de réinitialisation :",
@@ -65,10 +70,10 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   header: {
-    marginTop: 40,
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 20,
+    marginBottom: 30,
+    marginTop: 200,
   },
   input: {
     height: 45,
@@ -89,7 +94,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   resetSentText: {
-    marginTop: 10,
+    marginTop: 30,
     color: "green",
     fontWeight: "bold",
   },
@@ -99,12 +104,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   backButton: {
-    marginTop: 20,
+    marginTop: 10,
   },
   backButtonText: {
-    marginTop: 50,
+    fontSize: 20,
+    marginTop: 40,
     color: "#000",
     fontWeight: "bold",
+    backgroundColor: "#ccc",
+    borderRadius: 25,
+    paddingHorizontal: 10,
+    paddingVertical: 2,
   },
 });
 

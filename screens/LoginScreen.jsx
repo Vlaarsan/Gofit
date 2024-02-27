@@ -6,8 +6,13 @@ import {
   TextInput,
   TouchableOpacity,
   ImageBackground,
+  Alert,
 } from "react-native";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  isEmailVerified,
+} from "firebase/auth";
 import { auth } from "../firebase/config";
 import { useUserContext } from "../context/UserContext";
 import SaveUser from "../database/SaveUser";
@@ -42,25 +47,27 @@ const LoginScreen = ({ navigation }) => {
         email,
         password
       );
-      console.log("Utilisateur connecté avec succès!");
 
-      // Obtenez l'objet user à partir de userCredential
       const user = userCredential.user;
+      if (!user.emailVerified) {
+        Alert.alert(
+          "Email non vérifié",
+          "Veuillez vérifier votre adresse e-mail avant de vous connecter."
+        );
+        return;
+      }
+
       setUserContext(user);
 
-      // Enregistrez l'utilisateur dans la base de données
       SaveUser({
         uid: user.uid,
         email: user.email,
         emailVerified: user.emailVerified,
-        // Ajoutez d'autres propriétés d'utilisateur si nécessaire
       });
 
-      // Enregistrez les valeurs de l'e-mail et du mot de passe dans AsyncStorage
       await AsyncStorage.setItem("email", email);
       await AsyncStorage.setItem("password", password);
 
-      // Remplacez la ligne suivante par le code de navigation approprié
       navigation.replace("MyStack");
     } catch (error) {
       console.error(error);
@@ -80,7 +87,7 @@ const LoginScreen = ({ navigation }) => {
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
-        <Text style={styles.header}>Connectez vous</Text>
+        <Text style={styles.header}>Connectez-vous</Text>
         <TextInput
           style={styles.input}
           placeholder="Email"
