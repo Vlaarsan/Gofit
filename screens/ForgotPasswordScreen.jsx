@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { auth } from "../firebase/config";
 import { sendPasswordResetEmail } from "firebase/auth";
+import { LinearGradient } from "expo-linear-gradient";
 
 
 const ForgotPasswordScreen = ({ navigation }) => {
@@ -30,6 +31,10 @@ const ForgotPasswordScreen = ({ navigation }) => {
   };
 
   return (
+    <LinearGradient
+      colors={["#fff", "#bb91fa", "#8b50de"]}
+      style={styles.gradient}
+    >
     <View style={styles.container}>
       <Text style={styles.header}>Réinitialiser le mot de passe</Text>
       <TextInput
@@ -60,10 +65,14 @@ const ForgotPasswordScreen = ({ navigation }) => {
         <Text style={styles.backButtonText}>Retour</Text>
       </TouchableOpacity>
     </View>
+    </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
+  gradient: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     alignItems: "center",
@@ -112,7 +121,7 @@ const styles = StyleSheet.create({
     color: "#000",
     fontWeight: "bold",
     backgroundColor: "#ccc",
-    borderRadius: 25,
+    borderRadius: 10,
     paddingHorizontal: 10,
     paddingVertical: 2,
   },
