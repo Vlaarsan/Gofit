@@ -1826,5 +1826,95 @@ export const exoData = [
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/06/zercher-carry.gif",
   },
+  {
+    id: "203",
+    name: "Extensions mollets avec partenaire",
+    url: "https://www.fiteo.fr/wp-content/uploads/2019/11/musculation-homme-femme2.jpg",
+    category: "Mollets",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/10/extensions-des-mollets-avec-partenaire.gif",
+  },
+  {
+    id: "204",
+    name: "Extension mollets barre debout",
+    url: "https://www.mega-gear.net/modules/psblog/uploads/mollets.jpg",
+    category: "Mollets",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-barre-debout.gif",
+  },
+  {
+    id: "205",
+    name: "Extensions mollets assis barre",
+    url: "https://www.espace-musculation.com/uploads/2010/10/mollets-assis-barre.jpg",
+    category: "Mollets",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/extension-mollets-assis-barre.gif",
+  },
+  {
+    id: "206",
+    name: "Élévations mollets Donkey",
+    url: "https://img.youtube.com/vi/kRdWcn5Mqf8/maxresdefault.jpg",
+    category: "Mollets",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/extension-des-mollets-donkey.gif",
+  },
+  {
+    id: "207",
+    name: "Extensions mollets hack-squat",
+    url: "https://www.rakk.fr/cdn/shop/files/dsc01158.jpg?v=1689285971",
+    category: "Mollets",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/11/extensions-mollets-hack-squat.gif",
+  },
+  {
+    id: "208",
+    name: "Extensions mollets assis Smith machine",
+    url: "https://www.musculation.com/wikibody/wp-content/uploads/2021/08/shutterstock_156888605.jpg",
+    category: "Mollets",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/extension-mollets-assis-machine-smith.gif",
+  },
+  {
+    id: "209",
+    name: "Extensions mollets debout Smith machine",
+    url: "https://medias.lequipe.fr/img-photo-jpg/les-extensions-de-chevilles-a-la-barre-guidee-cooltraining/1500000001542197/0:32,1998:1364-1200-800-75/db2ba.jpg",
+    category: "Mollets",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/extension-mollets-smith-machine.gif",
+  },
+  {
+    id: "210",
+    name: "Extensions mollets debout machine",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/05/Untitled-design-79-1.png",
+    category: "Mollets",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-debout-machine.gif",
+  },
+  {
+    id: "211",
+    name: "Extensions mollets escalier",
+    url: "https://julienquaglierini.com/wp-content/uploads/2022/02/exercices-musculation-mollets-sans-materiel.jpg",
+    category: "Mollets",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-sur-marche.gif",
+  },
+  {
+    id: "212",
+    name: "Extension des mollets à la presse",
+    url: "https://www.musculation.com/wikibody/wp-content/uploads/2021/08/shutterstock_248597545.jpg",
+    category: "Mollets",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-presse-45.gif",
+  },
 
 ];
