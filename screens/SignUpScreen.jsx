@@ -27,9 +27,9 @@ const SignupScreen = ({ navigation }) => {
       createUserWithEmailAndPassword(auth, email, password)
         .then(async (userCredential) => {
           // L'utilisateur est créé avec succès, envoyez l'e-mail de confirmation
-          // sendEmailVerification(auth.currentUser).then(() => {
-          //   console.log("E-mail de confirmation envoyé avec succès!");
-          // });
+          sendEmailVerification(auth.currentUser).then(() => {
+            console.log("E-mail de confirmation envoyé avec succès!");
+          });
 
           // Affichez le message à l'intérieur du bloc .then
           console.log("Utilisateur créé avec succès!");
@@ -39,7 +39,7 @@ const SignupScreen = ({ navigation }) => {
           );
           setTimeout(() => {
             moveToLogin();
-          }, 1000);
+          }, 2000);
         })
         .catch((error) => {
           // Gérer les erreurs ici

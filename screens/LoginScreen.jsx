@@ -1,11 +1,11 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   Text,
   View,
   TextInput,
   TouchableOpacity,
-  ImageBackground
+  ImageBackground,
 } from "react-native";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
@@ -22,14 +22,14 @@ const LoginScreen = ({ navigation }) => {
   useEffect(() => {
     const loadUserData = async () => {
       try {
-        const savedEmail = await AsyncStorage.getItem('email');
-        const savedPassword = await AsyncStorage.getItem('password');
+        const savedEmail = await AsyncStorage.getItem("email");
+        const savedPassword = await AsyncStorage.getItem("password");
         if (savedEmail && savedPassword) {
           setEmail(savedEmail);
           setPassword(savedPassword);
         }
       } catch (error) {
-        console.error('Error loading user data:', error);
+        console.error("Error loading user data:", error);
       }
     };
     loadUserData();
@@ -74,7 +74,9 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <ImageBackground
-      source={{ uri: 'https://www.pixelstalk.net/wp-content/uploads/images6/Cool-Workout-Background.jpg' }}
+      source={{
+        uri: "https://www.pixelstalk.net/wp-content/uploads/images6/Cool-Workout-Background.jpg",
+      }}
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
@@ -105,10 +107,13 @@ const LoginScreen = ({ navigation }) => {
         <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
           <Text style={styles.buttonText}>Se connecter</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.signupText}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("ForgotPassword")}
+          style={styles.signupText}
+        >
           <Text style={styles.signupLink}>Mot de passe oublié ?</Text>
         </TouchableOpacity>
-  
+
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("Signup");
@@ -119,7 +124,6 @@ const LoginScreen = ({ navigation }) => {
       </View>
     </ImageBackground>
   );
-  
 };
 
 const styles = StyleSheet.create({
@@ -130,8 +134,8 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
+    resizeMode: "cover",
+    justifyContent: "center",
   },
   header: {
     marginTop: 40,
@@ -143,7 +147,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 }, // Décalage de l'ombre
     textShadowRadius: 5, // Rayon de l'ombre
   },
-  
+
   input: {
     height: 45,
     marginTop: 15,
@@ -154,7 +158,6 @@ const styles = StyleSheet.create({
     width: "80%",
     color: "#000",
     borderWidth: 0.6,
-
   },
   passwordContainer: {
     flexDirection: "row",

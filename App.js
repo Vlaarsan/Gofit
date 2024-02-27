@@ -11,6 +11,7 @@ import { LikedExercisesProvider } from "./context/LikedExercicesContext";
 import { UserProvider } from "./context/UserContext";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignUpScreen";
+import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
 
 
 const Tab = createMaterialTopTabNavigator();
@@ -62,6 +63,7 @@ export default function App() {
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Signup" component={SignupScreen} />
+            <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
             <Stack.Screen name="MyStack" component={MyStack} />
           </Stack.Navigator>
         </NavigationContainer>
