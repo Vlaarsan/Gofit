@@ -14,7 +14,7 @@ import ProfilUpdateModal from "../modals/ProfilUpdateModal";
 import Bubble from "../components/Bubble";
 import ImageApp from "../components/ImageApp";
 
-const ProfilScreen = () => {
+const ProfilScreen = ({navigation} ) => {
   const { user, setUserContext } = useUserContext();
 
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -46,6 +46,10 @@ const ProfilScreen = () => {
       targetWeight: targetWeight,
     });
     setIsModalVisible(false);
+  };
+
+  const handleLogout = () => {
+    navigation.replace("Login");
   };
 
   return (
@@ -83,6 +87,10 @@ const ProfilScreen = () => {
           onPress={handleOpenModal}
         >
           <Bubble text={`${user.targetWeight} kg`} title={"Poids Cible"} />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <Text style={styles.logoutButtonText}>Déconnexion</Text>
         </TouchableOpacity>
 
         <ProfilUpdateModal
@@ -135,5 +143,19 @@ const styles = StyleSheet.create({
     top: 470,
     right: 20,
     borderRadius: 100,
+  },
+  logoutButton: {
+    position: "absolute",
+    bottom: 20,
+    alignSelf:"center",
+    width: "100%",
+    backgroundColor: "#8b50de",
+    padding: 15,
+    borderRadius: 25,
+  },
+  logoutButtonText: {
+    color: "white",
+    textAlign: "center",
+    fontWeight: "bold",
   },
 });
