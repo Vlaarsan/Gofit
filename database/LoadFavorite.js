@@ -18,7 +18,8 @@ const LoadFavorites = async (user, setExercices, setSavable) => {
 
       console.log("Favoris chargés avec succès !");
     } else {
-      console.error("Document utilisateur introuvable");
+      console.error("Document favoris utilisateur introuvable");
+      setSavable(true);
     }
   } catch (error) {
     console.error("Erreur lors du chargement des favoris : ", error);

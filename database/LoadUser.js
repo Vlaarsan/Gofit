@@ -25,7 +25,7 @@ const LoadUser = async (user, setUser) => {
     
             console.log("Profil chargé !");
         } else {
-            console.error("Document utilisateur introuvable");
+            console.error("Document load user introuvable");
         }
     } catch (error) {
         console.error("Erreur lors du chargement du Pseudo : ", error);
