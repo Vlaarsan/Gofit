@@ -1142,5 +1142,689 @@ export const exoData = [
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2022/10/souleve-de-terre-valise-a-un-bras.gif",
   },
+  {
+    id: "127",
+    name: "Goblet squat haltère",
+    url: "https://cherry.img.pmdstatic.net/fit/https.3A.2F.2Fimg.2Esport.2Egentside.2Ecom.2Farticle.2Fjambes.2Fcomment-maitriser-le-goblet-squat_76669872295805c9ac551349d87dc952ec6b62b6.2Ejpg/1200x675/quality/80/thumbnail.jpg",
+    category: "Fessiers",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/06/squat-goblet-exercice-musculation.gif",
+  },
+  {
+    id: "128",
+    name: "Fentes avant haltères",
+    url: "https://static.thcdn.com/images/v2/wp-content/uploads/sites/442/2019/06/13115302/61831463_2749979091710747_65374427356856320_n.jpg?width=700",
+    category: "Fessiers",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/06/fentes-avant-exercice-musculation.gif",
+  },
+  {
+    id: "129",
+    name: "Presse à cuisses horizontale",
+    url: "https://www.ownsport.fr/blog/wp-content/uploads/2021/01/presse-a-cuisses3-Copie.jpg",
+    category: "Fessiers",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/06/presse-a-cuisse-exercice-musculation.gif",
+  },
+  {
+    id: "130",
+    name: "Squat bulgare haltères",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/06/squat-bulgare.jpeg",
+    category: "Fessiers",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/06/squat-bulgare-halteres-exercice-musculation.gif",
+  },
+  {
+    id: "131",
+    name: "Zercher deadlift",
+    url: "https://disciplean.com/wp-content/uploads/2022/09/Zercher-squat-1024x576.webp",
+    category: "Fessiers",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/zercher-deadlift.gif",
+  },
+  {
+    id: "132",
+    name: "Thruster",
+    url: "https://nopainnotartine.com/wp-content/uploads/2023/02/Crossfit-thrusters1-1024x576.png",
+    category: "Fessiers",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/thruster.gif",
+  },
+  {
+    id: "133",
+    name: "Squat landmine",
+    url: "https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2015/11/landmine-squat.jpg?quality=86&strip=all",
+    category: "Fessiers",
+    material: "Landmine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/squat-landmine.gif",
+  },
+  {
+    id: "134",
+    name: "Squat cosaque",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2022/07/shutterstock_2036135615-1.jpg",
+    category: "Fessiers",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/cossack-squat.gif",
+  },
+  {
+    id: "135",
+    name: "Presse à cuisses inclinée",
+    url: "https://www.sixpack.fr/wp-content/uploads/2023/06/presse-a-cuisses-incline.webp",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/presse-a-cuisses-inclinee.gif",
+  },
+  {
+    id: "136",
+    name: "Leg extension",
+    url: "https://physiotutors.com/wp-content/uploads/2022/01/Seated-Leg-Extension-featured.jpg",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/06/leg-extension-exercice-musculation.gif",
+  },
+  {
+    id: "137",
+    name: "Air Squat",
+    url: "https://fitnessvolt.com/wp-content/uploads/2022/03/Air-Squat-guide.jpg",
+    category: "Quadriceps",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/air-squat.gif",
+  },
+  {
+    id: "138",
+    name: "Overhead squat avec élastique",
+    url: "https://i.ytimg.com/vi/ZVglk1o19ck/sddefault.jpg",
+    category: "Quadriceps",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/overhead-squat-avec-elastique.gif",
+  },
+  {
+    id: "139",
+    name: "Sissy squat machine",
+    url: "https://homefittraining.fr/wp-content/uploads/2023/02/meilleures-machines-sissy-squat.jpg",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2023/07/sissy-squat-machine-bodyweight-supported-squat.gif",
+  },
+  {
+    id: "140",
+    name: "Pendulum squat",
+    url: "https://www.eliteprofitca.com/wp-content/uploads/2023/05/IMG_5981-scaled.jpg",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/pendulum-squat.gif",
+  },
+  {
+    id: "141",
+    name: "Belt squat",
+    url: "https://watsongym.co.uk/wp-content/uploads/2023/03/Screenshot-2023-03-20-at-16.35.34.jpg",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/belt-squat.gif",
+  },
+  {
+    id: "142",
+    name: "Split squat élastique",
+    url: "https://www.masterfight.net/upload/bande-de-musculation-1652354722-47338.jpg",
+    category: "Quadriceps",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/split-squat-avec-elastique.gif",
+  },
+  {
+    id: "143",
+    name: "Overhead squat haltères",
+    url: "https://swolverine.com/cdn/shop/articles/Overhead_Squat_-_Swolverine_1024x.jpg?v=1647545430",
+    category: "Quadriceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/overhead-squat-halteres.gif",
+  },
+  {
+    id: "144",
+    name: "Leg extension latéral unilatéral",
+    url: "https://www.intowellness.in/wp-content/uploads/2019/09/Iso-Lateral-Leg-Extension.jpg",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/leg-extension-iso-lateral-unilateral-hammer-strenght.gif",
+  },
+  {
+    id: "145",
+    name: "Squat banc",
+    url: "https://contents.mediadecathlon.com/s941939/k$015b1b16382da288d4f9de366167eebb/1800x0/4753pt3168/9051xcr6336/back-squat-box-squat.jpg?format=auto",
+    category: "Quadriceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/squat-sur-banc.gif",
+  },
+  {
+    id: "146",
+    name: "Jefferson squat",
+    url: "https://swolverine.com/cdn/shop/articles/Jefferson_Squat_800x.png?v=1653339592",
+    category: "Quadriceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/jefferson-squat.gif",
+  },
+  {
+    id: "147",
+    name: "Squat statique contre un mur",
+    url: "https://www.cellublue.com/blog/wp-content/uploads/2014/08/exercice-anti-cellulite-a%CC%80-la-maison.jpg",
+    category: "Quadriceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/squat-statique-contre-mur-exercice-chaise.gif",
+  },
+  {
+    id: "148",
+    name: "Sissy squat",
+    url: "https://i.ytimg.com/vi/ax6TuQAf8V4/maxresdefault.jpg",
+    category: "Quadriceps",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/sissy-squat.gif",
+  },
+  {
+    id: "149",
+    name: "Presse à cuisses iso-latérale",
+    url: "https://freshinsport.fr/wp-content/uploads/2020/04/meilleure-presse-a-cuisse.jpg",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/presse-cuisse-iso-laterale-hammer-stenght.gif",
+  },
+  {
+    id: "150",
+    name: "Soulevé de terre sumo",
+    url: "https://medias.lequipe.fr/img-photo-jpg/thibault-lassalle-coach-sportif-a-bordeaux-cooltraining/1500000001480768/0:171,1009:844-1200-800-75/504ec.jpg",
+    category: "Quadriceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/souleve-de-terre-sumo.gif",
+  },
+  {
+    id: "151",
+    name: "Soulevé de terre trap bar",
+    url: "https://www.espace-musculation.com/uploads/2018/09/deadlift-trap-bar.jpg",
+    category: "Quadriceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/souleve-de-terre-a-la-trap-bar.gif",
+  },
+  {
+    id: "152",
+    name: "Safety bar squat",
+    url: "https://treadmillfactory.ca/cdn/shop/products/safe_f163fe1e-319c-4193-82e5-ed0a8688c6a3.png?v=1618263870&width=1445",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/07/safety-bar-squat.gif",
+  },
+  {
+    id: "153",
+    name: "Squat Smith machine",
+    url: "https://steelsupplements.com/cdn/shop/articles/shutterstock_627366494_1000x.jpg?v=1644570976",
+    category: "Quadriceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/squat-smith-machine-exercice-musculation.gif",
+  },
+  {
+    id: "154",
+    name: "Fentes inversées landmine",
+    url: "https://cdn.shopify.com/s/files/1/0405/9358/8374/products/mb-41-single-arm-landmine-handle-2_535x.jpg?v=1670532336",
+    category: "Quadriceps",
+    material: "Landmine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/fentes-arriere-landmine.gif",
+  },
+  {
+    id: "155",
+    name: "Overhead squat",
+    url: "https://cdn.shopify.com/s/files/1/1283/2557/files/Overhead_Squat_9_Tips_To_Master_Your_Overhead_Squat_-_Swolverine_a0a183ae-fa5f-46f4-b026-ef8e722a11ad_1024x1024.jpg?v=1573773952",
+    category: "Quadriceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/overhead-squat.gif",
+  },
+  {
+    id: "156",
+    name: "Soulevé de terre jambes tendues",
+    url: "https://www.lesdessousdusport.fr/wp-content/uploads/2020/09/homme-qui-realise-un-souleve-de-terre-jambes-tendues.jpg",
+    category: "Ischio-jambiers",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/souleve-de-terre-jambes-tendues.gif",
+  },
+  {
+    id: "157",
+    name: "Leg curl allongé",
+    url: "https://www.musculation.com/wikibody/wp-content/uploads/2023/02/Shutterstock_415776211.jpg",
+    category: "Ischio-jambiers",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/leg-curl-allonge.gif",
+  },
+  {
+    id: "158",
+    name: "Leg curl unilatéral machine",
+    url: "https://i.ytimg.com/vi/wti0b1OyKfY/maxresdefault.jpg",
+    category: "Ischio-jambiers",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/leg-curl-unilateral-debout-machine.gif",
+  },
+  {
+    id: "159",
+    name: "Leg curl décliné avec haltère",
+    url: "https://i.ytimg.com/vi/bLTuN1HJ1ps/maxresdefault.jpg",
+    category: "Ischio-jambiers",
+    material: "Haltère",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/leg-curl-decline-haltere.gif",
+  },
+  {
+    id: "160",
+    name: "Soulevé de terre avec déficit",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2023/03/shutterstock_591795188-1.jpg",
+    category: "Ischio-jambiers",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/souleve-de-terre-avec-deficit.gif",
+  },
+  {
+    id: "161",
+    name: "Leg curl assis machine",
+    url: "https://liftingfaq.com/wp-content/uploads/2021/07/seated-leg-curl-alternatives.jpg",
+    category: "Ischio-jambiers",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/leg-curl-assis-machine.gif",
+  },
+  {
+    id: "162",
+    name: "Leg curl allongé élastique",
+    url: "https://assets-global.website-files.com/5d0c269d409e5b11b36e12aa/619a74cefe64ffd403e8792d_Leg-Curl-E%CC%81lastique.jpg",
+    category: "Ischio-jambiers",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/leg-curl-avec-elastique.gif",
+  },
+  {
+    id: "163",
+    name: "Planche",
+    url: "https://cache.marieclaire.fr/data/photo/w1200_h630_ci/5b/planche-sport-abdos.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/planche-abdos.gif",
+  },
+  {
+    id: "164",
+    name: "Crunch",
+    url: "https://contents.mediadecathlon.com/s942396/k$6a52f63bd4bbd76497f2e604d66c0624/1920x0/3000pt2516/6000xcr2500/crunch-abdominaux-musculation.jpg?format=auto",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/07/crunch-au-sol-exercice-musculation.gif",
+  },
+  {
+    id: "165",
+    name: "Sit-up décliné",
+    url: "https://www.dmoose.com/cdn/shop/articles/1_044424fd-62af-4b05-8d1f-ada1920bff63.jpg?v=1648738220",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/sit-up-decline.gif",
+  },
+  {
+    id: "166",
+    name: "Relevé de genoux suspendu",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2023/03/shutterstock_446770438.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/07/releve-de-genoux-suspendu-exercice-musculation.gif",
+  },
+  {
+    id: "167",
+    name: "Relevé de jambes chaise romaine",
+    url: "https://www.musculation.com/wikibody/wp-content/uploads/2021/08/shutterstock_1054046411.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/releve-jambes-chaise-romaine-abdominaux.gif",
+  },
+  {
+    id: "168",
+    name: "Roulette à abdominaux",
+    url: "https://resize.prod.femina.ladmedia.fr/rblr/1200,806/img/var/2021-07/roue-abdominaux-conseils-comment-muscler.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/roulette-abdominaux.gif",
+  },
+  {
+    id: "169",
+    name: "Relevé de jambes suspendu",
+    url: "https://www.sixpack.fr/wp-content/uploads/2023/12/releves-de-jambes-suspendu.webp",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/releve-de-jambes-suspendu.gif",
+  },
+  {
+    id: "170",
+    name: "Crunch poulie",
+    url: "https://www.sixpack.fr/wp-content/uploads/2023/06/crunch-poulie.webp",
+    category: "Abdos",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/06/crunch-poulie-haute-exercice-musculation.gif",
+  },
+  {
+    id: "171",
+    name: "Flexions obliques banc à lombaire",
+    url: "https://medias.toutelanutrition.com/ressource/144/blog/2020/aout/18/crunch-oblique.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/07/flexions-des-obliques-banc-lombaire-45-exercice-musculation.gif",
+  },
+  {
+    id: "172",
+    name: "Planche latérale",
+    url: "https://images.anaca3.com/wp-content/uploads/2018/05/la-planche-laterale-pour-travailler-ses-abdominaux-702x336.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/planche-laterale-obliques.gif",
+  },
+  {
+    id: "173",
+    name: "Mountain climber",
+    url: "https://www.healthshots.com/wp-content/uploads/2020/05/mountain-climber.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/06/mountain-climber-exercice-musculation.gif",
+  },
+  {
+    id: "174",
+    name: "Rotations du buste barre",
+    url: "https://www.docteur-fitness.com/wp-content/uploads/2021/10/rotation-buste-tube-pvc.jpg",
+    category: "Abdos",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/11/rotation-buste-barre.gif",
+  },
+  {
+    id: "175",
+    name: "Rotations des abdominaux suspendu",
+    url: "https://medias.toutelanutrition.com/ressource/104/Abdominaux%20suspendu.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/11/rotations-abdos-obliques-suspendu.gif",
+  },
+  {
+    id: "176",
+    name: "Crunch à la machine",
+    url: "https://strengthwarehouseusa.com/cdn/shop/products/MuscleDEliteLineMDE-02AAbCrunchStart.jpg?v=1643467223",
+    category: "Abdos",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/crunch-machine-abdos.gif",
+  },
+  {
+    id: "177",
+    name: "Dragon flag",
+    url: "https://www.sport-equipements.fr/wp-content/uploads/2016/03/shutterstock_1405376594-1-1024x683.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/07/dragon-flag.gif",
+  },
+  {
+    id: "178",
+    name: "Flexions latérales haltère",
+    url: "https://www.olivierallain.com/wp-content/uploads/2016/04/flexion-laterale-avec-haltere-attention-danger.jpg",
+    category: "Abdos",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/07/flexions-laterales-haltere.gif",
+  },
+  {
+    id: "179",
+    name: "AB Coaster",
+    url: "https://d3d71ba2asa5oz.cloudfront.net/12006023/images/96137.jpg",
+    category: "Abdos",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/ab-coaster-abdominaux.gif",
+  },
+  {
+    id: "180",
+    name: "Crunch debout élastique",
+    url: "https://www.fitadium.com/conseils/wp-content/uploads/2020/04/programme-entrainement-musculation-elastique.jpg",
+    category: "Abdos",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/crunch-debout-avec-elastique.gif",
+  },
+  {
+    id: "181",
+    name: "Crunch poulie obliques",
+    url: "https://medias.toutelanutrition.com/ressource/104/Crunch%20poulie%20haute.jpg",
+    category: "Abdos",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2023/07/crunch-a-la-poulie-pour-les-obliques.gif",
+  },
+  {
+    id: "182",
+    name: "Crunch papillon",
+    url: "https://www.valerieorsoni.com/fr/wp-content/uploads/2020/05/iStock-919871194.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/crunch-papillon-butterfly-sit-ups.gif",
+  },
+  {
+    id: "183",
+    name: "Crunch bicyclette",
+    url: "https://cache.cosmopolitan.fr/data/photo/w1000_ci/6g/exercice-ventre-sculpte.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/exercice-abdos-bicyclette.gif",
+  },
+  {
+    id: "184",
+    name: "Rotations russes",
+    url: "https://www.fitness.fr/wp-content/uploads/2021/02/russian-twist-mouvement-fitness-scaled.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/rotations-russes-obliques.gif",
+  },
+  {
+    id: "185",
+    name: "Cocon",
+    url: "https://www.grazia.fr/wp-content/uploads/grazia/2017/01/shutterstock_1994483099-min-750x410.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/cocon-abdominaux.gif",
+  },
+  {
+    id: "186",
+    name: "Hollow hold",
+    url: "https://i.ytimg.com/vi/4xRpGgttca8/maxresdefault.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/hollow-hold.gif",
+  },
+  {
+    id: "187",
+    name: "Planche de l'ours",
+    url: "https://i0.wp.com/post.healthline.com/wp-content/uploads/2022/02/man-bear-plank-header.jpg?w=1155&h=1528",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/gainage-ours-bear-plank.gif",
+  },
+  {
+    id: "188",
+    name: "Moulin",
+    url: "https://rkcblog.dragondoor.com/wp-content/uploads/2014/10/BethAndrews-Windmill_aspectratio.jpg",
+    category: "Abdos",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/windmill.gif",
+  },
+  {
+    id: "189",
+    name: "Rotations buste landmine",
+    url: "https://cdn.muscleandstrength.com/sites/default/files/landmine-rotation.jpg",
+    category: "Abdos",
+    material: "Landmine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/rotation-buste-landmine.gif",
+  },
+  {
+    id: "190",
+    name: "Rotation buste debout poulie",
+    url: "https://www.musculaction.com/images/intro-pallof.jpg",
+    category: "Abdos",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/rotation-buste-debout-poulie.gif",
+  },
+  {
+    id: "191",
+    name: "Flexions latérales poulie basse",
+    url: "https://athletes-temple.com/wp-content/uploads/2020/06/La-flexion-lat%C3%A9rale-3.jpg",
+    category: "Abdos",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/flexions-laterales-poulie-basse.gif",
+  },
+  {
+    id: "192",
+    name: "Touche talon alternés",
+    url: "https://musculation-alimentation.fr/wp-content/uploads/2021/05/touchers-1024x576.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/touche-talon-alternes.gif",
+  },
+  {
+    id: "193",
+    name: "Relevé de jambes assis",
+    url: "https://cherry.img.pmdstatic.net/fit/https.3A.2F.2Fimg.2Esport.2Egentside.2Ecom.2Fs3.2Ffrgss.2F1024.2Fabdos.2Fdefault_2021-01-15_d51fe514-6ecd-4da3-bbfc-814c8663db08.2Epng/640x360/quality/80/un-programme-de-3-exercices-pour-avoir-des-abdominaux-rapidement.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/releve-de-jambes-assis.gif",
+  },
+  {
+    id: "194",
+    name: "Ciseaux",
+    url: "https://www.sportri.com/upload/abdos-ciseaux.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/ciseaux.gif",
+  },
+  {
+    id: "195",
+    name: "Dead bug",
+    url: "https://images.squarespace-cdn.com/content/v1/5a620a85d55b41e7233c5243/b040dc80-c288-4018-8e4d-141101489e12/thumbnail%2Bframe%2B2.png",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/dead-bug.gif",
+  },
+  {
+    id: "196",
+    name: "Cercles jambes tendues",
+    url: "https://assets.afcdn.com/story/20190710/2015005_w5071h3803c1cx2536cy1691cxt0cyt0cxb5071cyb3381.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/cercles-jambes-tendues.gif",
+  },
+  {
+    id: "197",
+    name: "Planche de l'ours kickback",
+    url: "https://i.ytimg.com/vi/iPkf-3xF2yg/maxresdefault.jpg",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/bear-plank-avec-kickback.gif",
+  },
+  {
+    id: "198",
+    name: "Planche latérale avec rotation",
+    url: "https://media.istockphoto.com/id/1368589733/fr/photo/belle-jeune-femme-noire-debout-en-planche-lat%C3%A9rale-sur-un-tapis-de-yoga-%C3%A0-la-maison-espace.jpg?s=612x612&w=0&k=20&c=_fuYw1wVPwsuJ_ShrvRKTWRrPmXZK1JgkPhlKgL0f7M=",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/planche-laterale-avec-rotation.gif",
+  },
+  {
+    id: "199",
+    name: "Crunch jambes verticales",
+    url: "https://contents.mediadecathlon.com/s942392/k$9c97b23d0d99fab3e44a87ec025b762d/1920x0/3000pt2000/5714xcr4000/crunch--abdominaux-jambes-tendues.jpg?format=auto",
+    category: "Abdos",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/crunch-avec-jambes-verticales.gif",
+  },
+  {
+    id: "200",
+    name: "Rotation du buste élastique",
+    url: "https://cdn.coach-hunter.com/images/exercice/19e54919-df60-4010-8b74-0f5de5cb55e8.jpg",
+    category: "Abdos",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/rotation-buste-elastique-pallof-press.gif",
+  },
+  {
+    id: "201",
+    name: "Roulage barre",
+    url: "https://wodnews.com/wp-content/uploads/2018/01/Tip-Do-the-Ab-Wheel-Rollout.jpg",
+    category: "Abdos",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/abdominaux-a-la-barre.gif",
+  },
+  {
+    id: "202",
+    name: "Zercher carry",
+    url: "https://hips.hearstapps.com/hmg-prod/images/zercher-1656493924.jpg?crop=0.401xw:0.800xh;0.599xw,0&resize=640:*",
+    category: "Abdos",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/zercher-carry.gif",
+  },
 
 ];
