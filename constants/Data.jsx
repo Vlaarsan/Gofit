@@ -1916,5 +1916,769 @@ export const exoData = [
     exempleImg:
       "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-mollets-presse-45.gif",
   },
-
+  {
+    id: "213",
+    name: "Développé militaire",
+    url: "https://cdn.shopify.com/s/files/1/0680/7843/6626/files/ohp_midjourney_480x480.png?v=1690546084",
+    category: "Epaules",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/08/developpe-militaire-exercice-musculation.gif",
+  },
+  {
+    id: "214",
+    name: "Développé Arnold",
+    url: "https://www.dr-muscu.fr/wp-content/uploads/2023/02/Developpe-Arnold.jpg",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/08/developpe-arnold-exercice-musculation.gif",
+  },
+  {
+    id: "215",
+    name: "Face pull",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/07/Untitled-design-2023-07-31T112027.613-1.png",
+    category: "Epaules",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/face-pull.gif",
+  },
+  {
+    id: "216",
+    name: "Élévations latérales poulie",
+    url: "https://www.musculaction.com/images/560-elevations-laterales.jpg",
+    category: "Epaules",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/elevations-laterales-poulie.gif",
+  },
+  {
+    id: "217",
+    name: "Élévations latérales machine",
+    url: "https://www.musculaction.com/images/intro-elevations-machine.jpg",
+    category: "Epaules",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/elevation-laterale-machine.gif",
+  },
+  {
+    id: "218",
+    name: "Développé épaules haltères",
+    url: "https://www.ericfavre.com/lifestyle/wp-content/uploads/2020/02/shutterstock_1517575082-version-web.jpg",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/developpe-epaule-halteres.gif",
+  },
+  {
+    id: "219",
+    name: "Rotation externe de l'épaule poulie",
+    url: "https://i.ytimg.com/vi/lfK0LhL6xqE/hqdefault.jpg",
+    category: "Epaules",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/rotation-externe-epaule-poulie.gif",
+  },
+  {
+    id: "220",
+    name: "Pec deck inversé",
+    url: "https://www.fitnessheroes.fr/wp-content/uploads/2015/01/peck_deck_inverse_TN.jpg",
+    category: "Epaules",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/pec-deck-inverse.gif",
+  },
+  {
+    id: "221",
+    name: "Élévations frontales",
+    url: "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_925,h_400/https://passimale.fr/wp-content/uploads/2022/04/elevation-laterale-925x400.jpg",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevations-frontales-exercice-musculation.gif",
+  },
+  {
+    id: "222",
+    name: "Élévations latérales",
+    url: "https://www.ericfavre.com/lifestyle/wp-content/uploads/2020/06/iStock-874205972-1024x733.jpg",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevations-laterales-exercice-musculation.gif",
+  },
+  {
+    id: "223",
+    name: "Presse épaules inclinée",
+    url: "https://www.ericfavre.com/lifestyle/wp-content/uploads/2020/06/iStock-1204396438-1024x683.jpg",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/08/presse-epaule-exercice-musculation.gif",
+  },
+  {
+    id: "224",
+    name: "Élévations latérales kettlebell",
+    url: "https://i.vimeocdn.com/video/603159241-1c7622bea9b0f1757d372bd618fcc64aabb2ba1fd8b7d0601ca947953bf8a3b1-d_640?f=webp",
+    category: "Epaules",
+    material: "Kettlebell",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/elevation-laterales-avec-kettlebell.gif",
+  },
+  {
+    id: "225",
+    name: "Tirage menton kettlebell",
+    url: "https://www.lequipe.fr/_medias/img-ilosport-jpg/tirage-menton-avec-kettlebell/1500000000706810/0:123,1000:836-828-591-75/131bc.jpg",
+    category: "Epaules",
+    material: "Kettlebell",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/tirage-menton-avec-kettlebell.gif",
+  },
+  {
+    id: "226",
+    name: "Développé épaule kettlebell",
+    url: "https://www.ownsport.fr/blog/wp-content/uploads/2021/03/Seance-stabilite-de-lepaule-Copie.jpg",
+    category: "Epaules",
+    material: "Kettlebell",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/developpe-epaule-avec-kettlebell.gif",
+  },
+  {
+    id: "227",
+    name: "Tirage menton Smith machine",
+    url: "https://www.objectifs-fitness.com/wp-content/uploads/2016/05/rowing-menton-musculation-tirage.jpg",
+    category: "Epaules",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/11/tirage-menton-machine-guidee.gif",
+  },
+  {
+    id: "228",
+    name: "Élévations latérales landmine",
+    url: "https://cdn.shopify.com/s/files/1/0728/8355/files/1_2cb533b7-5e59-473e-b0da-c4dc41164c0b.png?v=1650973258",
+    category: "Epaules",
+    material: "Landmine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/08/elevation-laterale-landmine-exercice-musculation.gif",
+  },
+  {
+    id: "229",
+    name: "Oiseau assis banc",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/06/Untitled-design-2023-06-20T093024.124-1.png",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/oiseau-assis-sur-banc.gif",
+  },
+  {
+    id: "230",
+    name: "Développé épaule unilatéral élastique",
+    url: "https://cdn.coach-hunter.com/images/exercice/d53ea3ee-f36b-47cf-8840-558e8d8a2e87.jpg",
+    category: "Epaules",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-epaule-unilateral-avec-elastique.gif",
+  },
+  {
+    id: "231",
+    name: "Développé épaules Smith machine",
+    url: "https://i.ytimg.com/vi/Zsjl5XrGOx0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGGUgXShQMA8=&rs=AOn4CLAVp5-GbxuLpsp-8Wf2p3lVG6Gtiw",
+    category: "Epaules",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-epaules-smith-machine.gif",
+  },
+  {
+    id: "232",
+    name: "Tirage menton avec élastique",
+    url: "https://cdn.shopify.com/s/files/1/0364/7792/7564/files/rowing-menton-elastique-exercice_e024f173-7189-4e10-ad8e-529b086dad45.jpg?v=1644910805",
+    category: "Epaules",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/tirage-menton-avec-elastique.gif",
+  },
+  {
+    id: "233",
+    name: "Oiseau élastique",
+    url: "https://www.cellublue.com/blog/wp-content/uploads/2021/06/exercices-epaules-elastique-trapezes-1024x683.jpg",
+    category: "Epaules",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/oiseau-avec-elastique.gif",
+  },
+  {
+    id: "234",
+    name: "Développé épaules élastique",
+    url: "https://cdn.shopify.com/s/files/1/0364/7792/7564/files/developpe-militaire-elastique.jpg?v=1630294489",
+    category: "Epaules",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-epaules-avec-elastique.gif",
+  },
+  {
+    id: "235",
+    name: "Élévations latérales inclinées haltère",
+    url: "https://www.musculation.com/wikibody/wp-content/uploads/2021/08/shutterstock_587832161.jpg",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/elevation-laterale-incline-haltere.gif",
+  },
+  {
+    id: "236",
+    name: "Rotation externe épaule couchée haltère",
+    url: "https://www.superphysique.org/images/superphysique/exercices/222/1.jpg",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/rotation-externe-epaule-haltere.gif",
+  },
+  {
+    id: "237",
+    name: "Handstand push-up",
+    url: "https://hips.hearstapps.com/hmg-prod/images/handstanding-in-the-gym-royalty-free-image-492298271-1552082186.jpg?crop=0.719xw:1.00xh;0.189xw,0&resize=640:*",
+    category: "Epaules",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/handstand-push-up.gif",
+  },
+  {
+    id: "238",
+    name: "Pompes piquées",
+    url: "https://contents.mediadecathlon.com/s942249/k$494d64e396bd34dc6f0f450704e28238/1199x0/3000pt2204/6000xcr2571/Musculation--creer-son-programme-special-pompes-piquees.jpg?format=auto",
+    category: "Epaules",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/pike-push-up.gif",
+  },
+  {
+    id: "239",
+    name: "Croix de fer avec haltères",
+    url: "https://img.freepik.com/photos-premium/faire-exercice-halteres-dans-salle-musculation_798657-8.jpg?w=360",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/croix-de-fer-halteres.gif",
+  },
+  {
+    id: "240",
+    name: "Extension horizontale épaules élastique",
+    url: "https://fit-superhumain.com/cdn/shop/articles/rowing-elastique_1024x.jpg?v=1641179390",
+    category: "Epaules",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/03/extension-horizontale-de-epaule-elastique.gif",
+  },
+  {
+    id: "241",
+    name: "Élévations latérales unilatérales poulie",
+    url: "https://i.ytimg.com/vi/4mP9en4ll4c/maxresdefault.jpg",
+    category: "Epaules",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/elevations-laterales-unilaterale-poulie.gif",
+  },
+  {
+    id: "242",
+    name: "Développé épaules assis élastique",
+    url: "https://homefittraining.fr/wp-content/uploads/2021/06/programme-musculation-elastique.jpg",
+    category: "Epaules",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-epaules-assis-avec-elastique.gif",
+  },
+  {
+    id: "243",
+    name: "Développé épaules machine",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/06/Untitled-design-2023-06-27T110948.129-1.png",
+    category: "Epaules",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-epaules-a-la-machine-shoulder-press.gif",
+  },
+  {
+    id: "244",
+    name: "Rotations cubaines",
+    url: "https://www.fitmetrics.ch/uploads/media/images/rotations-cubaines-653ec6c9d7ee1106565263.png?f88242f20e0e3e789462356b1a7e3427",
+    category: "Epaules",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/rotation-externe-vertical-epaule-haltere.gif",
+  },
+  {
+    id: "245",
+    name: "Élévations frontales poulie basse",
+    url: "https://julienquaglierini.com/wp-content/uploads/2022/01/maxresdefault-59.jpg",
+    category: "Epaules",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/elevation-frontale-poulie-basse.gif",
+  },
+  {
+    id: "246",
+    name: "Développé nuque Smith machine",
+    url: "https://conseils-musculation.info/wp-content/uploads/2018/12/D%C3%A9velopp%C3%A9_Nuque_Conseils-Musculation.Info_.jpg",
+    category: "Epaules",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/developpe-nuque-barre-guidee.gif",
+  },
+  {
+    id: "247",
+    name: "Curl barre",
+    url: "https://www.musculaction.com/images/intro-curl-barre.jpg",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-barre.gif",
+  },
+  {
+    id: "248",
+    name: "Curl concentré",
+    url: "https://boxlifemagazine.com/wp-content/uploads//2023/06/Untitled-design-2023-06-06T151803.908-1-1024x666.png",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/09/curl-concentre.gif",
+  },
+  {
+    id: "249",
+    name: "Curl pupitre barre EZ",
+    url: "https://www.superprof.fr/blog/wp-content/uploads/2018/02/muscler-bras-barre.jpg",
+    category: "Biceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-au-pupitre-barre-ez-larry-scott.gif",
+  },
+  {
+    id: "250",
+    name: "Curl allongé poulie",
+    url: "https://www.espace-musculation.com/uploads/2013/06/curl-couche-poulie.jpg",
+    category: "Biceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-allonge-a-la-poulie.gif",
+  },
+  {
+    id: "251",
+    name: "Curl poulie position squat",
+    url: "https://www.espace-musculation.com/uploads/2013/06/curl-concentre-poulie-basse1.jpg",
+    category: "Biceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/curl-poulie-en-position-squat.gif",
+  },
+  {
+    id: "252",
+    name: "Curl biceps assis machine",
+    url: "https://www.basic-fit.com/dw/image/v2/BDFP_PRD/on/demandware.static/-/Library-Sites-basic-fit-shared-library/default/dw3e34368e/Roots/Blog/Blog-Header/1088x612/18-01-Blog-Fitness-Training-Bicep-Girl.jpg?sw=968",
+    category: "Biceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-pupitre-machine-prechargee.gif",
+  },
+  {
+    id: "253",
+    name: "Curl haltère debout banc incliné",
+    url: "https://www.fitnessheroes.fr/wp-content/uploads/2015/01/curl_pupitre_haltere_arrivee.jpg",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/curl-haltere-debout-banc-incline.gif",
+  },
+  {
+    id: "254",
+    name: "Curl Spider",
+    url: "https://mirafit.co.uk/wp/wp-content/uploads/2022/10/spider-curl-with-a-Mirafit-M350-Adjustable-Weight-Bench.jpg",
+    category: "Biceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/spider-curl.gif",
+  },
+  {
+    id: "255",
+    name: "Curl haltère incliné rotation",
+    url: "https://www.fitadium.com/conseils/wp-content/uploads/2020/11/curls-inclines.jpg",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/curl-haltere-incline.gif",
+  },
+  {
+    id: "256",
+    name: "Curl biceps poulie basse",
+    url: "https://i.ytimg.com/vi/RUt4ZqGIPso/maxresdefault.jpg",
+    category: "Biceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/curl-biceps-poulie-basse.gif",
+  },
+  {
+    id: "257",
+    name: "Curl Zottman",
+    url: "https://hips.hearstapps.com/hmg-prod/images/healthy-young-female-weight-training-in-gym-royalty-free-image-1674117552.jpg?crop=1xw:0.9339xh;center,top&resize=1200:*",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-zottman.gif",
+  },
+  {
+    id: "258",
+    name: "Curl prise marteau élastique",
+    url: "https://cdn.shopify.com/s/files/1/0364/7792/7564/files/triceps_elastique.jpg?v=1639938454",
+    category: "Biceps",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/curl-avec-elastique.gif",
+  },
+  {
+    id: "259",
+    name: "Curl à la poulie vis-à-vis",
+    url: "https://www.pyreneesinfosport.fr/wp-content/uploads/2020/11/exercices-pectoraux-musculation.jpg",
+    category: "Biceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/curl-poulie-vis-a-vis.gif",
+  },
+  {
+    id: "260",
+    name: "Drag curl haltères",
+    url: "https://i.ytimg.com/vi/5PdEraHkF1A/maxresdefault.jpg",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/drag-curl-halteres-assis.gif",
+  },
+  {
+    id: "261",
+    name: "Curl inversé barre",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/06/Untitled-design-2023-06-07T100025.006-1.png",
+    category: "Biceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/curl-inverse-barre.gif",
+  },
+  {
+    id: "262",
+    name: "Curl haltères prise neutre",
+    url: "https://www.fitadium.com/conseils/wp-content/uploads/2020/11/curl-prise-marteau.jpg",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/curl-haltere-prise-neutre.gif",
+  },
+  {
+    id: "263",
+    name: "Drag curl Smith machine",
+    url: "https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2018/01/1109-smith-drag-curl.jpg?w=1109&h=614&crop=1&quality=86&strip=all",
+    category: "Biceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/drag-curl-smith-machine.gif",
+  },
+  {
+    id: "264",
+    name: "Drag curl barre",
+    url: "https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2022/03/Black-fitness-model-demonstrating-how-to-do-the-drag-curl-exercise-in-the-gym.jpg?quality=86&strip=all",
+    category: "Biceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/drag-curl.gif",
+  },
+  {
+    id: "265",
+    name: "Curl biceps alterné haltères",
+    url: "https://i0.wp.com/www.conseil-fitness.com/wp-content/uploads/2016/12/4-exercices-musculation-biceps.jpg?fit=900%2C563&ssl=1",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/08/curl-biceps-avec-halteres-alterne.gif",
+  },
+  {
+    id: "266",
+    name: "Waiter curl",
+    url: "https://superhumanfitness.com/wp-content/uploads/2020/09/Waiters-Curl.jpg",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/waiter-curl.gif",
+  },
+  {
+    id: "267",
+    name: "Curl biceps alterné supination banc incliné",
+    url: "https://www.musculation-halteres.fr/wp-content/uploads/2017/05/curl-legerement-incline-supination-unilateral-alterne-avec-halteres-4.jpg",
+    category: "Biceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/curl-biceps-alterne-sur-banc-incline.gif",
+  },
+  {
+    id: "268",
+    name: "Curl biceps élastique",
+    url: "https://i.ytimg.com/vi/S1NIN1z4z9Q/maxresdefault.jpg",
+    category: "Biceps",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2023/07/curl-biceps-prise-pronation-bande-elastique.gif",
+  },
+  {
+    id: "269",
+    name: "Curl haltère prise marteau pupitre",
+    url: "https://i.ytimg.com/vi/lt0JSC_wRHA/maxresdefault.jpg",
+    category: "Biceps",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/curl-haltere-prise-marteau-pupitre.gif",
+  },
+  {
+    id: "270",
+    name: "Curl incliné poulie",
+    url: "https://www.musculaction.com/images/intro-curl-incline.jpg",
+    category: "Biceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/05/curl-incline-poulie.gif",
+  },
+  {
+    id: "271",
+    name: "Barre front",
+    url: "https://julienquaglierini.com/wp-content/uploads/2022/01/maxresdefault-32.jpg",
+    category: "Triceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/09/barre-front.gif",
+  },
+  {
+    id: "272",
+    name: "Dips barres parallèles",
+    url: "https://www.sport-chez-moi.com/wp-content/uploads/2019/04/meilleure-barre-de-dips-comparatif-guide-achat-avis.jpg",
+    category: "Triceps",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2000/01/dips-pectoraux.gif",
+  },
+  {
+    id: "273",
+    name: "Extensions verticales un bras haltère",
+    url: "https://www.fitadium.com/conseils/wp-content/uploads/2020/11/extension-triceps.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/extension-triceps-haltere-un-bras.gif",
+  },
+  {
+    id: "274",
+    name: "Extension verticale assis barre",
+    url: "https://i.ytimg.com/vi/Usoae88wPr4/maxresdefault.jpg",
+    category: "Triceps",
+    material: "Barre",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-verticale-assis-barre.gif",
+  },
+  {
+    id: "275",
+    name: "Extensions triceps machine",
+    url: "https://cdn.muscleandstrength.com/sites/default/files/machine-tricep-extension.jpg",
+    category: "Triceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/extension-triceps-machine-technogym.gif",
+  },
+  {
+    id: "276",
+    name: "Dips chaise",
+    url: "https://contents.mediadecathlon.com/s941895/k$6ee92c94dca84301b5e39e4a7031d84f/1800x0/4214pt3480/7362xcr4685/dips-banc-jambes-tendues.jpg?format=auto",
+    category: "Triceps",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/dips-sur-une-chaise.gif",
+  },
+  {
+    id: "277",
+    name: "Extensions triceps incliné poulie basse",
+    url: "https://musqle.fr/Media/Default/Exercise%20images/BIG59602.jpg",
+    category: "Triceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/extension-triceps-incline-poulie-basse.gif",
+  },
+  {
+    id: "278",
+    name: "Extensions concentrées des triceps poulie",
+    url: "https://www.lesdessousdusport.fr/wp-content/uploads/2023/05/Top-8-des-meilleurs-exercices-de-musculation-des-triceps-a-la-poulie.jpeg",
+    category: "Triceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/06/extensions-concentres-des-triceps-poulie.gif",
+  },
+  {
+    id: "279",
+    name: "Extension horizontale poulie",
+    url: "https://www.musculation.com/wikibody/wp-content/uploads/2021/08/shutterstock_1906078858.jpg",
+    category: "Triceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-horizontale-poulie.gif",
+  },
+  {
+    id: "280",
+    name: "Extensions verticales poulie haute",
+    url: "https://www.ericfavre.com/lifestyle/wp-content/uploads/2020/02/shutterstock_1089543869-version-web.jpg",
+    category: "Triceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/extension-triceps-poulie-haute.gif",
+  },
+  {
+    id: "281",
+    name: "Dips assis machine",
+    url: "https://image.noelshack.com/fichiers/2022/18/3/1651692195-machine-tricep-dip-eind.jpg",
+    category: "Triceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/dips-assis-machine-matrix.gif",
+  },
+  {
+    id: "282",
+    name: "Kickback alterné assis",
+    url: "https://i.ytimg.com/vi/STpmFu20yGY/maxresdefault.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/kickback-alterne-assis.gif",
+  },
+  {
+    id: "283",
+    name: "Extensions triceps incliné haltères",
+    url: "https://boxlifemagazine.com/wp-content/uploads/2023/10/image6-1-1024x576.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/extension-triceps-banc-incline-halteres.gif",
+  },
+  {
+    id: "284",
+    name: "Extensions triceps décliné haltères",
+    url: "https://www.masterfight.net/upload/extensions-triceps.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-triceps-decline-halteres.gif",
+  },
+  {
+    id: "285",
+    name: "Extensions triceps décliné haltères",
+    url: "https://www.masterfight.net/upload/extensions-triceps.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-triceps-decline-halteres.gif",
+  },
+  {
+    id: "286",
+    name: "Dips assistés machine",
+    url: "https://i.ytimg.com/vi/RABuuVuFrUY/maxresdefault.jpg",
+    category: "Triceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/04/dips-assiste-machine.gif",
+  },
+  {
+    id: "287",
+    name: "Kickback debout haltères",
+    url: "https://www.ericfavre.com/lifestyle/wp-content/uploads/2020/06/triceps-kick-back-1024x683.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/12/kickback-debout-avec-halteres.gif",
+  },
+  {
+    id: "288",
+    name: "Extensions triceps assis haltère",
+    url: "https://i.ytimg.com/vi/TB_Idy--jaU/sddefault.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/12/extensions-des-triceps-assis-avec-haltere.gif",
+  },
+  {
+    id: "289",
+    name: "Extensions triceps couché haltères",
+    url: "https://i.ytimg.com/vi/KXwQd9DoaVw/sddefault.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/12/extensions-triceps-couche-halteres.gif",
+  },
+  {
+    id: "290",
+    name: "Extensions triceps incliné Smith machine",
+    url: "https://i.ytimg.com/vi/QZfNRcUENZg/maxresdefault.jpg",
+    category: "Triceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/extensions-triceps-incline-smith-machine.gif",
+  },
+  {
+    id: "291",
+    name: "Développé couché prise serrée Smith machine",
+    url: "https://i.ytimg.com/vi/cpPJ2k0gts0/maxresdefault.jpg",
+    category: "Triceps",
+    material: "Machine",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/11/developpe-couche-prise-serree-smith-machine.gif",
+  },
+  {
+    id: "292",
+    name: "Extensions des triceps poulie haute",
+    url: "https://i.ytimg.com/vi/rnLaA5xJrj4/maxresdefault.jpg",
+    category: "Triceps",
+    material: "Poulie",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/10/extension-triceps-poulie-haute-corde.gif",
+  },
+  {
+    id: "293",
+    name: "Dips banc",
+    url: "https://i.ytimg.com/vi/CX7SgrlM700/sddefault.jpg",
+    category: "Triceps",
+    material: "Poids de corps",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/09/dips-sur-banc.gif",
+  },
+  {
+    id: "294",
+    name: "Kickback",
+    url: "https://protrainer.fr/blog/wp-content/uploads/2017/01/kickback-600x400.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/09/kickback.gif",
+  },
+  {
+    id: "295",
+    name: "Extensions verticales deux mains haltère",
+    url: "https://forge-du-muscle.fr/wp-content/uploads/2023/03/extension-vertical-nuque-deuxmains-683x1024.png",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/09/extensions-verticales-a-deux-mains-avec-haltere.gif",
+  },
+  {
+    id: "296",
+    name: "Extension verticale des triceps élastique",
+    url: "https://resize.prod.docfr.doc-media.fr/s/1200/ext/eac4ff34/content/2022/7/23/10-exercices-a-faire-avec-un-elastique-f163d14adea7ca84.jpeg",
+    category: "Triceps",
+    material: "Elastique",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/02/extension-triceps-verticale-elastique.gif",
+  },
+  {
+    id: "297",
+    name: "Tate press un bras haltère",
+    url: "https://cherry.img.pmdstatic.net/fit/https.3A.2F.2Fimg.2Esport.2Egentside.2Ecom.2Farticle.2Ftriceps.2Fles-meilleurs-exercices-pour-vos-triceps_da9a8475febc3c791e688192d5d2eb7c1037c522.2Ejpg/1200x675/quality/80/les-meilleurs-exercices-pour-vos-triceps.jpg",
+    category: "Triceps",
+    material: "Haltere",
+    exempleImg:
+      "https://www.docteur-fitness.com/wp-content/uploads/2022/01/tate-press.gif",
+  },
 ];
