@@ -161,6 +161,6 @@ const styles = StyleSheet.create({
     marginTop: 40,
     borderRadius: 20,
     width: "100%",
-    height: 450,
+    height: 550,
   },
 });
