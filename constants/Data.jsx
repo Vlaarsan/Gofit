@@ -15,7 +15,7 @@ export const exoData = [
     category: "Dos",
     material: "Barre",
     exempleImg:
-      "https://www.docteur-fitness.com/wp-content/uploads/2020/10/pompe-musculation.gif",
+      "https://www.docteur-fitness.com/wp-content/uploads/2021/12/souleve-de-terre.gif",
   },
   {
     id: "2",

@@ -5,6 +5,7 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Image
 } from "react-native";
 import {
   createUserWithEmailAndPassword,
@@ -61,6 +62,10 @@ const SignupScreen = ({ navigation }) => {
       style={styles.gradient}
     >
       <View style={styles.container}>
+      <Image
+          source={require("../assets/images/ImageApp.png")}
+          style={styles.image}
+        />
         <Text style={styles.header}>S'inscrire</Text>
         <TextInput
           style={styles.input}
@@ -113,10 +118,15 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   header: {
-    marginTop: 25,
+    marginTop: 10,
     fontSize: 36,
     fontWeight: "bold",
-    marginBottom: 150,
+    marginBottom: 50,
+  },
+  image: {
+    width: 200,
+    height: 200,
+    marginTop: 20,
   },
   input: {
     height: 45,
