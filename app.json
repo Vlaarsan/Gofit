@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Gofit",
-    "slug": "Gofit",
+    "name": "Kodafit",
+    "slug": "Kodafit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

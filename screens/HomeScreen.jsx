@@ -107,7 +107,7 @@ const HomeScreen = () => {
   return (
     <LinearGradient colors={["#fff",'#bb91fa', '#8b50de']} style={styles.container}>
     <SafeAreaView style={styles.container}>
-      <LogoApp title={"Gofit"} />
+      <LogoApp title={"Kodafit"} />
       <Text style={styles.title}>Salut {user.displayName}</Text>
       <Text style={styles.message}>
       Pense à noter tes jours d'entrainement 💪
