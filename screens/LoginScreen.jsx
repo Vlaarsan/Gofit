@@ -32,6 +32,7 @@ const LoginScreen = ({ navigation }) => {
         if (savedEmail && savedPassword) {
           setEmail(savedEmail);
           setPassword(savedPassword);
+          handleLogin(savedEmail, savedPassword);
         }
       } catch (error) {
         console.error("Error loading user data:", error);
@@ -40,7 +41,7 @@ const LoginScreen = ({ navigation }) => {
     loadUserData();
   }, []);
 
-  const handleLogin = async () => {
+  const handleLogin = async (email, password) => {
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
