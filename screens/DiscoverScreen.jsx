@@ -23,7 +23,6 @@ const DiscoverScreen = () => {
   const [selectedMaterials, setSelectedMaterials] = useState([]);
   const [inputFilter, setInputFilter] = useState(false);
   const [searchText, setSearchText] = useState("");
-  
 
   const filterByCategory = (item) => {
     if (selectedCategories.length === 0 && selectedMaterials.length === 0) {
@@ -73,7 +72,6 @@ const DiscoverScreen = () => {
       setSelectedMaterials([...selectedMaterials, material]);
     }
   };
-
 
   return (
     <ImageBackground
