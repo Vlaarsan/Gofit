@@ -131,6 +131,7 @@ const HomeScreen = () => {
           arrowColor: "#8b50de",
           monthTextColor: "#8b50de",
         }}
+        firstDay={1}
         style={styles.calendar}
       />
       <ImageApp/>
