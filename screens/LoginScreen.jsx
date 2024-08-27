@@ -112,7 +112,10 @@ const LoginScreen = ({ navigation }) => {
             <Text>{showPassword ? "👁️" : "🔒"}</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={handleLogin} style={styles.loginButton}>
+        <TouchableOpacity
+          onPress={handleLogin(email, password)}
+          style={styles.loginButton}
+        >
           <Text style={styles.buttonText}>Se connecter</Text>
         </TouchableOpacity>
         <TouchableOpacity

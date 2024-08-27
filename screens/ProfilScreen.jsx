@@ -13,6 +13,7 @@ import LogoApp from "../components/LogoApp";
 import ProfilUpdateModal from "../modals/ProfilUpdateModal";
 import Bubble from "../components/Bubble";
 import ImageApp from "../components/ImageApp";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const ProfilScreen = ({navigation} ) => {
   const { user, setUserContext } = useUserContext();
@@ -48,10 +49,15 @@ const ProfilScreen = ({navigation} ) => {
     setIsModalVisible(false);
   };
 
-  const handleLogout = () => {
-    navigation.replace("Login");
+  const handleLogout = async () => {
+    try {
+      await AsyncStorage.removeItem("password");
+      navigation.replace("Login");
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
   };
-
+  
   return (
     <TouchableWithoutFeedback onPress={handleCloseModal}>
     <ImageBackground
