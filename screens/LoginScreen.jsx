@@ -113,7 +113,7 @@ const LoginScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <TouchableOpacity
-          onPress={handleLogin(email, password)}
+          onPress={() => handleLogin(email, password)}
           style={styles.loginButton}
         >
           <Text style={styles.buttonText}>Se connecter</Text>
